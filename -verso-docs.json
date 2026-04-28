@@ -1,0 +1,1410 @@
+{"99":
+ "<code>HasDerivAt.hasDerivWithinAt.{u, v} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [NormedAddCommGroup F]\n  [NormedSpace 𝕜 F] {f : 𝕜 → F} {f' : F} {x : 𝕜} {s : Set 𝕜} (h : HasDerivAt f f' x) : HasDerivWithinAt f f' s x</code>",
+ "98":
+ "<code>HasDerivWithinAt.{u, v} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [AddCommGroup F] [Module 𝕜 F]\n  [TopologicalSpace F] [ContinuousSMul 𝕜 F] (f : 𝕜 → F) (f' : F) (s : Set 𝕜) (x : 𝕜) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`f` has the derivative `f'` at the point `x` within the subset `s`.\n\nThat is, `f x' = f x + (x' - x) • f' + o(x' - x)` where `x'` converges to `x` inside `s`.\n</code>",
+ "97":
+ "<code>HasDerivWithinAt φ ((fderiv ℝ f xStar) (x - xStar)) (Set.Icc 0 1) 0</code>",
+ "96":
+ "<code>AffineMap.hasDerivAt_lineMap.{u_1, u_2} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2} [NormedAddCommGroup E]\n  [NormedSpace 𝕜 E] {a b : E} {x : 𝕜} : HasDerivAt (⇑(AffineMap.lineMap a b)) (b - a) x</code>",
+ "95":
+ "<code>HasFDerivAt.comp_hasDerivAt.{u, v, w} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [NormedAddCommGroup F]\n  [NormedSpace 𝕜 F] {E : Type w} [NormedAddCommGroup E] [NormedSpace 𝕜 E] {f : 𝕜 → F} {f' : F} (x : 𝕜) {l : F → E}\n  {l' : F →L[𝕜] E} (hl : HasFDerivAt l l' (f x)) (hf : HasDerivAt f f' x) : HasDerivAt (l ∘ f) (l' f') x</code><span class=\"sep\"></span><code class=\"docstring\">The composition `l ∘ f` where `l : F → E` and `f : 𝕜 → F`, has a derivative equal to the\nFréchet derivative of `l` applied to the derivative of `f`. </code>",
+ "94":
+ "<code>HasDerivAt.{u, v} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [AddCommGroup F] [Module 𝕜 F]\n  [TopologicalSpace F] [ContinuousSMul 𝕜 F] (f : 𝕜 → F) (f' : F) (x : 𝕜) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`f` has the derivative `f'` at the point `x`.\n\nThat is, `f x' = f x + (x' - x) • f' + o(x' - x)` where `x'` converges to `x`.\n</code>",
+ "93": "<code>HasDerivAt φ ((fderiv ℝ f xStar) (x - xStar)) 0</code>",
+ "92":
+ "<code>DifferentiableAt.hasFDerivAt.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2} [AddCommGroup E]\n  [Module 𝕜 E] [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F] {f : E → F}\n  {x : E} (h : DifferentiableAt 𝕜 f x) : HasFDerivAt f (fderiv 𝕜 f x) x</code>",
+ "91":
+ "<code>HasFDerivAt.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2} [AddCommGroup E] [Module 𝕜 E]\n  [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F] (f : E → F) (f' : E →L[𝕜] F)\n  (x : E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A function `f` has the continuous linear map `f'` as derivative at `x` if\n`f x' = f x + f' (x' - x) + o (x' - x)` when `x'` tends to `x`. </code>",
+ "90":
+ "<code>HasFDerivAt f (fderiv ℝ f xStar) ((AffineMap.lineMap xStar x) 0)</code>",
+ "9": "<code>Ω.Nonempty</code>",
+ "89":
+ "<code>ge_iff_le._simp_1.{u_1} {α : Type u_1} [LE α] {x y : α} : (x ≥ y) = (y ≤ x)</code>",
+ "88":
+ "<code>AffineMap.lineMap_apply_zero.{u_1, u_2, u_3} {k : Type u_1} {V1 : Type u_2} {P1 : Type u_3} [Ring k] [AddCommGroup V1]\n  [Module k V1] [AddTorsor V1 P1] (p₀ p₁ : P1) : (AffineMap.lineMap p₀ p₁) 0 = p₀</code>",
+ "87":
+ "<code>funext.{u, v} {α : Sort u} {β : α → Sort v} {f g : (x : α) → β x} (h : ∀ (x : α), f x = g x) : f = g</code><span class=\"sep\"></span><code class=\"docstring\">**Function extensionality.** If two functions return equal results for all possible arguments, then\nthey are equal.\n\nIt is called “extensionality” because it provides a way to prove two objects equal based on the\nproperties of the underlying mathematical functions, rather than based on the syntax used to denote\nthem. Function extensionality is a theorem that can be [proved using quotient\ntypes](https://lean-lang.org/doc/reference/4.28.0/find/?domain=Verso.Genre.Manual.section&name=quotient-funext).\n</code>",
+ "86":
+ "<code>IsMinOn.localize.{u, v} {α : Type u} {β : Type v} [TopologicalSpace α] [Preorder β] {f : α → β} {s : Set α} {a : α}\n  (hf : IsMinOn f s a) : IsLocalMinOn f s a</code>",
+ "85": "<code>IsLocalMinOn φ (Set.Icc 0 1) 0</code>",
+ "840":
+ "<code>ConvexOptV3.Lectures.Lecture05.kkt_necessity_on_of_relative_perturbation_subgradient.{u_1} {E : Type u_1}\n  [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} {x_opt : E}\n  (hx : P.PrimalFeasibleOn C x_opt) (hopt : ∀ (y : E), P.PrimalFeasibleOn C y → P.objective x_opt ≤ P.objective y)\n  {g : Lecture05.Covector (PerturbationSpace m p)}\n  (hsub : IsERealSubgradientWithin (P.perturbationOn C) (Lecture05.effectiveDomain (P.perturbationOn C)) 0 g) :\n  ∃ kkt, kkt.x = x_opt</code><span class=\"sep\"></span><code class=\"docstring\">KKT necessity from an explicit-`C` perturbation subgradient at the\norigin. </code>",
+ "84": "<code>f xStar ≤ f ((AffineMap.lineMap xStar x) t)</code>",
+ "839":
+ "<code>ConvexOptV3.Lectures.Lecture05.marginal_masterFunctionOn_zero_ne_bot_of_optimal.{u_1} {E : Type u_1}\n  [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} {x_opt : E}\n  (hx : P.PrimalFeasibleOn C x_opt) (hopt : ∀ (y : E), P.PrimalFeasibleOn C y → P.objective x_opt ≤ P.objective y) :\n  Lecture05.marginal (P.masterFunctionOn C) 0 ≠ ⊥</code>",
+ "838":
+ "<code>∀ (y : E), P.PrimalFeasibleOn C y → P.objective x_opt ≤ P.objective y</code>",
+ "837": "<code>P.PrimalFeasibleOn C x_opt</code>",
+ "836":
+ "<code>Lecture05_thm_l5_kkt_nec.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E] {m p : ℕ}\n  (P : LagrangianProblem E m p) {C : Set E} (hC : Convex ℝ C) (hObj : ConvexOn ℝ C P.objective)\n  (hIneq : ∀ (i : Fin m), ConvexOn ℝ C (P.ineqConstraint i))\n  (hEqAffine : ∀ (j : Fin p), IsAffineFunctional (P.eqConstraint j)) (hslater : P.HasSlaterPointOn C) {x_opt : E}\n  (hx : P.PrimalFeasibleOn C x_opt) (hopt : ∀ (y : E), P.PrimalFeasibleOn C y → P.objective x_opt ≤ P.objective y) :\n  ∃ kkt, kkt.x = x_opt</code>",
+ "835":
+ "<code>ConvexOptV3.Lectures.Lecture05.strong_duality_value_of_relative_perturbation_subgradient_on.{u_1} {E : Type u_1}\n  [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E}\n  (hfinite : ∃ v, P.primalValueOn C = ↑v) {g : Lecture05.Covector (PerturbationSpace m p)}\n  (hsub : IsERealSubgradientWithin (P.perturbationOn C) (Lecture05.effectiveDomain (P.perturbationOn C)) 0 g) :\n  ∃ mu ν, P.DualOptimalOn C mu ν ∧ P.dualValueOn C = P.primalValueOn C</code><span class=\"sep\"></span><code class=\"docstring\">Value-level Lecture 5 strong duality from a perturbation subgradient at\nthe origin: extract dual multipliers, prove dual feasibility, then close the\ngap by comparing `value(P)` and `value(D)`. </code>",
+ "834":
+ "<code>ConvexOptV3.Lectures.Lecture05.effectiveDomain.{u_2} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) : Set E</code><span class=\"sep\"></span><code class=\"docstring\">Reuse Lecture 4's effective-domain notion locally. </code>",
+ "833":
+ "<code>ConvexOptV3.Lectures.Lecture05.IsERealSubgradientWithin.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (s : Set E) (x : E) (g : Lecture05.Covector E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Relative extended-value subgradient on a comparison set. </code>",
+ "832":
+ "<code>ConvexOptV3.Lectures.Lecture05.Covector.{u_2} (E : Type u_2) [NormedAddCommGroup E] [NormedSpace ℝ E] : Type u_2</code><span class=\"sep\"></span><code class=\"docstring\">A Lecture 5 covector is a continuous linear functional `E →L[ℝ] ℝ`. </code>",
+ "831": "<code>PerturbationSpace m p → EReal</code>",
+ "830":
+ "<code>ConvexOptV3.Lectures.Lecture05.slater_zero_mem_intrinsicInterior_effectiveDomain_masterFunctionOn.{u_1} {E : Type u_1}\n  [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ} [FiniteDimensional ℝ E] (P : LagrangianProblem E m p) {C : Set E}\n  (hC : Convex ℝ C) (hObj : ConvexOn ℝ C P.objective) (hIneq : ∀ (i : Fin m), ConvexOn ℝ C (P.ineqConstraint i))\n  (hEqAffine : ∀ (j : Fin p), IsAffineFunctional (P.eqConstraint j)) (hslater : P.HasSlaterPointOn C) :\n  0 ∈ intrinsicInterior ℝ (Lecture05.effectiveDomain (Lecture05.marginal (P.masterFunctionOn C)))</code><span class=\"sep\"></span><code class=\"docstring\">The reordered Lecture 5 origin-regularity lemma transported to the Lecture\n4 marginal-duality packaging `p(u) = inf_x Φ_C(x,u)`. </code>",
+ "83":
+ "<code>setOf.{u} {α : Type u} (p : α → Prop) : Set α</code><span class=\"sep\"></span><code class=\"docstring\">Turn a predicate `p : α → Prop` into a set, also written as `{x | p x}` </code>",
+ "829":
+ "<code>ConvexOptV3.Lectures.Lecture05.masterFunctionOn_eConvexOn.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} (hC : Convex ℝ C) (hObj : ConvexOn ℝ C P.objective)\n  (hIneq : ∀ (i : Fin m), ConvexOn ℝ C (P.ineqConstraint i))\n  (hEqAffine : ∀ (j : Fin p), IsAffineFunctional (P.eqConstraint j)) :\n  Lecture05.EConvexOn Set.univ (P.masterFunctionOn C)</code><span class=\"sep\"></span><code class=\"docstring\">Joint one-sided extended-value convexity of the Lecture 5 master\nfunction. </code>",
+ "828":
+ "<code>ConvexOptV3.Lectures.Lecture05.perturbationOn_subgradient_of_marginal_duality_hypotheses.{u_1} {E : Type u_1}\n  [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) (C : Set E)\n  (hΦ_convex : Lecture05.EConvexOn Set.univ (P.masterFunctionOn C))\n  (hzero_bot : Lecture05.marginal (P.masterFunctionOn C) 0 ≠ ⊥)\n  (hri : 0 ∈ intrinsicInterior ℝ (Lecture05.effectiveDomain (Lecture05.marginal (P.masterFunctionOn C)))) :\n  ∃ g, IsERealSubgradientWithin (P.perturbationOn C) (Lecture05.effectiveDomain (P.perturbationOn C)) 0 g</code><span class=\"sep\"></span><code class=\"docstring\">Direct Lecture 4 -&gt; Lecture 5 bridge at the subgradient level. </code>",
+ "827":
+ "<code>IsERealSubgradientWithin (P.perturbationOn C) (Lecture05.effectiveDomain (P.perturbationOn C)) 0 g</code>",
+ "826": "<code>Lecture05.Covector (PerturbationSpace m p)</code>",
+ "825": "<code>EReal.coe_ne_bot (x : ℝ) : ↑x ≠ ⊥</code>",
+ "824": "<code>P.perturbationOn C 0 = ↑v</code>",
+ "823": "<code>P.primalValueOn C = ↑v</code>",
+ "822":
+ "<code>ConvexOptV3.Lectures.Lecture05.marginal_masterFunctionOn_eq_perturbationOn.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) (C : Set E) :\n  Lecture05.marginal (P.masterFunctionOn C) = P.perturbationOn C</code>",
+ "821": "<code>PerturbationSpace m p</code>",
+ "820":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.masterFunctionOn.{u_1} {E : Type u_1} {m p : ℕ}\n  (P : LagrangianProblem E m p) (C : Set E) (xuv : E × PerturbationSpace m p) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing Lecture 5 master function packaged in the Lecture 4 `Φ(x,u)`\nlanguage. </code>",
+ "82": "<code>t ∈ Set.Icc 0 1</code>",
+ "819":
+ "<code>ConvexOptV3.Lectures.Lecture05.PerturbationSpace (m p : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">The perturbation space for Lecture 5. </code>",
+ "818":
+ "<code>ConvexOptV3.Lectures.Lecture05.marginal.{u_2, u_3} {X : Type u_2} {Y : Type u_3} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) (u : Y) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Marginal value function `p(u) = inf_x Φ(x,u)`. </code>",
+ "817": "<code>Lecture05.marginal (P.masterFunctionOn C) 0 ≠ ⊥</code>",
+ "816": "<code>∃ v, P.primalValueOn C = ↑v</code>",
+ "815":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.HasSlaterPointOn.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) (C : Set E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing Slater condition relative to an explicit base set `C`. </code>",
+ "814": "<code>P.HasSlaterPointOn C</code>",
+ "813":
+ "<code>ConvexOptV3.Lectures.Lecture05.IsAffineFunctional.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (h : E → ℝ) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">An equality constraint is affine if it is a continuous linear functional\nplus a constant. </code>",
+ "812": "<code>∀ (j : Fin p), IsAffineFunctional (P.eqConstraint j)</code>",
+ "811": "<code>∀ (i : Fin m), ConvexOn ℝ C (P.ineqConstraint i)</code>",
+ "810": "<code>ConvexOn ℝ C P.objective</code>",
+ "81":
+ "<code>HasSubset.Subset.{u} {α : Type u} [self : HasSubset α] : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">Subset relation: `a ⊆ b`  \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `⊆` in identifiers is `subset`.</code>",
+ "809":
+ "<code>Lecture05_thm_l5_strong_duality.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} (hC : Convex ℝ C) (hObj : ConvexOn ℝ C P.objective)\n  (hIneq : ∀ (i : Fin m), ConvexOn ℝ C (P.ineqConstraint i))\n  (hEqAffine : ∀ (j : Fin p), IsAffineFunctional (P.eqConstraint j)) (hslater : P.HasSlaterPointOn C)\n  (hfinite : ∃ v, P.primalValueOn C = ↑v) : ∃ mu ν, P.DualOptimalOn C mu ν ∧ P.dualValueOn C = P.primalValueOn C</code>",
+ "808":
+ "<code class=\"docstring\">* `symm` applies to a goal whose target has the form `t ~ u` where `~` is a symmetric relation,\n  that is, a relation which has a symmetry lemma tagged with the attribute [symm].\n  It replaces the target with `u ~ t`.\n* `symm at h` will rewrite a hypothesis `h : t ~ u` to `h : u ~ t`.\n</code>",
+ "807": "<code>P.dualValueOn C = P.primalValueOn C</code>",
+ "806": "<code>P.DualOptimalOn C kkt.mu kkt.ν</code>",
+ "805":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.dual_feasible.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) : P.DualFeasible self.mu</code>",
+ "804":
+ "<code>ConvexOptV3.Lectures.Lecture05.dualFunctionOn_le_dualValueOn.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) (C : Set E) {mu : Fin m → ℝ} {ν : Fin p → ℝ}\n  (hmu : P.DualFeasible mu) : P.dualFunctionOn C mu ν ≤ P.dualValueOn C</code><span class=\"sep\"></span><code class=\"docstring\">Any dual-feasible pair lies below the dual value. </code>",
+ "803": "<code>P.dualFunctionOn C kkt.mu kkt.ν ≤ P.dualValueOn C</code>",
+ "802": "<code>P.dualValueOn C ≤ P.dualFunctionOn C kkt.mu kkt.ν</code>",
+ "801":
+ "<code>ConvexOptV3.Lectures.Lecture05.perturbationOn_zero_eq_optimal.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} {x_opt : E} (hx : P.PrimalFeasibleOn C x_opt)\n  (hopt : ∀ (y : E), P.PrimalFeasibleOn C y → P.objective x_opt ≤ P.objective y) :\n  P.perturbationOn C 0 = ↑(P.objective x_opt)</code>",
+ "800":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.perturbationOn.{u_1} {E : Type u_1} {m p : ℕ}\n  (P : LagrangianProblem E m p) (C : Set E) (uv : PerturbationSpace m p) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing perturbation value function with an explicit base set `C`. </code>",
+ "80":
+ "<code>congrArg.{u, v} {α : Sort u} {β : Sort v} {a₁ a₂ : α} (f : α → β) (h : a₁ = a₂) : f a₁ = f a₂</code><span class=\"sep\"></span><code class=\"docstring\">Congruence in the function argument: if `a₁ = a₂` then `f a₁ = f a₂` for\nany (nondependent) function `f`. This is more powerful than it might look at first, because\nyou can also use a lambda expression for `f` to prove that\n`&lt;something containing a₁&gt; = &lt;something containing a₂&gt;`. This function is used\ninternally by tactics like `congr` and `simp` to apply equalities inside\nsubterms.\n\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n</code>",
+ "8":
+ "<code>IsCompact.{u_1} {X : Type u_1} [TopologicalSpace X] (s : Set X) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A set `s` is compact if for every nontrivial filter `f` that contains `s`,\nthere exists `a ∈ s` such that every set of `f` meets every neighborhood of `a`. </code>",
+ "799":
+ "<code>EReal.coe_eq_coe_iff._simp_1 {x y : ℝ} : (↑x = ↑y) = (x = y)</code>",
+ "798": "<code>P.primalValueOn C = ↑(P.objective kkt.x)</code>",
+ "797":
+ "<code>le_top._simp_2.{u} {α : Type u} [LE α] [OrderTop α] {a : α} : (a ≤ ⊤) = True</code>",
+ "796": "<code>eq_false {p : Prop} (h : ¬p) : p = False</code>",
+ "795":
+ "<code>ite_cond_eq_false.{u} {α : Sort u} {c : Prop} {x✝ : Decidable c} (a b : α) (h : c = False) : (if c then a else b) = b</code>",
+ "794":
+ "<code>cast.{u} {α β : Sort u} (h : α = β) (a : α) : β</code><span class=\"sep\"></span><code class=\"docstring\">Cast across a type equality. If `h : α = β` is an equality of types, and\n`a : α`, then `a : β` will usually not typecheck directly, but this function\nwill allow you to work around this and embed `a` in type `β` as `cast h a : β`.\n\nIt is best to avoid this function if you can, because it is more complicated\nto reason about terms containing casts, but if the types don't match up\ndefinitionally sometimes there isn't anything better you can do.\n\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n</code>",
+ "793":
+ "<code>↑(P.lagrangian kkt.x kkt.mu kkt.ν) ≤ ↑(P.lagrangian y kkt.mu kkt.ν)</code>",
+ "792":
+ "<code>EReal.coe_le_coe_iff._simp_1 {x y : ℝ} : (↑x ≤ ↑y) = (x ≤ y)</code>",
+ "791": "<code>P.dualFunctionOn C kkt.mu kkt.ν = ↑(P.objective kkt.x)</code>",
+ "790":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.stationarity.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) (y : E) :\n  y ∈ C → P.lagrangian self.x self.mu self.ν ≤ P.lagrangian y self.mu self.ν</code>",
+ "79":
+ "<code>congrFun'.{u, v} {α : Sort u} {β : Sort v} {f g : α → β} (h : f = g) (a : α) : f a = g a</code><span class=\"sep\"></span><code class=\"docstring\">Similar to `congrFun` but `β` does not depend on `α`. </code>",
+ "789":
+ "<code class=\"docstring\">Normalize casts in the goal and the given expression, then close the goal with `exact`.\n</code>",
+ "788": "<code>y ∉ C</code>",
+ "787":
+ "<code>le_iInf.{u_1, u_4} {α : Type u_1} {ι : Sort u_4} [CompleteLattice α] {f : ι → α} {a : α} (h : ∀ (i : ι), a ≤ f i) :\n  a ≤ iInf f</code>",
+ "786": "<code>eq_true {p : Prop} (h : p) : p = True</code>",
+ "785":
+ "<code>ite_cond_eq_true.{u} {α : Sort u} {c : Prop} {x✝ : Decidable c} (a b : α) (h : c = True) : (if c then a else b) = a</code>",
+ "784":
+ "<code>↑(P.lagrangian kkt.x kkt.mu kkt.ν) ≤ P.dualFunctionOn C kkt.mu kkt.ν</code>",
+ "783":
+ "<code>iInf_le_of_le.{u_1, u_4} {α : Type u_1} {ι : Sort u_4} [CompleteLattice α] {f : ι → α} {a : α} (i : ι) (h : f i ≤ a) :\n  iInf f ≤ a</code>",
+ "782":
+ "<code>ite.{u} {α : Sort u} (c : Prop) [h : Decidable c] (t e : α) : α</code><span class=\"sep\"></span><code class=\"docstring\">`if c then t else e` is notation for `ite c t e`, \"if-then-else\", which decides to\nreturn `t` or `e` depending on whether `c` is true or false. The explicit argument\n`c : Prop` does not have any actual computational content, but there is an additional\n`[Decidable c]` argument synthesized by typeclass inference which actually\ndetermines how to evaluate `c` to true or false. Write `if h : c then t else e`\ninstead for a \"dependent if-then-else\" `dite`, which allows `t`/`e` to use the fact\nthat `c` is true/false.\n</code>",
+ "781":
+ "<code>P.dualFunctionOn C kkt.mu kkt.ν ≤ ↑(P.lagrangian kkt.x kkt.mu kkt.ν)</code>",
+ "780": "<code>P.PrimalFeasible kkt.x</code>",
+ "78":
+ "<code>Eq.mp.{u} {α β : Sort u} (h : α = β) (a : α) : β</code><span class=\"sep\"></span><code class=\"docstring\">If `h : α = β` is a proof of type equality, then `h.mp : α → β` is the induced\n\"cast\" operation, mapping elements of `α` to elements of `β`.\n\nYou can prove theorems about the resulting element by induction on `h`, since\n`rfl.mp` is definitionally the identity function.\n</code>",
+ "779":
+ "<code>P.dualFunctionOn C kkt.mu kkt.ν = ↑(P.lagrangian kkt.x kkt.mu kkt.ν)</code>",
+ "778":
+ "<code>MulZeroClass.mul_zero.{u} {M₀ : Type u} [self : MulZeroClass M₀] (a : M₀) : a * 0 = 0</code><span class=\"sep\"></span><code class=\"docstring\">Zero is a right absorbing element for multiplication </code>",
+ "777": "<code>∑ j, kkt.ν j * P.eqConstraint j kkt.x = 0</code>",
+ "776":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.complementary_slackness.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) (i : Fin m) :\n  self.mu i * P.ineqConstraint i self.x = 0</code>",
+ "775":
+ "<code>Finset.sum_eq_zero.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s : Finset ι} [AddCommMonoid M] {f : ι → M}\n  (h : ∀ x ∈ s, f x = 0) : ∑ x ∈ s, f x = 0</code>",
+ "774": "<code>∑ i, kkt.mu i * P.ineqConstraint i kkt.x = 0</code>",
+ "773":
+ "<code class=\"docstring\">* `unfold id` unfolds all occurrences of definition `id` in the target.\n* `unfold id1 id2 ...` is equivalent to `unfold id1; unfold id2; ...`.\n* `unfold id at h` unfolds at the hypothesis `h`.\n\nDefinitions can be either global or local definitions.\n\nFor non-recursive global definitions, this tactic is identical to `delta`.\nFor recursive global definitions, it uses the \"unfolding lemma\" `id.eq_def`,\nwhich is generated for each recursive definition, to unfold according to the recursive definition given by the user.\nOnly one level of unfolding is performed, in contrast to `simp only [id]`, which unfolds definition `id` recursively.\n</code>",
+ "772":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.eqConstraint.{u_2} {E : Type u_2} {m p : ℕ}\n  (self : LagrangianProblem E m p) : Fin p → E → ℝ</code>",
+ "771": "<code>Fin p</code>",
+ "770":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.ineqConstraint.{u_2} {E : Type u_2} {m p : ℕ}\n  (self : LagrangianProblem E m p) : Fin m → E → ℝ</code>",
+ "77":
+ "<code>Set.image_subset_iff._simp_1.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Set α} {t : Set β} {f : α → β} :\n  (f '' s ⊆ t) = (s ⊆ f ⁻¹' t)</code>",
+ "769": "<code>kkt.x ∈ C</code>",
+ "768": "<code>∀ (j : Fin p), P.eqConstraint j kkt.x = 0</code>",
+ "767": "<code>∀ (i : Fin m), P.ineqConstraint i kkt.x ≤ 0</code>",
+ "766":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.lagrangian.{u_1} {E : Type u_1} {m p : ℕ} (P : LagrangianProblem E m p)\n  (x : E) (mu : Fin m → ℝ) (ν : Fin p → ℝ) : ℝ</code><span class=\"sep\"></span><code class=\"docstring\">Lagrangian `L(x,μ,ν) = f(x) + Σᵢ μᵢ gᵢ(x) + Σⱼ νⱼ hⱼ(x)`. </code>",
+ "765": "<code>P.lagrangian kkt.x kkt.mu kkt.ν = P.objective kkt.x</code>",
+ "764":
+ "<code>ConvexOptV3.Lectures.Lecture05.kkt_suff_primalOptimality_on.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} (kkt : P.KKTPointOn C) (y : E) :\n  P.PrimalFeasibleOn C y → P.objective kkt.x ≤ P.objective y</code><span class=\"sep\"></span><code class=\"docstring\">KKT implies primal optimality. </code>",
+ "763":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.primal_feasible.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) : P.PrimalFeasibleOn C self.x</code>",
+ "762": "<code>P.PrimalOptimalOn C kkt.x</code>",
+ "761":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.ν.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) : Fin p → ℝ</code>",
+ "760":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.mu.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) : Fin m → ℝ</code>",
+ "76":
+ "<code>proof_of_Lecture01_lem_l1_first_order_necessary._simp_1.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Set α} {t : Set β}\n  {f : α → β} : Set.MapsTo f s t = (f '' s ⊆ t)</code>",
+ "759":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.DualOptimalOn.{u_1} {E : Type u_1} {m p : ℕ} (P : ConvexProgram E m p)\n  (C : Set E) (mu : Fin m → ℝ) (ν : Fin p → ℝ) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing dual optimality relative to an explicit base set `C`. </code>",
+ "758":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.x.{u_1} {E : Type u_1} {m p : ℕ}\n  {P : LagrangianProblem E m p} {C : Set E} (self : P.KKTPointOn C) : E</code>",
+ "757":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.PrimalOptimalOn.{u_1} {E : Type u_1} {m p : ℕ}\n  (P : ConvexProgram E m p) (C : Set E) (x : E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing primal optimality relative to an explicit base set `C`. </code>",
+ "756":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.KKTPointOn.{u_1} {E : Type u_1} {m p : ℕ} (P : LagrangianProblem E m p)\n  (C : Set E) : Type u_1</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing KKT point relative to an explicit base set `C`. </code>",
+ "755": "<code>P.KKTPointOn C</code>",
+ "754":
+ "<code>Lecture05_thm_l5_kkt_suff.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ}\n  (P : LagrangianProblem E m p) {C : Set E} (kkt : P.KKTPointOn C) :\n  P.PrimalOptimalOn C kkt.x ∧ P.DualOptimalOn C kkt.mu kkt.ν ∧ P.dualValueOn C = P.primalValueOn C</code>",
+ "753":
+ "<code>ConvexOptV3.Lectures.Lecture05.dualFunctionOn_le_objective_of_feasible.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) {C : Set E} {x : E} (hx : P.PrimalFeasibleOn C x)\n  {mu : Fin m → ℝ} {ν : Fin p → ℝ} (hmu : P.DualFeasible mu) : P.dualFunctionOn C mu ν ≤ ↑(P.objective x)</code><span class=\"sep\"></span><code class=\"docstring\">Pointwise weak duality: a dual-feasible pair gives a lower bound on any\nprimal-feasible objective value. </code>",
+ "752": "<code>P.DualFeasible mu</code>",
+ "751": "<code>P.PrimalFeasibleOn C x</code>",
+ "750":
+ "<code>ConvexOptV3.Lectures.Lecture05.dualValueOn_le_primalValueOn.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {m p : ℕ} (P : LagrangianProblem E m p) (C : Set E) : P.dualValueOn C ≤ P.primalValueOn C</code><span class=\"sep\"></span><code class=\"docstring\">Global weak duality on the value level. </code>",
+ "75":
+ "<code>Eq.trans.{u} {α : Sort u} {a b c : α} (h₁ : a = b) (h₂ : b = c) : a = c</code><span class=\"sep\"></span><code class=\"docstring\">Equality is transitive: if `a = b` and `b = c` then `a = c`.\n\nBecause this is in the `Eq` namespace, if you have variables or expressions\n`h₁ : a = b` and `h₂ : b = c`, you can use `h₁.trans h₂ : a = c` as shorthand\nfor `Eq.trans h₁ h₂`.\n\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n</code>",
+ "749":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.primalValueOn.{u_1} {E : Type u_1} {m p : ℕ} (P : ConvexProgram E m p)\n  (C : Set E) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing primal value `value(P)` relative to an explicit base set `C`. </code>",
+ "748":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.dualValueOn.{u_1} {E : Type u_1} {m p : ℕ} (P : ConvexProgram E m p)\n  (C : Set E) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing dual value `value(D)` relative to an explicit base set `C`. </code>",
+ "747":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.objective.{u_2} {E : Type u_2} {m p : ℕ}\n  (self : LagrangianProblem E m p) : E → ℝ</code>",
+ "746":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.dualFunctionOn.{u_1} {E : Type u_1} {m p : ℕ}\n  (P : LagrangianProblem E m p) (C : Set E) (mu : Fin m → ℝ) (ν : Fin p → ℝ) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing dual function with an explicit base set `C`. </code>",
+ "745":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.DualFeasible.{u_1} {E : Type u_1} {m p : ℕ} :\n  LagrangianProblem E m p → (mu : Fin m → ℝ) → Prop</code><span class=\"sep\"></span><code class=\"docstring\">Dual feasibility: `μ ≥ 0`. </code>",
+ "744":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.PrimalFeasibleOn.{u_1} {E : Type u_1} {m p : ℕ}\n  (P : LagrangianProblem E m p) (C : Set E) (x : E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing primal feasibility relative to an explicit constraint set `C`. </code>",
+ "743": "<code>Fin p → ℝ</code>",
+ "742":
+ "<code>ConvexOptV3.Lectures.Lecture05.LagrangianProblem.{u_2} (E : Type u_2) (m p : ℕ) : Type u_2</code><span class=\"sep\"></span><code class=\"docstring\">A convex constrained problem: min `f(x)` s.t. `gᵢ(x) ≤ 0`, `hⱼ(x) = 0`. </code>",
+ "741": "<code>LagrangianProblem E m p</code>",
+ "740":
+ "<code>Lecture05_thm_l5_weak_duality.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {m p : ℕ}\n  (P : LagrangianProblem E m p) {C : Set E} :\n  (∀ ⦃x : E⦄ ⦃mu : Fin m → ℝ⦄ ⦃ν : Fin p → ℝ⦄,\n      P.PrimalFeasibleOn C x → P.DualFeasible mu → P.dualFunctionOn C mu ν ≤ ↑(P.objective x)) ∧\n    P.dualValueOn C ≤ P.primalValueOn C</code>",
+ "74":
+ "<code>id.{u} {α : Sort u} (a : α) : α</code><span class=\"sep\"></span><code class=\"docstring\">The identity function. `id` takes an implicit argument `α : Sort u`\n(a type in any universe), and an argument `a : α`, and returns `a`.\n\nAlthough this may look like a useless function, one application of the identity\nfunction is to explicitly put a type on an expression. If `e` has type `T`,\nand `T'` is definitionally equal to `T`, then `@id T' e` typechecks, and Lean\nknows that this expression has type `T'` rather than `T`. This can make a\ndifference for typeclass inference, since `T` and `T'` may have different\ntypeclass instances on them. `show T' from e` is sugar for an `@id T' e`\nexpression.\n</code>",
+ "739":
+ "<code>ConvexOptV3.Lectures.Lecture04.thm_l4_marginal_duality.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] [FiniteDimensional ℝ Y] (Φ : X × Y → EReal)\n  (hΦ_convex : EConvexOn Set.univ Φ) (hzero_bot : marginal Φ 0 ≠ ⊥)\n  (hri : 0 ∈ intrinsicInterior ℝ (effectiveDomain (marginal Φ))) :\n  ∃ y, marginal Φ 0 = marginalDualValue Φ ∧ marginalDualValue Φ = marginalDualObjective Φ y</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing part (4) wrapper for Lecture 4 marginal duality. </code>",
+ "738": "<code>FiniteDimensional ℝ Y</code>",
+ "737":
+ "<code>ConvexOptV3.Lectures.Lecture04.effectiveDomain.{u_1} {E : Type u_1} (f : E → EReal) : Set E</code><span class=\"sep\"></span><code class=\"docstring\">Effective domain: the points where `f` is not `+∞`. </code>",
+ "736": "<code>0 ∈ intrinsicInterior ℝ (effectiveDomain (marginal Φ))</code>",
+ "735": "<code>EConvexOn Set.univ Φ</code>",
+ "734":
+ "<code>Lecture04_thm_l4_marginal_duality.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [NormedAddCommGroup X] [NormedSpace ℝ X]\n  [NormedAddCommGroup Y] [NormedSpace ℝ Y] [FiniteDimensional ℝ Y] (Φ : X × Y → EReal)\n  (hΦ_convex : EConvexOn Set.univ Φ) (hzero_bot : marginal Φ 0 ≠ ⊥)\n  (hri : 0 ∈ intrinsicInterior ℝ (effectiveDomain (marginal Φ))) :\n  ∃ y, marginal Φ 0 = marginalDualValue Φ ∧ marginalDualValue Φ = marginalDualObjective Φ y</code>",
+ "733":
+ "<code>ConvexOptV3.Lectures.Lecture04.thm_l4_marginal_duality_part3.{u_1, u_2} {X : Type u_1} {Y : Type u_2}\n  [NormedAddCommGroup X] [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal)\n  (hzero_bot : marginal Φ 0 ≠ ⊥) (hzero_top : marginal Φ 0 ≠ ⊤) {y : Covector Y}\n  (hsub : Lecture02.IsERealSubgradient (marginal Φ) 0 y) :\n  marginal Φ 0 = marginalDualValue Φ ∧ marginalDualValue Φ = marginalDualObjective Φ y</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing part (3) of Lecture 4 marginal duality. </code>",
+ "732":
+ "<code>ConvexOptV3.Lectures.Lecture04.marginalDualObjective.{u_2, u_3} {X : Type u_2} {Y : Type u_3} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) (y : Covector Y) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Dual objective associated to the marginal value function\n`p(u) = inf_x Φ(x,u)`: notes-side `y ↦ -Φ^*(0,y)`. </code>",
+ "731": "<code>Lecture02.IsERealSubgradient (marginal Φ) 0 y</code>",
+ "730": "<code>marginal Φ 0 ≠ ⊤</code>",
+ "73":
+ "<code>Eq.mpr.{u} {α β : Sort u} (h : α = β) (b : β) : α</code><span class=\"sep\"></span><code class=\"docstring\">If `h : α = β` is a proof of type equality, then `h.mpr : β → α` is the induced\n\"cast\" operation in the reverse direction, mapping elements of `β` to elements of `α`.\n\nYou can prove theorems about the resulting element by induction on `h`, since\n`rfl.mpr` is definitionally the identity function.\n</code>",
+ "729": "<code>marginal Φ 0 ≠ ⊥</code>",
+ "728":
+ "<code>Lecture04_thm_l4_marginal_duality_part3.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) (hzero_bot : marginal Φ 0 ≠ ⊥)\n  (hzero_top : marginal Φ 0 ≠ ⊤) {y : Covector Y} (hsub : Lecture02.IsERealSubgradient (marginal Φ) 0 y) :\n  marginal Φ 0 = marginalDualValue Φ ∧ marginalDualValue Φ = marginalDualObjective Φ y</code>",
+ "727":
+ "<code>ConvexOptV3.Lectures.Lecture04.thm_l4_marginal_duality_part2.{u_2, u_3} {X : Type u_2} {Y : Type u_3}\n  [NormedAddCommGroup X] [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal)\n  (hprimal : marginal Φ 0 = ⊥) : marginalDualValue Φ = ⊥</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing part (2) of Lecture 4 marginal duality. </code>",
+ "726":
+ "<code>Bot.bot.{u_1} {α : Type u_1} [self : Bot α] : α</code><span class=\"sep\"></span><code class=\"docstring\">The bot (`⊥`, `\\bot`) element \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `⊥` in identifiers is `bot`.</code>",
+ "725": "<code>marginal Φ 0 = ⊥</code>",
+ "724":
+ "<code>Lecture04_thm_l4_marginal_duality_part2.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) (hprimal : marginal Φ 0 = ⊥) :\n  marginalDualValue Φ = ⊥</code>",
+ "723":
+ "<code>ConvexOptV3.Lectures.Lecture04.thm_l4_marginal_duality_part1.{u_2, u_3} {X : Type u_2} {Y : Type u_3}\n  [NormedAddCommGroup X] [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) :\n  (∀ (y : Covector Y), fenchelConjugate (marginal Φ) y = fenchelConjugate Φ (prodSndCovector y)) ∧\n    (∀ (u : Y) (y : Covector Y), affineMinus y (marginal Φ) u ≤ fenchelConjugate Φ (prodSndCovector y)) ∧\n      marginalDualValue Φ ≤ marginal Φ 0</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing part (1) of Lecture 4 marginal duality. </code>",
+ "722":
+ "<code>Prod.{u, v} (α : Type u) (β : Type v) : Type (max u v)</code><span class=\"sep\"></span><code class=\"docstring\">The product type, usually written `α × β`. Product types are also called pair or tuple types.\nElements of this type are pairs in which the first element is an `α` and the second element is a\n`β`.\n\nProducts nest to the right, so `(x, y, z) : α × β × γ` is equivalent to `(x, (y, z)) : α × (β × γ)`.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `×` in identifiers is `Prod`.</code>",
+ "721": "<code>NormedSpace ℝ Y</code>",
+ "720": "<code>NormedAddCommGroup Y</code>",
+ "72": "<code>IsMinOn φ (Set.Icc 0 1) 0</code>",
+ "719": "<code>NormedSpace ℝ X</code>",
+ "718": "<code>NormedAddCommGroup X</code>",
+ "717":
+ "<code>ConvexOptV3.Lectures.Lecture04.marginalDualValue.{u_2, u_3} {X : Type u_2} {Y : Type u_3} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Dual value associated to the marginal value function\n`p(u) = inf_x Φ(x,u)`: notes-side `sup_y { -Φ^*(0,y) }`. </code>",
+ "716":
+ "<code>ConvexOptV3.Lectures.Lecture04.affineMinus.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (ξ : Covector E) (f : E → EReal) (x : E) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Affine term minus an extended-value function. </code>",
+ "715": "<code>Y</code>",
+ "714":
+ "<code>ConvexOptV3.Lectures.Lecture04.prodSndCovector.{u_2, u_3} {X : Type u_2} {Y : Type u_3} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (y : Covector Y) : Covector (X × Y)</code><span class=\"sep\"></span><code class=\"docstring\">The product covector `(0,y)` on `X × Y`. </code>",
+ "713":
+ "<code>ConvexOptV3.Lectures.Lecture04.marginal.{u_2, u_3} {X : Type u_2} {Y : Type u_3} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) (u : Y) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Marginal value function `p(u) = inf_x Φ(x,u)`. </code>",
+ "712": "<code>Covector Y</code>",
+ "711": "<code>X × Y → EReal</code>",
+ "710":
+ "<code>Lecture04_thm_l4_marginal_duality_part1.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [NormedAddCommGroup X]\n  [NormedSpace ℝ X] [NormedAddCommGroup Y] [NormedSpace ℝ Y] (Φ : X × Y → EReal) :\n  (∀ (y : Covector Y), fenchelConjugate (marginal Φ) y = fenchelConjugate Φ (prodSndCovector y)) ∧\n    (∀ (u : Y) (y : Covector Y), affineMinus y (marginal Φ) u ≤ fenchelConjugate Φ (prodSndCovector y)) ∧\n      marginalDualValue Φ ≤ marginal Φ 0</code>",
+ "71":
+ "<code>Convex.segment_subset.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid E]\n  [SMul 𝕜 E] {s : Set E} (h : Convex 𝕜 s) {x y : E} (hx : x ∈ s) (hy : y ∈ s) : segment 𝕜 x y ⊆ s</code>",
+ "709":
+ "<code>ConvexOptV3.Lectures.Lecture04.thm_l4_fm.{u_1} {E : Type u_1} [NormedAddCommGroup E] [InnerProductSpace ℝ E]\n  [FiniteDimensional ℝ E] (f : E → EReal) (hf_proper : IsProper f) (hf_closed : LowerSemicontinuous f)\n  (hf_convex : EConvexOn Set.univ f) : fenchelBiconjugate f = f</code><span class=\"sep\"></span><code class=\"docstring\">Lecture 4 Fenchel--Moreau theorem (`thm:l4_fm`): for a proper closed\nconvex `f : E → ℝ ∪ {+∞}`, the typed biconjugate `f**` agrees with `f`. </code>",
+ "708":
+ "<code>ConvexOptV3.Lectures.Lecture04.EConvexOn.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] (s : Set E)\n  (f : E → EReal) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Extended-real convexity on a comparison set. </code>",
+ "707":
+ "<code>LowerSemicontinuous.{u_1, u_2} {α : Type u_1} {β : Type u_2} [TopologicalSpace α] [Preorder β] (f : α → β) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A real function `f` is lower semicontinuous if, for any `ε &gt; 0`, for any `x`, for all `x'` close\nenough to `x`, then `f x'` is at least `f x - ε`. We formulate this in a general preordered space,\nusing an arbitrary `y &lt; f x` instead of `f x - ε`. </code>",
+ "706": "<code>LowerSemicontinuous f</code>",
+ "705":
+ "<code>Lecture04_thm_l4_fm.{u_1} {E : Type u_1} [NormedAddCommGroup E] [InnerProductSpace ℝ E] [FiniteDimensional ℝ E]\n  (f : E → EReal) (hf_proper : IsProper f) (hf_closed : LowerSemicontinuous f) (hf_convex : EConvexOn Set.univ f) :\n  fenchelBiconjugate f = f</code>",
+ "704":
+ "<code>ConvexOptV3.Lectures.Lecture04.IsProper.noBot.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {f : E → EReal} (hf : IsProper f) : NoBot f</code>",
+ "703":
+ "<code>Or.inr {a b : Prop} (h : b) : a ∨ b</code><span class=\"sep\"></span><code class=\"docstring\">`Or.inr` is \"right injection\" into an `Or`. If `h : b` then `Or.inr h : a ∨ b`. </code>",
+ "702":
+ "<code>ConvexOptV3.Lectures.Lecture04.fenchelConjugate_ne_bot_of_proper.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] (f : E → EReal) (hf : IsProper f) (ξ : Covector E) : fenchelConjugate f ξ ≠ ⊥</code>",
+ "701":
+ "<code>Or.inl {a b : Prop} (h : a) : a ∨ b</code><span class=\"sep\"></span><code class=\"docstring\">`Or.inl` is \"left injection\" into an `Or`. If `h : a` then `Or.inl h : a ∨ b`. </code>",
+ "700":
+ "<code>EReal.sub_le_iff_le_add {a b c : EReal} (h₁ : b ≠ ⊥ ∨ c ≠ ⊤) (h₂ : b ≠ ⊤ ∨ c ≠ ⊥) : a - b ≤ c ↔ a ≤ c + b</code>",
+ "70":
+ "<code>segment_eq_image_lineMap.{u_1, u_2} (𝕜 : Type u_1) {E : Type u_2} [Ring 𝕜] [PartialOrder 𝕜] [AddRightMono 𝕜]\n  [AddCommGroup E] [Module 𝕜 E] (x y : E) : segment 𝕜 x y = ⇑(AffineMap.lineMap x y) '' Set.Icc 0 1</code>",
+ "7": "<code>IsCompact Ω</code>",
+ "699":
+ "<code>add_comm.{u_1} {G : Type u_1} [AddCommMagma G] (a b : G) : a + b = b + a</code>",
+ "698":
+ "<code>ConvexOptV3.Lectures.Lecture04.evalAtCovector_apply.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (x : E) (ξ : Covector E) : (evalAtCovector x) ξ = ξ x</code>",
+ "697": "<code>↑((evalAtCovector x) ξ) ≤ f x + fenchelConjugate f ξ</code>",
+ "696":
+ "<code>iSup_le.{u_1, u_4} {α : Type u_1} {ι : Sort u_4} [CompleteLattice α] {f : ι → α} {a : α} (h : ∀ (i : ι), f i ≤ a) :\n  iSup f ≤ a</code>",
+ "695":
+ "<code>ConvexOptV3.Lectures.Lecture04.evalAtCovector.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] (x : E) :\n  Covector (Covector E)</code><span class=\"sep\"></span><code class=\"docstring\">Evaluation at `x`, viewed as a covector on `E*`. </code>",
+ "694":
+ "<code>ConvexOptV3.Lectures.Lecture04.fenchelConjugate_eq_iSup.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (ξ : Covector E) : fenchelConjugate f ξ = ⨆ x, ↑(ξ x) - f x</code>",
+ "693":
+ "<code>ConvexOptV3.Lectures.Lecture04.fenchelBiconjugate.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (x : E) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Biconjugate evaluated back at a primal point. </code>",
+ "692":
+ "<code>Lecture04_lem_l4_biconj_le.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → EReal}\n  (hf : IsProper f) (x : E) : fenchelBiconjugate f x ≤ f x</code>",
+ "691":
+ "<code>ConvexOptV3.Lectures.Lecture04.lem_l4_fy_eq_iff_subgradient.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {f : E → EReal} (hf : IsProper f) {x : E} {ξ : Covector E} :\n  f x + fenchelConjugate f ξ = ↑(ξ x) ↔ Lecture02.IsERealSubgradient f x ξ</code><span class=\"sep\"></span><code class=\"docstring\">Lecture 4 equality case for Fenchel--Young (`lem:l4_fy_eq_iff_subgradient`). </code>",
+ "690":
+ "<code>ConvexOptV3.Lectures.Lecture02.IsERealSubgradient.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (x : E) (g : Lecture02.Covector E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Extended-value subgradient in the Lecture 2 one-sided `ℝ ∪ {+∞}` layer.\nLecture 2 uses this encoding to package the effective domain into the\nobjective itself, so the ambient domain can stay equal to `E` in later\nconvex-analysis statements. </code>",
+ "69":
+ "<code>Set.mapsTo_iff_image_subset.{u_1, u_2} {α : Type u_1} {β : Type u_2} {s : Set α} {t : Set β} {f : α → β} :\n  Set.MapsTo f s t ↔ f '' s ⊆ t</code>",
+ "689":
+ "<code>Lecture04_lem_l4_fy_eq_iff_subgradient.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → EReal}\n  (hf : IsProper f) {x : E} {ξ : Covector E} : f x + fenchelConjugate f ξ = ↑(ξ x) ↔ Lecture02.IsERealSubgradient f x ξ</code>",
+ "688":
+ "<code>ConvexOptV3.Lectures.Lecture04.lem_l4_fy.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → EReal}\n  (hf : IsProper f) (x : E) (ξ : Covector E) : f x + fenchelConjugate f ξ ≥ ↑(ξ x)</code><span class=\"sep\"></span><code class=\"docstring\">Lecture 4 Fenchel--Young inequality (`lem:l4_fy`). </code>",
+ "687":
+ "<code>ConvexOptV3.Lectures.Lecture04.fenchelConjugate.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (ξ : Covector E) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Fenchel conjugate `f*(ξ) = sup_x { ξ(x) - f(x) }`. </code>",
+ "686":
+ "<code>ConvexOptV3.Lectures.Lecture04.Covector.{u_2} (E : Type u_2) [NormedAddCommGroup E] [NormedSpace ℝ E] : Type u_2</code><span class=\"sep\"></span><code class=\"docstring\">A real-valued covector on `E`. </code>",
+ "685":
+ "<code>ConvexOptV3.Lectures.Lecture04.IsProper.{u_1} {E : Type u_1} (f : E → EReal) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Properness for the Lecture 4 extended-value layer. </code>",
+ "684":
+ "<code>Lecture04_lem_l4_fy.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → EReal} (hf : IsProper f)\n  (x : E) (ξ : Covector E) : f x + fenchelConjugate f ξ ≥ ↑(ξ x)</code>",
+ "683":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqValueFunction_toReal_convexOn_effectiveDomain {m n : ℕ}\n  (A : Matrix (Fin m) (Fin n) ℝ) (c : Fin n → ℝ) :\n  ConvexOn ℝ (effectiveDomain (lpReqValueFunction A c)) fun u =&gt; (lpReqValueFunction A c u).toReal</code>",
+ "682":
+ "<code>ConvexOptV3.Lectures.Lecture03.noBot_lpReqValueFunction {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (c : Fin n → ℝ) :\n  NoBot (lpReqValueFunction A c)</code>",
+ "681": "<code>NoBot (lpReqValueFunction A c)</code>",
+ "680":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqValueFunction {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (c : Fin n → ℝ)\n  (u : Fin m → ℝ) : EReal</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing value function `u ↦ inf {cᵀx : Ax ≥ u, x ≥ 0}`.\n\nIn the one-sided extended-value language of the notes, this is `+∞` whenever\nthe corresponding upper set is empty or not bounded below. </code>",
+ "68":
+ "<code>Set.Icc.{u_1} {α : Type u_1} [Preorder α] (a b : α) : Set α</code><span class=\"sep\"></span><code class=\"docstring\">`Icc a b` is the left-closed right-closed interval $[a, b]$. </code>",
+ "679":
+ "<code>Lecture03_lem_l3_value_function_convex {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (c : Fin n → ℝ) :\n  EConvexOn Set.univ (lpReqValueFunction A c)</code>",
+ "678":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReq_optimal_of_complementarySlackness {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ}\n  {b : Fin m → ℝ} {c x : Fin n → ℝ} {y : Fin m → ℝ} (hx : lpReqPrimalFeasible A b x) (hy : lpReqDualFeasible A c y)\n  (hcs : (∀ (j : Fin n), x j * (c j - A.transpose.mulVec y j) = 0) ∧ ∀ (i : Fin m), y i * (A.mulVec x i - b i) = 0) :\n  lpReqPrimalOptimal A b c x ∧ lpReqDualOptimal A b c y</code><span class=\"sep\"></span><code class=\"docstring\">Complementary slackness implies optimality for the notes-facing requirement LP. </code>",
+ "677":
+ "<code>(∀ (j : Fin n), x j * (c j - A.transpose.mulVec y j) = 0) ∧ ∀ (i : Fin m), y i * (A.mulVec x i - b i) = 0</code>",
+ "676":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReq_zero_gap_iff_complementarySlackness {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ}\n  {b : Fin m → ℝ} {c x : Fin n → ℝ} {y : Fin m → ℝ} (hx : lpReqPrimalFeasible A b x) (hy : lpReqDualFeasible A c y) :\n  c ⬝ᵥ x = b ⬝ᵥ y ↔\n    (∀ (j : Fin n), x j * (c j - A.transpose.mulVec y j) = 0) ∧ ∀ (i : Fin m), y i * (A.mulVec x i - b i) = 0</code><span class=\"sep\"></span><code class=\"docstring\">Zero gap is equivalent to complementary slackness in the notes-facing requirement LP. </code>",
+ "675":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReq_zero_gap_of_primalOptimal_dualOptimal {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ}\n  {b : Fin m → ℝ} {c x : Fin n → ℝ} {y : Fin m → ℝ} (hx : lpReqPrimalOptimal A b c x) (hy : lpReqDualOptimal A b c y) :\n  c ⬝ᵥ x = b ⬝ᵥ y</code><span class=\"sep\"></span><code class=\"docstring\">Optimal primal and dual points have zero duality gap in the notes-facing requirement LP. </code>",
+ "674": "<code>c ⬝ᵥ x = b ⬝ᵥ y</code>",
+ "673": "<code>lpReqPrimalOptimal A b c x ∧ lpReqDualOptimal A b c y</code>",
+ "672":
+ "<code>Lecture03_thm_l3_cs {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ} {b : Fin m → ℝ} {c x : Fin n → ℝ} {y : Fin m → ℝ}\n  (hx : lpReqPrimalFeasible A b x) (hy : lpReqDualFeasible A c y) :\n  lpReqPrimalOptimal A b c x ∧ lpReqDualOptimal A b c y ↔\n    (∀ (j : Fin n), x j * (c j - A.transpose.mulVec y j) = 0) ∧ ∀ (i : Fin m), y i * (A.mulVec x i - b i) = 0</code>",
+ "671":
+ "<code>Finset.sum_const_zero.{u_1, u_3} {ι : Type u_1} {M : Type u_3} {s : Finset ι} [AddCommMonoid M] : ∑ _x ∈ s, 0 = 0</code>",
+ "670":
+ "<code>MulZeroClass.zero_mul.{u} {M₀ : Type u} [self : MulZeroClass M₀] (a : M₀) : 0 * a = 0</code><span class=\"sep\"></span><code class=\"docstring\">Zero is a left absorbing element for multiplication </code>",
+ "67":
+ "<code>Set.MapsTo.{u, v} {α : Type u} {β : Type v} (f : α → β) (s : Set α) (t : Set β) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`MapsTo f s t` means that the image of `s` is contained in `t`. </code>",
+ "669": "<code>x_1 ∈ Finset.univ</code>",
+ "668":
+ "<code>Finset.sum_congr.{u_1, u_4} {ι : Type u_1} {M : Type u_4} {s₁ s₂ : Finset ι} [AddCommMonoid M] {f g : ι → M}\n  (h : s₁ = s₂) : (∀ x ∈ s₂, f x = g x) → s₁.sum f = s₂.sum g</code>",
+ "667": "<code>b ⬝ᵥ y ≤ 0</code>",
+ "666":
+ "<code>ConvexOptV3.Lectures.Lecture03.lem_l3_weak_duality {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ} {b : Fin m → ℝ}\n  {c x : Fin n → ℝ} {y : Fin m → ℝ} (hx : lpReqPrimalFeasible A b x) (hy : lpReqDualFeasible A c y) : b ⬝ᵥ y ≤ c ⬝ᵥ x</code><span class=\"sep\"></span><code class=\"docstring\">Weak duality for the notes-facing requirement LP. </code>",
+ "665": "<code>b ⬝ᵥ y ≤ (fun x =&gt; 0) ⬝ᵥ x</code>",
+ "664": "<code>0 &lt; b ⬝ᵥ y</code>",
+ "663": "<code>lpReqDualFeasible A 0 y</code>",
+ "662":
+ "<code class=\"docstring\">The `rintro` tactic is a combination of the `intros` tactic with `rcases` to\nallow for destructuring patterns while introducing variables. See `rcases` for\na description of supported patterns. For example, `rintro (a | ⟨b, c⟩) ⟨d, e⟩`\nwill introduce two variables, and then do case splits on both of them producing\ntwo subgoals, one with variables `a d e` and the other with `b c d e`.\n\n`rintro`, unlike `rcases`, also supports the form `(x y : ty)` for introducing\nand type-ascripting multiple variables at once, similar to binders.\n</code>",
+ "661":
+ "<code>ConvexOptV3.Lectures.Lecture03.thm_l3_farkas_or {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ) :\n  (∃ x, lpReqPrimalFeasible A b x) ∨ ∃ y, lpReqDualFeasible A 0 y ∧ 0 &lt; b ⬝ᵥ y</code><span class=\"sep\"></span><code class=\"docstring\">Disjunctive Farkas alternative in the notes-facing `Ax ≥ b`, `x ≥ 0`\nformulation. </code>",
+ "660":
+ "<code>Or (a b : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`Or a b`, or `a ∨ b`, is the disjunction of propositions. There are two\nconstructors for `Or`, called `Or.inl : a → a ∨ b` and `Or.inr : b → a ∨ b`,\nand you can use `match` or `cases` to destruct an `Or` assumption into the\ntwo cases.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∨` in identifiers is `or`.\n\n * The recommended spelling of `\\/` in identifiers is `or` (prefer `∨` over `\\/`).</code>",
+ "66": "<code>Set.MapsTo (⇑(AffineMap.lineMap xStar x)) (Set.Icc 0 1) Ω</code>",
+ "659":
+ "<code>Lecture03_thm_l3_farkas {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ) :\n  ((∃ x, lpReqPrimalFeasible A b x) ∨ ∃ y, lpReqDualFeasible A 0 y ∧ 0 &lt; b ⬝ᵥ y) ∧\n    ¬((∃ x, lpReqPrimalFeasible A b x) ∧ ∃ y, lpReqDualFeasible A 0 y ∧ 0 &lt; b ⬝ᵥ y)</code>",
+ "658":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqPrimalValue_eq_of_primalOptimal {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ}\n  {b : Fin m → ℝ} {c x : Fin n → ℝ} (hx : lpReqPrimalOptimal A b c x) : sInf (lpReqPrimalObjectiveValues A b c) = c ⬝ᵥ x</code><span class=\"sep\"></span><code class=\"docstring\">If `x` is primal-optimal, then its objective value equals the infimum of the primal objective-value set. </code>",
+ "657":
+ "<code>ConvexOptV3.Lectures.Lecture03.thm_l3_lp_strong_dual {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ} {b : Fin m → ℝ}\n  {c : Fin n → ℝ} (hnonempty : (lpReqPrimalObjectiveValues A b c).Nonempty)\n  (hbounded : BddBelow (lpReqPrimalObjectiveValues A b c)) :\n  ∃ y,\n    lpReqDualOptimal A b c y ∧\n      sInf (lpReqPrimalObjectiveValues A b c) = sSup (lpReqDualObjectiveValues A b c) ∧\n        sSup (lpReqDualObjectiveValues A b c) = b ⬝ᵥ y</code><span class=\"sep\"></span><code class=\"docstring\">Dual attainment plus value equality for strong duality in the notes-facing\nrequirement LP. This helper keeps the old dual-only interface available for\ndownstream proofs. </code>",
+ "656": "<code>sSup (lpReqDualObjectiveValues A b c) = b ⬝ᵥ y</code>",
+ "655":
+ "<code>sInf (lpReqPrimalObjectiveValues A b c) = sSup (lpReqDualObjectiveValues A b c)</code>",
+ "654": "<code>lpReqDualOptimal A b c y</code>",
+ "653":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqPrimalOptimal_exists_of_nonempty_bddBelow {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ}\n  {b : Fin m → ℝ} {c : Fin n → ℝ} (hnonempty : (lpReqPrimalObjectiveValues A b c).Nonempty)\n  (hbounded : BddBelow (lpReqPrimalObjectiveValues A b c)) : ∃ x, lpReqPrimalOptimal A b c x</code><span class=\"sep\"></span><code class=\"docstring\">If the primal objective-value set is nonempty and bounded below, then the\nnotes-facing LP primal optimum is attained. </code>",
+ "652": "<code>lpReqPrimalOptimal A b c x</code>",
+ "651":
+ "<code>SupSet.sSup.{u_1} {α : Type u_1} [self : SupSet α] : Set α → α</code><span class=\"sep\"></span><code class=\"docstring\">Supremum of a set </code>",
+ "650":
+ "<code>InfSet.sInf.{u_1} {α : Type u_1} [self : InfSet α] : Set α → α</code><span class=\"sep\"></span><code class=\"docstring\">Infimum of a set </code>",
+ "65":
+ "<code>Function.comp.{u, v, w} {α : Sort u} {β : Sort v} {δ : Sort w} (f : β → δ) (g : α → β) : α → δ</code><span class=\"sep\"></span><code class=\"docstring\">Function composition, usually written with the infix operator `∘`. A new function is created from\ntwo existing functions, where one function's output is used as input to the other.\n\nExamples:\n * `Function.comp List.reverse (List.drop 2) [3, 2, 4, 1] = [1, 4]`\n * `(List.reverse ∘ List.drop 2) [3, 2, 4, 1] = [1, 4]`\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∘` in identifiers is `comp`.</code>",
+ "649":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqDualOptimal {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ) (c : Fin n → ℝ)\n  (y : Fin m → ℝ) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Dual optimality for the notes-facing requirement LP. </code>",
+ "648":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqPrimalOptimal {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ)\n  (c x : Fin n → ℝ) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Primal optimality for the notes-facing requirement LP. </code>",
+ "647":
+ "<code>BddBelow.{u_1} {α : Type u_1} [LE α] (s : Set α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A set is bounded below if there exists a lower bound. </code>",
+ "646": "<code>BddBelow (lpReqPrimalObjectiveValues A b c)</code>",
+ "645": "<code>(lpReqPrimalObjectiveValues A b c).Nonempty</code>",
+ "644":
+ "<code>Lecture03_thm_l3_lp_strong {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ} {b : Fin m → ℝ} {c : Fin n → ℝ}\n  (hnonempty : (lpReqPrimalObjectiveValues A b c).Nonempty) (hbounded : BddBelow (lpReqPrimalObjectiveValues A b c)) :\n  ∃ x y,\n    lpReqPrimalOptimal A b c x ∧\n      lpReqDualOptimal A b c y ∧\n        sInf (lpReqPrimalObjectiveValues A b c) = sSup (lpReqDualObjectiveValues A b c) ∧\n          sInf (lpReqPrimalObjectiveValues A b c) = c ⬝ᵥ x ∧ sSup (lpReqDualObjectiveValues A b c) = b ⬝ᵥ y</code>",
+ "643":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqDualObjectiveValues_closed {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ)\n  (c : Fin n → ℝ) : IsClosed (lpReqDualObjectiveValues A b c)</code><span class=\"sep\"></span><code class=\"docstring\">The dual objective-value set for the notes-facing requirement LP is closed. </code>",
+ "642":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqPrimalObjectiveValues_closed {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ)\n  (b : Fin m → ℝ) (c : Fin n → ℝ) : IsClosed (lpReqPrimalObjectiveValues A b c)</code><span class=\"sep\"></span><code class=\"docstring\">The primal objective-value set for the notes-facing requirement LP is closed. </code>",
+ "641":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqDualObjectiveValues {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ)\n  (c : Fin n → ℝ) : Set ℝ</code><span class=\"sep\"></span><code class=\"docstring\">The set of dual-feasible objective values for the notes-facing requirement LP. </code>",
+ "640":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqPrimalObjectiveValues {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ)\n  (c : Fin n → ℝ) : Set ℝ</code><span class=\"sep\"></span><code class=\"docstring\">The set of primal-feasible objective values for the notes-facing requirement LP. </code>",
+ "64":
+ "<code>AffineMap.lineMap.{u_1, u_2, u_3} {k : Type u_1} {V1 : Type u_2} {P1 : Type u_3} [Ring k] [AddCommGroup V1]\n  [Module k V1] [AddTorsor V1 P1] (p₀ p₁ : P1) : k →ᵃ[k] P1</code><span class=\"sep\"></span><code class=\"docstring\">The affine map from `k` to `P1` sending `0` to `p₀` and `1` to `p₁`. </code>",
+ "639":
+ "<code>Lecture03_lem_l3_objective_values_closed {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ) (c : Fin n → ℝ) :\n  IsClosed (lpReqPrimalObjectiveValues A b c) ∧ IsClosed (lpReqDualObjectiveValues A b c)</code>",
+ "638":
+ "<code>mul_le_mul_of_nonneg_left.{u_1} {α : Type u_1} [Mul α] [Zero α] [Preorder α] {a b c : α} [PosMulMono α] (hbc : b ≤ c)\n  (ha : 0 ≤ a) : a * b ≤ a * c</code>",
+ "637": "<code>j ∈ Finset.univ</code>",
+ "636":
+ "<code>Matrix.vecMul_transpose.{v, u_2, u_3} {m : Type u_2} {n : Type u_3} {α : Type v} [NonUnitalCommSemiring α] [Fintype n]\n  (A : Matrix m n α) (x : n → α) : Matrix.vecMul x A.transpose = A.mulVec x</code>",
+ "635": "<code>Matrix.vecMul y A = A.transpose.mulVec y</code>",
+ "634":
+ "<code>Matrix.vecMul.{v, u_2, u_3} {m : Type u_2} {n : Type u_3} {α : Type v} [NonUnitalNonAssocSemiring α] [Fintype m]\n  (v : m → α) (M : Matrix m n α) : n → α</code><span class=\"sep\"></span><code class=\"docstring\">`v ᵥ* M` (notation for `vecMul v M`) is the vector-matrix product of vector `v` and matrix `M`,\nwhere `v` is seen as a row vector.\nPut another way, `v ᵥ* M` is the vector whose entries are those of `row v * M` (see `row_vecMul`).\n\nThe notation has precedence 73, which comes immediately before ` ⬝ᵥ ` for `dotProduct`,\nso that `v ᵥ* A ⬝ᵥ w ᵥ* B` is parsed as `(v ᵥ* A) ⬝ᵥ (w ᵥ* B)`.\n</code>",
+ "633":
+ "<code>Matrix.dotProduct_mulVec.{u_2, u_3, u_7} {m : Type u_2} {n : Type u_3} {R : Type u_7} [Fintype n] [Fintype m]\n  [NonUnitalSemiring R] (v : m → R) (A : Matrix m n R) (w : n → R) : v ⬝ᵥ A.mulVec w = Matrix.vecMul v A ⬝ᵥ w</code><span class=\"sep\"></span><code class=\"docstring\">Associate the dot product of `mulVec` to the left. </code>",
+ "632":
+ "<code>mul_comm.{u_1} {G : Type u_1} [CommMagma G] (a b : G) : a * b = b * a</code>",
+ "631":
+ "<code>mul_le_mul_of_nonneg_right.{u_1} {α : Type u_1} [Mul α] [Zero α] [Preorder α] {a b c : α} [MulPosMono α] (hbc : b ≤ c)\n  (ha : 0 ≤ a) : b * a ≤ c * a</code>",
+ "630": "<code>i ∈ Finset.univ</code>",
+ "63": "<code>ℝ → ℝ</code>",
+ "629":
+ "<code>Finset.univ.{u_1} {α : Type u_1} [Fintype α] : Finset α</code><span class=\"sep\"></span><code class=\"docstring\">`univ` is the universal finite set of type `Finset α` implied from\nthe assumption `Fintype α`. </code>",
+ "628":
+ "<code>Finset.sum_le_sum.{u_1, u_5} {ι : Type u_1} {N : Type u_5} [AddCommMonoid N] [PartialOrder N] {f g : ι → N}\n  {s : Finset ι} [AddLeftMono N] (h : ∀ i ∈ s, f i ≤ g i) : ∑ i ∈ s, f i ≤ ∑ i ∈ s, g i</code><span class=\"sep\"></span><code class=\"docstring\">In an ordered additive commutative monoid, if each summand `f i` of one finite sum is less than\nor equal to the corresponding summand `g i` of another finite sum, then\n`∑ i ∈ s, f i ≤ ∑ i ∈ s, g i`. </code>",
+ "627":
+ "<code>Matrix.transpose.{v, u_2, u_3} {m : Type u_2} {n : Type u_3} {α : Type v} (M : Matrix m n α) : Matrix n m α</code><span class=\"sep\"></span><code class=\"docstring\">The transpose of a matrix. </code>",
+ "626": "<code>∀ (i : Fin m), 0 ≤ y i</code>",
+ "625": "<code>∀ (j : Fin n), A.transpose.mulVec y j ≤ c j</code>",
+ "624": "<code>Fin n</code>",
+ "623":
+ "<code>Matrix.mulVec.{v, u_2, u_3} {m : Type u_2} {n : Type u_3} {α : Type v} [NonUnitalNonAssocSemiring α] [Fintype n]\n  (M : Matrix m n α) (v : n → α) : m → α</code><span class=\"sep\"></span><code class=\"docstring\">`M *ᵥ v` (notation for `mulVec M v`) is the matrix-vector product of matrix `M` and vector `v`,\nwhere `v` is seen as a column vector.\nPut another way, `M *ᵥ v` is the vector whose entries are those of `M * col v` (see `col_mulVec`).\n\nThe notation has precedence 73, which comes immediately before ` ⬝ᵥ ` for `dotProduct`,\nso that `A *ᵥ v ⬝ᵥ B *ᵥ w` is parsed as `(A *ᵥ v) ⬝ᵥ (B *ᵥ w)`.\n</code>",
+ "622": "<code>Fin m</code>",
+ "621": "<code>∀ (j : Fin n), 0 ≤ x j</code>",
+ "620": "<code>∀ (i : Fin m), b i ≤ A.mulVec x i</code>",
+ "62":
+ "<code class=\"docstring\">The `let` tactic is for adding definitions to the local context of the main goal.\nThe definition can be unfolded, unlike definitions introduced by `have`.\n\n* `let x : t := e` adds the definition `x : t := e` if `e` is a term of type `t`.\n* `let x := e` uses the type of `e` for `t`.\n* `let : t := e` and `let := e` use `this` for the name of the hypothesis.\n* `let pat := e` for a pattern `pat` is equivalent to `match e with | pat =&gt; _`,\n  where `_` stands for the tactics that follow this one.\n  It is convenient for types that let only one applicable constructor.\n  For example, given `p : α × β × γ`, `let ⟨x, y, z⟩ := p` produces the\n  local variables `x : α`, `y : β`, and `z : γ`.\n* The syntax `let (eq := h) pat := e` is equivalent to `match h : e with | pat =&gt; _`,\n  which adds the equation `h : e = pat` to the local context.\n\nThe tactic supports all the same syntax variants and options as the `let` term.\n\n## Properties and relations\n\n* Unlike `have`, it is possible to unfold definitions introduced using `let`, using tactics\n  such as `simp`, `dsimp`, `unfold`, and `subst`.\n* The `clear_value` tactic turns a `let` definition into a `have` definition after the fact.\n  The tactic might fail if the local context depends on the value of the variable.\n* The `let` tactic is preferred for data (non-propositions).\n* Sometimes `have` is used for non-propositions to ensure that the variable is never unfolded,\n  which may be important for performance reasons.\n</code>",
+ "619":
+ "<code>dotProduct.{v, u_2} {m : Type u_2} {α : Type v} [Fintype m] [Mul α] [AddCommMonoid α] (v w : m → α) : α</code><span class=\"sep\"></span><code class=\"docstring\">`dotProduct v w` is the sum of the entrywise products `v i * w i`.\n\nSee also `dotProductEquiv`. </code>",
+ "618":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqDualFeasible {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (c : Fin n → ℝ)\n  (y : Fin m → ℝ) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing LP dual feasibility: `Aᵀy ≤ c` and `y ≥ 0`. </code>",
+ "617": "<code>lpReqDualFeasible A c y</code>",
+ "616":
+ "<code>ConvexOptV3.Lectures.Lecture03.lpReqPrimalFeasible {m n : ℕ} (A : Matrix (Fin m) (Fin n) ℝ) (b : Fin m → ℝ)\n  (x : Fin n → ℝ) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing LP primal feasibility: `Ax ≥ b` and `x ≥ 0`. </code>",
+ "615": "<code>lpReqPrimalFeasible A b x</code>",
+ "614": "<code>Fin n → ℝ</code>",
+ "613": "<code>Fin m → ℝ</code>",
+ "612":
+ "<code>Matrix.{u, u', v} (m : Type u) (n : Type u') (α : Type v) : Type (max u u' v)</code><span class=\"sep\"></span><code class=\"docstring\">`Matrix m n R` is the type of matrices with entries in `R`, whose rows are indexed by `m`\nand whose columns are indexed by `n`. </code>",
+ "611": "<code>Matrix (Fin m) (Fin n) ℝ</code>",
+ "610":
+ "<code>Lecture03_lem_l3_weak_duality {m n : ℕ} {A : Matrix (Fin m) (Fin n) ℝ} {b : Fin m → ℝ} {c x : Fin n → ℝ} {y : Fin m → ℝ}\n  (hx : lpReqPrimalFeasible A b x) (hy : lpReqDualFeasible A c y) : b ⬝ᵥ y ≤ c ⬝ᵥ x</code>",
+ "61": "<code>x ∈ Ω</code>",
+ "609": "<code>P ↑v = v</code>",
+ "608":
+ "<code>ContinuousLinearMap.{u_1, u_2, u_3, u_4} {R : Type u_1} {S : Type u_2} [Semiring R] [Semiring S] (σ : R →+* S)\n  (M : Type u_3) [TopologicalSpace M] [AddCommMonoid M] (M₂ : Type u_4) [TopologicalSpace M₂] [AddCommMonoid M₂]\n  [Module R M] [Module S M₂] : Type (max u_3 u_4)</code><span class=\"sep\"></span><code class=\"docstring\">Continuous linear maps between modules. We only put the type classes that are necessary for the\ndefinition, although in applications `M` and `M₂` will be topological modules over the topological\nring `R`. </code>",
+ "607":
+ "<code>Submodule.linearProjOfClosedCompl.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [NontriviallyNormedField 𝕜]\n  [NormedAddCommGroup E] [NormedSpace 𝕜 E] [CompleteSpace E] (p q : Subspace 𝕜 E) (h : IsCompl p q) (hp : IsClosed ↑p)\n  (hq : IsClosed ↑q) : E →L[𝕜] ↥p</code><span class=\"sep\"></span><code class=\"docstring\">Projection to a closed submodule along a closed complement. </code>",
+ "606": "<code>E →L[ℝ] ↥L</code>",
+ "605": "<code>IsClosed ↑q</code>",
+ "604":
+ "<code>Submodule.closed_of_finiteDimensional.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [NontriviallyNormedField 𝕜]\n  [CompleteSpace 𝕜] [AddCommGroup E] [TopologicalSpace E] [IsTopologicalAddGroup E] [Module 𝕜 E] [ContinuousSMul 𝕜 E]\n  [T2Space E] (s : Submodule 𝕜 E) [FiniteDimensional 𝕜 ↥s] : IsClosed ↑s</code><span class=\"sep\"></span><code class=\"docstring\">A finite-dimensional subspace is closed. </code>",
+ "603": "<code>IsClosed ↑L</code>",
+ "602":
+ "<code>Submodule.exists_isCompl.{u_3, u_4} {K : Type u_3} {V : Type u_4} [DivisionRing K] [AddCommGroup V] [Module K V]\n  (p : Submodule K V) : ∃ q, IsCompl p q</code>",
+ "601":
+ "<code>IsCompl.{u_1} {α : Type u_1} [PartialOrder α] [BoundedOrder α] (x y : α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Two elements `x` and `y` are complements of each other if `x ⊔ y = ⊤` and `x ⊓ y = ⊥`. </code>",
+ "600": "<code>IsCompl L q</code>",
+ "60":
+ "<code class=\"docstring\">Introduces one or more hypotheses, optionally naming and/or pattern-matching them.\nFor each hypothesis to be introduced, the remaining main goal's target type must\nbe a `let` or function type.\n\n* `intro` by itself introduces one anonymous hypothesis, which can be accessed\n  by e.g. `assumption`. It is equivalent to `intro _`.\n* `intro x y` introduces two hypotheses and names them. Individual hypotheses\n  can be anonymized via `_`, given a type ascription, or matched against a pattern:\n  ```lean\n  -- ... ⊢ α × β → ...\n  intro (a, b)\n  -- ..., a : α, b : β ⊢ ...\n  ```\n* `intro rfl` is short for `intro h; subst h`, if `h` is an equality where the left-hand or right-hand side\n  is a variable.\n* Alternatively, `intro` can be combined with pattern matching much like `fun`:\n  ```lean\n  intro\n  | n + 1, 0 =&gt; tac\n  | ...\n  ```\n</code>",
+ "6": "<code>E → ℝ</code>",
+ "599": "<code>↥L</code>",
+ "598": "<code>Covector ↥L</code>",
+ "597":
+ "<code>Submodule.{u, v} (R : Type u) (M : Type v) [Semiring R] [AddCommMonoid M] [Module R M] : Type v</code><span class=\"sep\"></span><code class=\"docstring\">A submodule of a module is one which is closed under vector operations.\nThis is a sufficient condition for the subset of vectors in the submodule\nto themselves form a module. </code>",
+ "596": "<code>Submodule ℝ E</code>",
+ "595":
+ "<code>Lecture02_lem_l2_extend_covector.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {L : Submodule ℝ E} (gL : Covector ↥L) : ∃ g, ∀ (v : ↥L), g ↑v = gL v</code>",
+ "594":
+ "<code>EmptyCollection.emptyCollection.{u} {α : Type u} [self : EmptyCollection α] : α</code><span class=\"sep\"></span><code class=\"docstring\">`∅` or `{}` is the empty set or empty collection.\nIt is supported by the `EmptyCollection` typeclass. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `{}` in identifiers is `empty`.\n\n * The recommended spelling of `∅` in identifiers is `empty`.</code>",
+ "593":
+ "<code>Set.not_nonempty_iff_eq_empty.{u} {α : Type u} {s : Set α} : ¬s.Nonempty ↔ s = ∅</code><span class=\"sep\"></span><code class=\"docstring\">See also `Set.nonempty_iff_ne_empty`. </code>",
+ "592": "<code>interior C = ∅</code>",
+ "591": "<code>¬(interior C).Nonempty</code>",
+ "590": "<code>affineSpan ℝ C = ⊤</code>",
+ "59":
+ "<code>fderiv.{u_4, u_5, u_6} (𝕜 : Type u_4) [NontriviallyNormedField 𝕜] {E : Type u_5} [AddCommGroup E] [Module 𝕜 E]\n  [TopologicalSpace E] {F : Type u_6} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F] (f : E → F) (x : E) : E →L[𝕜] F</code><span class=\"sep\"></span><code class=\"docstring\">If `f` has a derivative at `x`, then `fderiv 𝕜 f x` is such a derivative. Otherwise, it is\nset to `0`. </code>",
+ "589":
+ "<code>Convex.interior_nonempty_iff_affineSpan_eq_top.{u_1} {V : Type u_1} [NormedAddCommGroup V] [NormedSpace ℝ V]\n  [FiniteDimensional ℝ V] {s : Set V} (hs : Convex ℝ s) : (interior s).Nonempty ↔ affineSpan ℝ s = ⊤</code>",
+ "588": "<code>affineSpan ℝ (closure C) = ⊤</code>",
+ "587": "<code>x ∈ interior (closure C)</code>",
+ "586":
+ "<code>Set.eq_empty_iff_forall_notMem.{u} {α : Type u} {s : Set α} : s = ∅ ↔ ∀ (x : α), x ∉ s</code>",
+ "585": "<code>interior (closure C) = ∅</code>",
+ "584":
+ "<code>affineSpan_mono.{u_1, u_2, u_3} (k : Type u_1) {V : Type u_2} {P : Type u_3} [Ring k] [AddCommGroup V] [Module k V]\n  [AddTorsor V P] {s₁ s₂ : Set P} (h : s₁ ⊆ s₂) : affineSpan k s₁ ≤ affineSpan k s₂</code><span class=\"sep\"></span><code class=\"docstring\">`affineSpan` is monotone. </code>",
+ "583":
+ "<code>affineSpan.{u_1, u_2, u_3} (k : Type u_1) {V : Type u_2} {P : Type u_3} [Ring k] [AddCommGroup V] [Module k V]\n  [AddTorsor V P] (s : Set P) : AffineSubspace k P</code><span class=\"sep\"></span><code class=\"docstring\">The affine span of a set of points is the smallest affine subspace containing those points.\n(Actually defined here in terms of spans in modules.) </code>",
+ "582":
+ "<code>AffineSubspace.closed_of_finiteDimensional.{u, v, u_1} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {E : Type v}\n  [NormedAddCommGroup E] [NormedSpace 𝕜 E] [CompleteSpace 𝕜] {P : Type u_1} [MetricSpace P] [NormedAddTorsor E P]\n  (s : AffineSubspace 𝕜 P) [FiniteDimensional 𝕜 ↥s.direction] : IsClosed ↑s</code>",
+ "581":
+ "<code>subset_affineSpan.{u_1, u_2, u_3} (k : Type u_1) {V : Type u_2} {P : Type u_3} [Ring k] [AddCommGroup V] [Module k V]\n  [AddTorsor V P] (s : Set P) : s ⊆ ↑(affineSpan k s)</code><span class=\"sep\"></span><code class=\"docstring\">A set is contained in its affine span. </code>",
+ "580":
+ "<code>closure_minimal.{u} {X : Type u} [TopologicalSpace X] {s t : Set X} (h₁ : s ⊆ t) (h₂ : IsClosed t) : closure s ⊆ t</code>",
+ "58":
+ "<code>Differentiable.{u_1, u_2, u_3} (𝕜 : Type u_1) [NontriviallyNormedField 𝕜] {E : Type u_2} [AddCommGroup E] [Module 𝕜 E]\n  [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F] (f : E → F) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`Differentiable 𝕜 f` means that `f` is differentiable at any point. </code>",
+ "579":
+ "<code>affineSpan_le_of_subset_coe.{u_1, u_2, u_3} {k : Type u_1} {V : Type u_2} {P : Type u_3} [Ring k] [AddCommGroup V]\n  [Module k V] [AddTorsor V P] {s : Set P} {s₁ : AffineSubspace k P} (h : s ⊆ ↑s₁) : affineSpan k s ≤ s₁</code><span class=\"sep\"></span><code class=\"docstring\">If an affine subspace contains a set of points, it contains the affine span of that set. </code>",
+ "578": "<code>affineSpan ℝ (closure C) = affineSpan ℝ C</code>",
+ "577": "<code>(interior C).Nonempty</code>",
+ "576":
+ "<code>Convex.interior_closure_eq_interior_of_nonempty_interior.{u_2, u_3} {𝕜 : Type u_2} {E : Type u_3} [Field 𝕜]\n  [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜] [AddCommGroup E] [Module 𝕜 E] [TopologicalSpace E] [IsTopologicalAddGroup E]\n  [TopologicalSpace 𝕜] [OrderTopology 𝕜] [ContinuousSMul 𝕜 E] {s : Set E} (hs : Convex 𝕜 s)\n  (hs' : (interior s).Nonempty) : interior (closure s) = interior s</code>",
+ "575":
+ "<code>Convex.closure.{u_2, u_3} {𝕜 : Type u_2} {E : Type u_3} [Field 𝕜] [PartialOrder 𝕜] [AddCommGroup E] [Module 𝕜 E]\n  [TopologicalSpace E] [IsTopologicalAddGroup E] [ContinuousConstSMul 𝕜 E] {s : Set E} (hs : Convex 𝕜 s) :\n  Convex 𝕜 (closure s)</code><span class=\"sep\"></span><code class=\"docstring\">In a topological vector space, the closure of a convex set is convex. </code>",
+ "574": "<code>Type u_2</code>",
+ "573":
+ "<code>ConvexOptV3.Lectures.Lecture02.IsERealSubgradientWithin.of_effectiveDomain.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {f : E → EReal} {x : E} {g : Covector E} (h : IsERealSubgradientWithin f (effectiveDomain f) x g) :\n  IsERealSubgradient f x g</code>",
+ "572":
+ "<code>ConvexOptV3.Lectures.Lecture02.IsERealSubgradientWithin.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (s : Set E) (x : E) (g : Covector E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Relative extended-value subgradient on a comparison set. </code>",
+ "571":
+ "<code>ConvexOptV3.Lectures.Lecture02.exists_ereal_subgradientWithin_of_mem_intrinsicInterior_effectiveDomain.{u_1}\n  {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E] {f : E → EReal} (hproper : IsProper f)\n  (hconv : EConvexOn Set.univ f) {x : E} (hx : x ∈ intrinsicInterior ℝ (effectiveDomain f)) :\n  ∃ g, IsERealSubgradientWithin f (effectiveDomain f) x g</code>",
+ "570": "<code>IsERealSubgradientWithin f (effectiveDomain f) x g</code>",
+ "57": "<code>Differentiable ℝ f</code>",
+ "569":
+ "<code>intrinsicInterior.{u_1, u_2, u_5} (𝕜 : Type u_1) {V : Type u_2} {P : Type u_5} [Ring 𝕜] [AddCommGroup V] [Module 𝕜 V]\n  [TopologicalSpace P] [AddTorsor V P] (s : Set P) : Set P</code><span class=\"sep\"></span><code class=\"docstring\">The intrinsic interior of a set is its interior considered as a set in its affine span. </code>",
+ "568": "<code>x ∈ intrinsicInterior ℝ (effectiveDomain f)</code>",
+ "567":
+ "<code>ConvexOptV3.Lectures.Lecture02.IsProper.{u_1} {E : Type u_1} (f : E → EReal) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Properness for the Lecture 2 extended-value layer. </code>",
+ "566": "<code>IsProper f</code>",
+ "565":
+ "<code>Lecture02_thm_l2_subgrad_exist.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {f : E → EReal} (hproper : IsProper f) (hconv : EConvexOn Set.univ f) {x : E}\n  (hx : x ∈ intrinsicInterior ℝ (effectiveDomain f)) : ∃ g, IsERealSubgradient f x g</code>",
+ "564": "<code>g = fderiv ℝ f x</code>",
+ "563": "<code>g ∈ {fderiv ℝ f x}</code>",
+ "562":
+ "<code>Set.mem_singleton_iff.{u} {α : Type u} {a b : α} : a ∈ {b} ↔ a = b</code>",
+ "561":
+ "<code>ContinuousLinearMap.fderiv.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2} [AddCommGroup E]\n  [Module 𝕜 E] [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F] (f : E →L[𝕜] F)\n  {x : E} [ContinuousAdd E] [ContinuousSMul 𝕜 E] [ContinuousAdd F] [ContinuousSMul 𝕜 F] [T2Space F] :\n  fderiv 𝕜 (⇑f) x = f</code>",
+ "560": "<code>fderiv ℝ f x = g</code>",
+ "56": "<code>∀ y ∈ Ω, f xStar ≤ f y</code>",
+ "559":
+ "<code>ContinuousLinearMap.differentiableAt.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2}\n  [AddCommGroup E] [Module 𝕜 E] [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F]\n  (f : E →L[𝕜] F) {x : E} : DifferentiableAt 𝕜 (⇑f) x</code>",
+ "558":
+ "<code>fderiv_sub.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2} [NormedAddCommGroup E]\n  [NormedSpace 𝕜 E] {F : Type u_3} [NormedAddCommGroup F] [NormedSpace 𝕜 F] {f g : E → F} {x : E}\n  (hf : DifferentiableAt 𝕜 f x) (hg : DifferentiableAt 𝕜 g x) : fderiv 𝕜 (f - g) x = fderiv 𝕜 f x - fderiv 𝕜 g x</code>",
+ "557":
+ "<code>ContinuousLinearMap.ext.{u_1, u_2, u_4, u_6} {R₁ : Type u_1} {R₂ : Type u_2} [Semiring R₁] [Semiring R₂]\n  {σ₁₂ : R₁ →+* R₂} {M₁ : Type u_4} [TopologicalSpace M₁] [AddCommMonoid M₁] {M₂ : Type u_6} [TopologicalSpace M₂]\n  [AddCommMonoid M₂] [Module R₁ M₁] [Module R₂ M₂] {f g : M₁ →SL[σ₁₂] M₂} (h : ∀ (x : M₁), f x = g x) : f = g</code>",
+ "556": "<code>fderiv ℝ h x = fderiv ℝ f x - g</code>",
+ "555":
+ "<code>le_antisymm.{u_1} {α : Type u_1} [PartialOrder α] {a b : α} : a ≤ b → b ≤ a → a = b</code>",
+ "554": "<code>0 &lt; (fderiv ℝ h x) v</code>",
+ "553": "<code>0 ≤ -(fderiv ℝ h x) v</code>",
+ "552": "<code>E →L[ℝ] ℝ</code>",
+ "551": "<code>fderiv ℝ h x = 0</code>",
+ "550":
+ "<code>sub_sub_cancel_left.{u_3} {G : Type u_3} [AddCommGroup G] (a b : G) : a - b - a = -b</code>",
+ "55":
+ "<code>Convex.{u_1, u_2} (𝕜 : Type u_1) {E : Type u_2} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid E] [SMul 𝕜 E] (s : Set E) :\n  Prop</code><span class=\"sep\"></span><code class=\"docstring\">Convexity of sets. </code>",
+ "549":
+ "<code>map_neg.{u_7, u_8, u_9} {G : Type u_7} {H : Type u_8} {F : Type u_9} [FunLike F G H] [AddGroup G] [SubtractionMonoid H]\n  [AddMonoidHomClass F G H] (f : F) (a : G) : f (-a) = -f a</code><span class=\"sep\"></span><code class=\"docstring\">Additive group homomorphisms preserve negation. </code>",
+ "548": "<code>0 ≤ (fderiv ℝ h x) (-v)</code>",
+ "547":
+ "<code>add_sub_cancel_left.{u_3} {G : Type u_3} [AddCommGroup G] (a b : G) : a + b - a = b</code>",
+ "546": "<code>∀ (v : E), (fderiv ℝ h x) v ≤ 0</code>",
+ "545":
+ "<code>Set.mem_univ._simp_1.{u} {α : Type u} (x : α) : (x ∈ Set.univ) = True</code>",
+ "544": "<code>∀ (v : E), 0 ≤ (fderiv ℝ h x) v</code>",
+ "543": "<code>f y - g y &lt; f x - g x</code>",
+ "542":
+ "<code>ConvexOptV3.Lectures.Lecture01.thm_l1_first_order_char.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {Ω : Set E} {f : E → ℝ} {xStar : E} (hconv : ConvexOn ℝ Ω f) (hxStar : xStar ∈ Ω) (hf : Differentiable ℝ f) :\n  (∀ x ∈ Ω, f xStar ≤ f x) ↔ ∀ x ∈ Ω, 0 ≤ (fderiv ℝ f xStar) (x - xStar)</code><span class=\"sep\"></span><code class=\"docstring\">Lecture 1 differentiable convex first-order characterization\n(`thm:l1_first_order_char`). </code>",
+ "541": "<code>∀ x_1 ∈ Set.univ, 0 ≤ (fderiv ℝ h x) (x_1 - x)</code>",
+ "540": "<code>f y ≥ f x + (g y - g x)</code>",
+ "54": "<code>Convex ℝ Ω</code>",
+ "539":
+ "<code>ContinuousLinearMap.map_sub.{u_1, u_2, u_4, u_5} {R : Type u_1} [Ring R] {R₂ : Type u_2} [Ring R₂] {M : Type u_4}\n  [TopologicalSpace M] [AddCommGroup M] {M₂ : Type u_5} [TopologicalSpace M₂] [AddCommGroup M₂] [Module R M]\n  [Module R₂ M₂] {σ₁₂ : R →+* R₂} (f : M →SL[σ₁₂] M₂) (x y : M) : f (x - y) = f x - f y</code>",
+ "538": "<code>f y ≥ f x + g (y - x)</code>",
+ "537":
+ "<code class=\"docstring\">* `change tgt'` will change the goal from `tgt` to `tgt'`,\n  assuming these are definitionally equal.\n* `change t' at h` will change hypothesis `h : t` to have type `t'`, assuming\n  assuming `t` and `t'` are definitionally equal.\n* `change a with b` will change occurrences of `a` to `b` in the goal,\n  assuming `a` and `b` are definitionally equal.\n* `change a with b at h` similarly changes `a` to `b` in the type of hypothesis `h`.\n</code>",
+ "536": "<code>y ∈ Set.univ</code>",
+ "535":
+ "<code>Differentiable.sub_iff_left._simp_2.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2}\n  [NormedAddCommGroup E] [NormedSpace 𝕜 E] {F : Type u_3} [NormedAddCommGroup F] [NormedSpace 𝕜 F] {f g : E → F}\n  (hg : Differentiable 𝕜 g) : Differentiable 𝕜 (f - g) = Differentiable 𝕜 f</code>",
+ "534":
+ "<code>ContinuousLinearMap.differentiable._simp_1.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2}\n  [AddCommGroup E] [Module 𝕜 E] [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F]\n  (f : E →L[𝕜] F) : Differentiable 𝕜 ⇑f = True</code>",
+ "533":
+ "<code>Differentiable.fun_sub_iff_left._simp_1.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2}\n  [NormedAddCommGroup E] [NormedSpace 𝕜 E] {F : Type u_3} [NormedAddCommGroup F] [NormedSpace 𝕜 F] {f g : E → F}\n  (hg : Differentiable 𝕜 g) : (Differentiable 𝕜 fun i =&gt; f i - g i) = Differentiable 𝕜 f</code>",
+ "532": "<code>∀ y ∈ Set.univ, h x ≤ h y</code>",
+ "531":
+ "<code>ContinuousLinearMap.differentiable.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2}\n  [AddCommGroup E] [Module 𝕜 E] [TopologicalSpace E] {F : Type u_3} [AddCommGroup F] [Module 𝕜 F] [TopologicalSpace F]\n  (f : E →L[𝕜] F) : Differentiable 𝕜 ⇑f</code>",
+ "530":
+ "<code>Differentiable.sub.{u_1, u_2, u_3} {𝕜 : Type u_1} [NontriviallyNormedField 𝕜] {E : Type u_2} [NormedAddCommGroup E]\n  [NormedSpace 𝕜 E] {F : Type u_3} [NormedAddCommGroup F] [NormedSpace 𝕜 F] {f g : E → F} (hf : Differentiable 𝕜 f)\n  (hg : Differentiable 𝕜 g) : Differentiable 𝕜 (f - g)</code>",
+ "53":
+ "<code>proof_of_Lecture01_lem_l1_first_order_necessary.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {Ω : Set E} {f : E → ℝ} {xStar : E} (hΩ_convex : Convex ℝ Ω) (hxStar : xStar ∈ Ω) (hmin : ∀ y ∈ Ω, f xStar ≤ f y)\n  (hf : Differentiable ℝ f) (x : E) : x ∈ Ω → 0 ≤ (fderiv ℝ f xStar) (x - xStar)</code>",
+ "529": "<code>Differentiable ℝ h</code>",
+ "528":
+ "<code>convex_univ.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid E] [SMul 𝕜 E] :\n  Convex 𝕜 Set.univ</code>",
+ "527":
+ "<code>LinearMap.concaveOn.{u_1, u_2, u_5} {𝕜 : Type u_1} {E : Type u_2} {β : Type u_5} [Semiring 𝕜] [PartialOrder 𝕜]\n  [AddCommMonoid E] [AddCommMonoid β] [PartialOrder β] [Module 𝕜 E] [Module 𝕜 β] (f : E →ₗ[𝕜] β) {s : Set E}\n  (hs : Convex 𝕜 s) : ConcaveOn 𝕜 s ⇑f</code><span class=\"sep\"></span><code class=\"docstring\">A linear map is concave. </code>",
+ "526":
+ "<code>ContinuousLinearMap.toLinearMap.{u_1, u_2, u_3, u_4} {R : Type u_1} {S : Type u_2} [Semiring R] [Semiring S]\n  {σ : R →+* S} {M : Type u_3} [TopologicalSpace M] [AddCommMonoid M] {M₂ : Type u_4} [TopologicalSpace M₂]\n  [AddCommMonoid M₂] [Module R M] [Module S M₂] (self : M →SL[σ] M₂) : M →ₛₗ[σ] M₂</code>",
+ "525":
+ "<code>ConvexOn.sub.{u_1, u_2, u_5} {𝕜 : Type u_1} {E : Type u_2} {β : Type u_5} [Semiring 𝕜] [PartialOrder 𝕜]\n  [AddCommMonoid E] [AddCommGroup β] [PartialOrder β] [IsOrderedAddMonoid β] [SMul 𝕜 E] [Module 𝕜 β] {s : Set E}\n  {f g : E → β} (hf : ConvexOn 𝕜 s f) (hg : ConcaveOn 𝕜 s g) : ConvexOn 𝕜 s (f - g)</code>",
+ "524": "<code>ConvexOn ℝ Set.univ h</code>",
+ "523": "<code>g ∈ subdifferential f x</code>",
+ "522":
+ "<code>Singleton.singleton.{u, v} {α : outParam (Type u)} {β : Type v} [self : Singleton α β] : α → β</code><span class=\"sep\"></span><code class=\"docstring\">`singleton x` is a collection with the single element `x` (notation: `{x}`). \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `{x}` in identifiers is `singleton`.</code>",
+ "521":
+ "<code>ConvexOptV3.Lectures.Lecture02.subdifferential.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] (f : E → ℝ)\n  (x : E) : Set (Covector E)</code><span class=\"sep\"></span><code class=\"docstring\">The subdifferential `∂f(x)` as a set of covectors. </code>",
+ "520": "<code>ConvexOn ℝ Set.univ f</code>",
+ "52":
+ "<code>IsMinOn.of_isLocalMinOn_of_convexOn.{u_1, u_2} {E : Type u_1} {β : Type u_2} [AddCommGroup E] [TopologicalSpace E]\n  [Module ℝ E] [IsTopologicalAddGroup E] [ContinuousSMul ℝ E] [AddCommGroup β] [PartialOrder β] [IsOrderedAddMonoid β]\n  [Module ℝ β] [IsOrderedModule ℝ β] [PosSMulReflectLE ℝ β] {s : Set E} {f : E → β} {a : E} (a_in_s : a ∈ s)\n  (h_localmin : IsLocalMinOn f s a) (h_conv : ConvexOn ℝ s f) : IsMinOn f s a</code><span class=\"sep\"></span><code class=\"docstring\">A local minimum of a convex function is a global minimum, restricted to a set `s`.\n</code>",
+ "519":
+ "<code>Lecture02_prop_l2_unique_subgrad.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → ℝ}\n  (hconv : ConvexOn ℝ Set.univ f) (hf : Differentiable ℝ f) (x : E) : subdifferential f x = {fderiv ℝ f x}</code>",
+ "518":
+ "<code>le_top.{u} {α : Type u} [LE α] [OrderTop α] {a : α} : a ≤ ⊤</code>",
+ "517":
+ "<code>propext {a b : Prop} : (a ↔ b) → a = b</code><span class=\"sep\"></span><code class=\"docstring\">The [axiom](https://lean-lang.org/doc/reference/4.28.0/find/?domain=Verso.Genre.Manual.section&name=axioms) of **propositional extensionality**. It asserts that if\npropositions `a` and `b` are logically equivalent (that is, if `a` can be proved from `b` and vice\nversa), then `a` and `b` are *equal*, meaning `a` can be replaced with `b` in all contexts.\n\nThe standard logical connectives provably respect propositional extensionality. However, an axiom is\nneeded for higher order expressions like `P a` where `P : Prop → Prop` is unknown, as well as for\nequality. Propositional extensionality is intuitionistically valid.\n</code>",
+ "516": "<code>Prop</code>",
+ "515":
+ "<code>Classical.not_not {a : Prop} : ¬¬a ↔ a</code><span class=\"sep\"></span><code class=\"docstring\">The Double Negation Theorem: `¬¬P` is equivalent to `P`.\nThe left-to-right direction, double negation elimination (DNE),\nis classically true but not constructively. </code>",
+ "514": "<code>¬f y ≠ ⊤</code>",
+ "513":
+ "<code class=\"docstring\">Location specifications are used by many tactics that can operate on either the\nhypotheses or the goal. It can have one of the forms:\n* 'empty' is not actually present in this syntax, but most tactics use\n  `(location)?` matchers. It means to target the goal only.\n* `at h₁ ... hₙ`: target the hypotheses `h₁`, ..., `hₙ`\n* `at h₁ h₂ ⊢`: target the hypotheses `h₁` and `h₂`, and the goal\n* `at *`: target all hypotheses and the goal\n</code>",
+ "512":
+ "<code>ConvexOptV3.Lectures.Lecture02.mem_effectiveDomain.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {f : E → EReal} {x : E} : x ∈ effectiveDomain f ↔ f x ≠ ⊤</code>",
+ "511":
+ "<code>Top.top.{u_1} {α : Type u_1} [self : Top α] : α</code><span class=\"sep\"></span><code class=\"docstring\">The top (`⊤`, `\\top`) element \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `⊤` in identifiers is `top`.</code>",
+ "510": "<code>f y = ⊤</code>",
+ "51":
+ "<code>dist_eq_norm.{u_5} {E : Type u_5} [SeminormedAddGroup E] (a b : E) : dist a b = ‖a - b‖</code><span class=\"sep\"></span><code class=\"docstring\">**Alias** of `dist_eq_norm_sub`.</code>",
+ "509": "<code>EReal</code>",
+ "508":
+ "<code>le_rfl.{u_1} {α : Type u_1} [Preorder α] {a : α} : a ≤ a</code><span class=\"sep\"></span><code class=\"docstring\">A version of `le_refl` where the argument is implicit </code>",
+ "507": "<code>f x + ↑(g (y - x)) ≤ ↑(f y).toReal</code>",
+ "506":
+ "<code>EReal.coe_toReal {x : EReal} (hx : x ≠ ⊤) (h'x : x ≠ ⊥) : ↑x.toReal = x</code>",
+ "505": "<code>f y = ↑(f y).toReal</code>",
+ "504": "<code>y ∉ effectiveDomain f</code>",
+ "503": "<code>y ∈ effectiveDomain f</code>",
+ "502": "<code>∀ (y : E) (t : ℝ), f y ≤ ↑t → f x + ↑(g (y - x)) ≤ ↑t</code>",
+ "501":
+ "<code>le_trans.{u_1} {α : Type u_1} [Preorder α] {a b c : α} : a ≤ b → b ≤ c → a ≤ c</code><span class=\"sep\"></span><code class=\"docstring\">The relation `≤` on a preorder is transitive. </code>",
+ "500": "<code>f y ≤ ↑t</code>",
+ "50":
+ "<code>Metric.mem_ball.{u} {α : Type u} [PseudoMetricSpace α] {x y : α} {ε : ℝ} : y ∈ Metric.ball x ε ↔ dist y x &lt; ε</code>",
+ "5":
+ "<code>Set.{u} (α : Type u) : Type u</code><span class=\"sep\"></span><code class=\"docstring\">A set is a collection of elements of some type `α`.\n\nAlthough `Set` is defined as `α → Prop`, this is an implementation detail which should not be\nrelied on. Instead, `setOf` and membership of a set (`∈`) should be used to convert between sets\nand predicates.\n</code>",
+ "499": "<code>IsERealSubgradient f x g</code>",
+ "498":
+ "<code>ConvexOptV3.Lectures.Lecture02.IsERealSubgradient.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (f : E → EReal) (x : E) (g : Covector E) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Extended-value subgradient in the Lecture 2 one-sided `ℝ ∪ {+∞}` layer.\nLecture 2 uses this encoding to package the effective domain into the\nobjective itself, so the ambient domain can stay equal to `E` in later\nconvex-analysis statements. </code>",
+ "497": "<code>x ∈ effectiveDomain f</code>",
+ "496":
+ "<code>Lecture02_lem_l2_subgrad_support.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → EReal}\n  (hNoBot : NoBot f) {x : E} (hx : x ∈ effectiveDomain f) {g : Covector E} :\n  IsERealSubgradient f x g ↔ ∀ (y : E) (t : ℝ), f y ≤ ↑t → f x + ↑(g (y - x)) ≤ ↑t</code>",
+ "495": "<code>z ∈ K</code>",
+ "494": "<code>ξ z ≤ 0</code>",
+ "493":
+ "<code>ConvexOptV3.Lectures.Lecture02.thm_l2_cone_sep.{u_2} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  [FiniteDimensional ℝ E] {K : Set E} (hK_closed : IsClosed K) (hK_convex : Convex ℝ K)\n  (hK_cone : ∀ x ∈ K, ∀ (t : ℝ), 0 ≤ t → t • x ∈ K) (hK_zero : 0 ∈ K) {z : E} (hz : z ∉ K) : ∃ ξ ∈ polarCone K, ξ z &gt; 0</code><span class=\"sep\"></span><code class=\"docstring\">Cone separation in `E/E*` language. </code>",
+ "492": "<code>ξ z &gt; 0</code>",
+ "491": "<code>z ∈ bipolarCone K</code>",
+ "490":
+ "<code>Set.Subset.antisymm.{u} {α : Type u} {a b : Set α} (h₁ : a ⊆ b) (h₂ : b ⊆ a) : a = b</code>",
+ "49":
+ "<code class=\"docstring\">This is a \"finishing\" tactic modification of `simp`. It has two forms.\n\n* `simpa [rules, ⋯] using e` will simplify the goal and the type of\n`e` using `rules`, then try to close the goal using `e`.\n\nSimplifying the type of `e` makes it more likely to match the goal\n(which has also been simplified). This construction also tends to be\nmore robust under changes to the simp lemma set.\n\n* `simpa [rules, ⋯]` will simplify the goal and the type of a\nhypothesis `this` if present in the context, then try to close the goal using\nthe `assumption` tactic.\n</code>",
+ "489":
+ "<code>ConvexOptV3.Lectures.Lecture02.bipolarCone.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] (K : Set E) :\n  Set E</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing bipolar comparison set on the primal space. </code>",
+ "488":
+ "<code>Lecture02_thm_l2_bipolar.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {K : Set E} (hK_ne : K.Nonempty) (hK_closed : IsClosed K) (hK_convex : Convex ℝ K)\n  (hK_cone : ∀ x ∈ K, ∀ (t : ℝ), 0 ≤ t → t • x ∈ K) : bipolarCone K = K</code>",
+ "487":
+ "<code>map_smul.{u_8, u_9, u_10, u_11} {F : Type u_8} {M : Type u_9} {X : Type u_10} {Y : Type u_11} [SMul M X] [SMul M Y]\n  [FunLike F X Y] [MulActionHomClass F M X Y] (f : F) (c : M) (x : X) : f (c • x) = c • f x</code>",
+ "486":
+ "<code>Decidable.byContradiction {p : Prop} [dec : Decidable p] (h : ¬p → False) : p</code>",
+ "485": "<code>t * ξ x ≤ b</code>",
+ "484":
+ "<code>not_le_of_gt.{u_1} {α : Type u_1} [Preorder α] {a b : α} (hab : a &lt; b) : ¬b ≤ a</code>",
+ "483":
+ "<code>ContinuousLinearMap.map_smul.{u_1, u_4, u_6} {R₁ : Type u_1} [Semiring R₁] {M₁ : Type u_4} [TopologicalSpace M₁]\n  [AddCommMonoid M₁] {M₂ : Type u_6} [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R₁ M₁] [Module R₁ M₂]\n  (f : M₁ →L[R₁] M₂) (c : R₁) (x : M₁) : f (c • x) = c • f x</code>",
+ "482": "<code>ξ (t • x) ≤ b</code>",
+ "481":
+ "<code>Mathlib.Tactic.Ring.add_pf_add_gt.{u_1} {R : Type u_1} [CommSemiring R] {a b₂ c : R} (b₁ : R) :\n  a + b₂ = c → a + (b₁ + b₂) = b₁ + c</code>",
+ "480": "<code>b + ξ x ≤ b</code>",
+ "48":
+ "<code>Metric.ball.{u} {α : Type u} [PseudoMetricSpace α] (x : α) (ε : ℝ) : Set α</code><span class=\"sep\"></span><code class=\"docstring\">`ball x ε` is the set of all points `y` with `dist y x &lt; ε` </code>",
+ "479":
+ "<code>Bool.true : Bool</code><span class=\"sep\"></span><code class=\"docstring\">The Boolean value `true`, not to be confused with the proposition `True`. </code>",
+ "478":
+ "<code>of_decide_eq_true {p : Prop} [inst : Decidable p] : decide p = true → p</code>",
+ "477":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval_cons_of_pow_eq_zero.{u_1} {M : Type u_1} [CommGroupWithZero M] {r : ℤ} (hr : r = 0)\n  {x : M} (hx : x ≠ 0) (l : Mathlib.Tactic.FieldSimp.NF M) : ((r, x) ::ᵣ l).eval = l.eval</code>",
+ "476":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval_mul_eval_cons_zero.{u_1} {M : Type u_1} [CommGroupWithZero M] {e : M}\n  {L l l' l₀ : Mathlib.Tactic.FieldSimp.NF M} (h : L.eval * l.eval = l'.eval) (h' : ((0, e) ::ᵣ l).eval = l₀.eval) :\n  L.eval * l₀.eval = ((0, e) ::ᵣ l').eval</code>",
+ "475":
+ "<code>Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₂.{u_1} {M : Type u_1} [CommGroupWithZero M] (r₁ r₂ : ℤ) (x : M)\n  {l₁ l₂ l : Mathlib.Tactic.FieldSimp.NF M} (h : l₁.eval * l₂.eval = l.eval) :\n  ((r₁, x) ::ᵣ l₁).eval * ((r₂, x) ::ᵣ l₂).eval = ((r₁ + r₂, x) ::ᵣ l).eval</code>",
+ "474":
+ "<code>Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₁.{u_1} {M : Type u_1} [CommGroupWithZero M] (a₁ : ℤ × M) {a₂ : ℤ × M}\n  {l₁ l₂ l : Mathlib.Tactic.FieldSimp.NF M} (h : l₁.eval * (a₂ ::ᵣ l₂).eval = l.eval) :\n  (a₁ ::ᵣ l₁).eval * (a₂ ::ᵣ l₂).eval = (a₁ ::ᵣ l).eval</code>",
+ "473":
+ "<code>mul_one.{u} {M : Type u} [MulOneClass M] (a : M) : a * 1 = a</code>",
+ "472":
+ "<code>Mathlib.Tactic.FieldSimp.NF.mul_eq_eval₃.{u_1} {M : Type u_1} [CommGroupWithZero M] {a₁ : ℤ × M} (a₂ : ℤ × M)\n  {l₁ l₂ l : Mathlib.Tactic.FieldSimp.NF M} (h : (a₁ ::ᵣ l₁).eval * l₂.eval = l.eval) :\n  (a₁ ::ᵣ l₁).eval * (a₂ ::ᵣ l₂).eval = (a₂ ::ᵣ l).eval</code>",
+ "471":
+ "<code>ne_of_gt.{u_1} {α : Type u_1} [Preorder α] {a b : α} (h : b &lt; a) : a ≠ b</code>",
+ "470":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval_cons_mul_eval_cons_neg.{u_1} {M : Type u_1} [CommGroupWithZero M] (n : ℤ) {e : M}\n  (he : e ≠ 0) {L l l' : Mathlib.Tactic.FieldSimp.NF M} (h : L.eval * l.eval = l'.eval) :\n  ((n, e) ::ᵣ L).eval * ((-n, e) ::ᵣ l).eval = l'.eval</code>",
+ "47":
+ "<code>Inter.inter.{u} {α : Type u} [self : Inter α] : α → α → α</code><span class=\"sep\"></span><code class=\"docstring\">`a ∩ b` is the intersection of `a` and `b`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∩` in identifiers is `inter`.</code>",
+ "469":
+ "<code>Mathlib.Tactic.FieldSimp.NF.one_eq_eval.{u_1} (M : Type u_1) [GroupWithZero M] : 1 = Mathlib.Tactic.FieldSimp.NF.eval []</code>",
+ "468":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval_cons_mul_eval.{u_1} {M : Type u_1} [CommGroupWithZero M] (n : ℤ) (e : M)\n  {L l l' : Mathlib.Tactic.FieldSimp.NF M} (h : L.eval * l.eval = l'.eval) :\n  ((n, e) ::ᵣ L).eval * l.eval = ((n, e) ::ᵣ l').eval</code>",
+ "467":
+ "<code>Mathlib.Tactic.FieldSimp.NF.cons.{u_1} {M : Type u_1} (p : ℤ × M) (l : Mathlib.Tactic.FieldSimp.NF M) :\n  Mathlib.Tactic.FieldSimp.NF M</code><span class=\"sep\"></span><code class=\"docstring\">Augment a `FieldSimp.NF M` object `l`, i.e. a list of pairs in `ℤ × M`, by prepending another\npair `p : ℤ × M`. </code>",
+ "466":
+ "<code>Mathlib.Tactic.FieldSimp.NF.div_eq_eval₃.{u_1} {M : Type u_1} [CommGroupWithZero M] {a₁ : ℤ × M} (a₂ : ℤ × M)\n  {l₁ l₂ l : Mathlib.Tactic.FieldSimp.NF M} (h : (a₁ ::ᵣ l₁).eval / l₂.eval = l.eval) :\n  (a₁ ::ᵣ l₁).eval / (a₂ ::ᵣ l₂).eval = ((-a₂.1, a₂.2) ::ᵣ l).eval</code>",
+ "465":
+ "<code>Mathlib.Tactic.FieldSimp.NF.div_eq_eval.{u_1} {M : Type u_1} [GroupWithZero M] {l₁ l₂ l : Mathlib.Tactic.FieldSimp.NF M}\n  {x₁ x₂ : M} (hx₁ : x₁ = l₁.eval) (hx₂ : x₂ = l₂.eval) (h : l₁.eval / l₂.eval = l.eval) : x₁ / x₂ = l.eval</code>",
+ "464":
+ "<code>Mathlib.Tactic.FieldSimp.subst_add.{u_1} {M : Type u_1} [Semiring M] {x₁ x₂ X₁ X₂ Y y a : M} (h₁ : x₁ = a * X₁)\n  (h₂ : x₂ = a * X₂) (H_atom : X₁ + X₂ = Y) (hy : a * Y = y) : x₁ + x₂ = y</code>",
+ "463":
+ "<code>Mathlib.Tactic.FieldSimp.NF.mul_eq_eval.{u_1} {M : Type u_1} [GroupWithZero M] {l₁ l₂ l : Mathlib.Tactic.FieldSimp.NF M}\n  {x₁ x₂ : M} (hx₁ : x₁ = l₁.eval) (hx₂ : x₂ = l₂.eval) (h : l₁.eval * l₂.eval = l.eval) : x₁ * x₂ = l.eval</code>",
+ "462":
+ "<code>congr_arg₂.{u_1, u_2, u_3} {α : Sort u_1} {β : Sort u_2} {γ : Sort u_3} (f : α → β → γ) {x x' : α} {y y' : β}\n  (hx : x = x') (hy : y = y') : f x y = f x' y'</code><span class=\"sep\"></span><code class=\"docstring\">**Alias** of `congrArg₂`.</code>",
+ "461":
+ "<code>Mathlib.Tactic.FieldSimp.zpow'_one.{u_1} {α : Type u_1} [GroupWithZero α] (a : α) :\n  Mathlib.Tactic.FieldSimp.zpow' a 1 = a</code>",
+ "460":
+ "<code>Mathlib.Tactic.FieldSimp.zpow'.{u_1} {α : Type u_1} [GroupWithZero α] (a : α) (n : ℤ) : α</code><span class=\"sep\"></span><code class=\"docstring\">This is a variant of integer exponentiation, defined for internal use in the `field_simp` tactic\nimplementation. It differs from the usual integer exponentiation in that `0 ^ 0` is `0`, not `1`.\nWith this choice, the function `n ↦ a ^ n` is always a homomorphism (`a ^ (n + m) = a ^ n * a ^ m`),\neven if `a` is zero. </code>",
+ "46": "<code>x ∈ Ω ∩ Metric.ball xStar r</code>",
+ "459":
+ "<code>Prod.mk.{u, v} {α : Type u} {β : Type v} (fst : α) (snd : β) : α × β</code><span class=\"sep\"></span><code class=\"docstring\">Constructs a pair. This is usually written `(x, y)` instead of `Prod.mk x y`.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `(a, b)` in identifiers is `mk`.</code>",
+ "458":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval_cons.{u_1} {M : Type u_1} [CommGroupWithZero M] (p : ℤ × M)\n  (l : Mathlib.Tactic.FieldSimp.NF M) : (p ::ᵣ l).eval = l.eval * Mathlib.Tactic.FieldSimp.zpow' p.2 p.1</code>",
+ "457":
+ "<code>div_one.{u_3} {G : Type u_3} [DivInvOneMonoid G] (a : G) : a / 1 = a</code>",
+ "456":
+ "<code>Mathlib.Tactic.FieldSimp.NF.cons_eq_div_of_eq_div.{u_1} {M : Type u_1} [CommGroupWithZero M] (n : ℤ) (e : M)\n  {t t_n t_d : Mathlib.Tactic.FieldSimp.NF M} (h : t.eval = t_n.eval / t_d.eval) :\n  ((n, e) ::ᵣ t).eval = ((n, e) ::ᵣ t_n).eval / t_d.eval</code>",
+ "455":
+ "<code>Mathlib.Tactic.FieldSimp.eq_div_of_eq_one_of_subst.{u_1} {M : Type u_1} [DivInvOneMonoid M] {l l_n n : M}\n  (h : l = l_n / 1) (hn : l_n = n) : l = n</code>",
+ "454":
+ "<code>List.nil.{u} {α : Type u} : List α</code><span class=\"sep\"></span><code class=\"docstring\">The empty list, usually written `[]`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `[]` in identifiers is `nil`.</code>",
+ "453":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval.{u_1} {M : Type u_1} [GroupWithZero M] (l : Mathlib.Tactic.FieldSimp.NF M) : M</code><span class=\"sep\"></span><code class=\"docstring\">Evaluate a `FieldSimp.NF M` object `l`, i.e. a list of pairs in `ℤ × M`, to an element of `M`,\nby forming the \"multiplicative linear combination\" it specifies: raise each `M` term to the power of\nthe corresponding `ℤ` term, then multiply them all together. </code>",
+ "452":
+ "<code>one_mul.{u} {M : Type u} [MulOneClass M] (a : M) : 1 * a = a</code>",
+ "451":
+ "<code>Mathlib.Tactic.FieldSimp.NF.eval_mul_eval_cons.{u_1} {M : Type u_1} [CommGroupWithZero M] (n : ℤ) (e : M)\n  {L l l' : Mathlib.Tactic.FieldSimp.NF M} (h : L.eval * l.eval = l'.eval) :\n  L.eval * ((n, e) ::ᵣ l).eval = ((n, e) ::ᵣ l').eval</code>",
+ "450":
+ "<code>Mathlib.Tactic.FieldSimp.NF.atom_eq_eval.{u_1} {M : Type u_1} [GroupWithZero M] (x : M) :\n  x = Mathlib.Tactic.FieldSimp.NF.eval [(1, x)]</code>",
+ "45":
+ "<code>Metric.ball_mem_nhds.{u} {α : Type u} [PseudoMetricSpace α] (x : α) {ε : ℝ} (ε0 : 0 &lt; ε) : Metric.ball x ε ∈ nhds x</code>",
+ "449":
+ "<code>Mathlib.Tactic.FieldSimp.eq_mul_of_eq_eq_eq_mul.{u_1} {M : Type u_1} [Mul M] {a b c D e f : M} (h₁ : a = b) (h₂ : b = c)\n  (h₃ : c = D * e) (h₄ : e = f) : a = D * f</code>",
+ "448":
+ "<code>Mathlib.Tactic.FieldSimp.lt_eq_cancel_lt.{u_1} {M : Type u_1} [MonoidWithZero M] [PartialOrder M] [PosMulStrictMono M]\n  [PosMulReflectLT M] {e₁ e₂ f₁ f₂ L : M} (H₁ : e₁ = L * f₁) (H₂ : e₂ = L * f₂) (HL : 0 &lt; L) : (e₁ &lt; e₂) = (f₁ &lt; f₂)</code>",
+ "447": "<code>t • x ∈ K</code>",
+ "446":
+ "<code>LT.lt.ne'.{u_1} {α : Type u_1} [Preorder α] {a b : α} (h : b &lt; a) : a ≠ b</code>",
+ "445":
+ "<code class=\"docstring\">The goal of `field_simp` is to bring expressions in (semi-)fields over a common denominator, i.e. to\nreduce them to expressions of the form `n / d` where neither `n` nor `d` contains any division\nsymbol. For example, `x / (1 - y) / (1 + y / (1 - y))` is reduced to `x / (1 - y + y)`:\n```\nexample (x y z : ℚ) (hy : 1 - y ≠ 0) :\n    ⌊x / (1 - y) / (1 + y / (1 - y))⌋ &lt; 3 := by\n  field_simp\n  -- new goal: `⊢ ⌊x / (1 - y + y)⌋ &lt; 3`\n```\n\nThe `field_simp` tactic will also clear denominators in field *(in)equalities*, by\ncross-multiplying. For example, `field_simp` will clear the `x` denominators in the following\nequation:\n```\nexample {K : Type*} [Field K] {x : K} (hx0 : x ≠ 0) :\n    (x + 1 / x) ^ 2 + (x + 1 / x) = 1 := by\n  field_simp\n  -- new goal: `⊢ (x ^ 2 + 1) * (x ^ 2 + 1 + x) = x ^ 2`\n```\n\nA very common pattern is `field_simp; ring` (clear denominators, then the resulting goal is\nsolvable by the axioms of a commutative ring). The finishing tactic `field` is a shorthand for this\npattern.\n\nCancelling and combining denominators will generally require checking \"nonzeroness\"/\"positivity\"\nside conditions. The `field_simp` tactic attempts to discharge these, and will omit such steps if it\ncannot discharge the corresponding side conditions. The discharger will try, among other things,\n`positivity` and `norm_num`, and will also use any nonzeroness/positivity proofs included explicitly\n(e.g. `field_simp [hx]`). If your expression is not completely reduced by `field_simp`, check the\ndenominators of the resulting expression and provide proofs that they are nonzero/positive to enable\nfurther progress.\n</code>",
+ "444":
+ "<code>Nat.ble : ℕ → ℕ → Bool</code><span class=\"sep\"></span><code class=\"docstring\">The Boolean less-than-or-equal-to comparison on natural numbers.\n\nThis function is overridden in both the kernel and the compiler to efficiently evaluate using the\narbitrary-precision arithmetic library. The definition provided here is the logical model.\n\nExamples:\n * `Nat.ble 2 5 = true`\n * `Nat.ble 5 2 = false`\n * `Nat.ble 5 5 = true`\n</code>",
+ "443":
+ "<code>Nat.cast_one.{u_1} {R : Type u_1} [AddMonoidWithOne R] : ↑1 = 1</code>",
+ "442":
+ "<code>Mathlib.Meta.Positivity.pos_of_isNat.{u_1} {A : Type u_1} {e : A} {n : ℕ} [Semiring A] [PartialOrder A]\n  [IsOrderedRing A] [Nontrivial A] (h : Mathlib.Meta.NormNum.IsNat e n) (w : Nat.ble 1 n = true) : 0 &lt; e</code>",
+ "441":
+ "<code>Mathlib.Meta.Positivity.div_nonneg_of_nonneg_of_pos.{u_4} {α : Type u_4} [GroupWithZero α] [PartialOrder α] {a b : α}\n  [PosMulReflectLT α] (ha : 0 ≤ a) (hb : 0 &lt; b) : 0 ≤ a / b</code>",
+ "440":
+ "<code>Right.add_pos_of_nonneg_of_pos.{u_1} {α : Type u_1} [AddZeroClass α] [Preorder α] [AddRightMono α] {a b : α}\n  (ha : 0 ≤ a) (hb : 0 &lt; b) : 0 &lt; a + b</code><span class=\"sep\"></span><code class=\"docstring\">Assumes right covariance.\nThe lemma assuming left covariance is `Left.add_pos_of_nonneg_of_pos`. </code>",
+ "44":
+ "<code>inter_mem_nhdsWithin.{u_1} {α : Type u_1} [TopologicalSpace α] (s : Set α) {t : Set α} {a : α} (h : t ∈ nhds a) :\n  s ∩ t ∈ nhdsWithin a s</code>",
+ "439":
+ "<code>le_of_lt.{u_1} {α : Type u_1} [Preorder α] {a b : α} (hab : a &lt; b) : a ≤ b</code>",
+ "438": "<code>b &lt; t * ξ x</code>",
+ "437":
+ "<code class=\"docstring\">Tactic solving goals of the form `0 ≤ x`, `0 &lt; x` and `x ≠ 0`.  The tactic works recursively\naccording to the syntax of the expression `x`, if the atoms composing the expression all have\nnumeric lower bounds which can be proved positive/nonnegative/nonzero by `norm_num`.  This tactic\neither closes the goal or fails.\n\n`positivity [t₁, …, tₙ]` first executes `have := t₁; …; have := tₙ` in the current goal,\nthen runs `positivity`. This is useful when `positivity` needs derived premises such as `0 &lt; y`\nfor division/reciprocal, or `0 ≤ x` for real powers.\n\nExamples:\n```\nexample {a : ℤ} (ha : 3 &lt; a) : 0 ≤ a ^ 3 + a := by positivity\n\nexample {a : ℤ} (ha : 1 &lt; a) : 0 &lt; |(3:ℤ) + a| := by positivity\n\nexample {b : ℤ} : 0 ≤ max (-3) (b ^ 2) := by positivity\n\nexample {a b c d : ℝ} (hab : 0 &lt; a * b) (hb : 0 ≤ b) (hcd : c &lt; d) :\n    0 &lt; a ^ c + 1 / (d - c) := by\n  positivity [sub_pos_of_lt hcd, pos_of_mul_pos_left hab hb]\n```\n</code>",
+ "436":
+ "<code class=\"docstring\">The `dsimp` tactic is the definitional simplifier. It is similar to `simp` but only\napplies theorems that hold by reflexivity. Thus, the result is guaranteed to be\ndefinitionally equal to the input.\n</code>",
+ "435": "<code>0 ≤ t</code>",
+ "434":
+ "<code>HDiv.hDiv.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HDiv α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a / b` computes the result of dividing `a` by `b`.\nThe meaning of this notation is type-dependent.\n* For most types like `Nat`, `Int`, `Rat`, `Real`, `a / 0` is defined to be `0`.\n* For `Nat`, `a / b` rounds downwards.\n* For `Int`, `a / b` rounds downwards if `b` is positive or upwards if `b` is negative.\n  It is implemented as `Int.ediv`, the unique function satisfying\n  `a % b + b * (a / b) = a` and `0 ≤ a % b &lt; natAbs b` for `b ≠ 0`.\n  Other rounding conventions are available using the functions\n  `Int.fdiv` (floor rounding) and `Int.tdiv` (truncation rounding).\n* For `Float`, `a / 0` follows the IEEE 754 semantics for division,\n  usually resulting in `inf` or `nan`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `/` in identifiers is `div`.</code>",
+ "433":
+ "<code>Mathlib.Tactic.Linarith.add_lt_of_neg_of_le.{u} {α : Type u} [Semiring α] [PartialOrder α] [IsStrictOrderedRing α]\n  {a b c : α} (ha : a &lt; 0) (hbc : b ≤ c) : a + b &lt; c</code>",
+ "432": "<code>ξ x ≤ 0</code>",
+ "431":
+ "<code>lt_of_not_ge.{u_1} {α : Type u_1} [LinearOrder α] {a b : α} (h : ¬b ≤ a) : a &lt; b</code>",
+ "430": "<code>0 &lt; ξ x</code>",
+ "43":
+ "<code class=\"docstring\">`filter_upwards [h₁, ⋯, hₙ]` replaces a goal of the form `s ∈ f` and terms\n`h₁ : t₁ ∈ f, ⋯, hₙ : tₙ ∈ f` with `∀ x, x ∈ t₁ → ⋯ → x ∈ tₙ → x ∈ s`.\nThe list is an optional parameter, `[]` being its default value.\n\n`filter_upwards [h₁, ⋯, hₙ] with a₁ a₂ ⋯ aₖ` is a short form for\n`{ filter_upwards [h₁, ⋯, hₙ], intro a₁ a₂ ⋯ aₖ }`.\n\n`filter_upwards [h₁, ⋯, hₙ] using e` is a short form for\n`{ filter_upwards [h1, ⋯, hn], exact e }`.\n\nCombining both shortcuts is done by writing `filter_upwards [h₁, ⋯, hₙ] with a₁ a₂ ⋯ aₖ using e`.\nNote that in this case, the `aᵢ` terms can be used in `e`.\n</code>",
+ "429": "<code>¬ξ x ≤ 0</code>",
+ "428":
+ "<code class=\"docstring\">`by_contra h` proves `⊢ p` by contradiction,\nintroducing a hypothesis `h : ¬p` and proving `False`.\n* If `p` is a negation `¬q`, `h : q` will be introduced instead of `¬¬q`.\n* If `p` is decidable, it uses `Decidable.byContradiction` instead of `Classical.byContradiction`.\n* If `h` is omitted, the introduced variable will be called `this`.\n</code>",
+ "427":
+ "<code>map_zero.{u_4, u_5, u_9} {M : Type u_4} {N : Type u_5} {F : Type u_9} [Zero M] [Zero N] [FunLike F M N]\n  [ZeroHomClass F M N] (f : F) : f 0 = 0</code>",
+ "426": "<code>ξ ∈ polarCone K</code>",
+ "425": "<code>ξ 0 ≤ b</code>",
+ "424": "<code>0 ≤ b</code>",
+ "423":
+ "<code>le_refl.{u_1} {α : Type u_1} [Preorder α] (a : α) : a ≤ a</code><span class=\"sep\"></span><code class=\"docstring\">The relation `≤` on a preorder is reflexive. </code>",
+ "422": "<code>0 ≤ 0</code>",
+ "421":
+ "<code>zero_smul.{u_2, u_7} (M₀ : Type u_2) {A : Type u_7} [Zero M₀] [Zero A] [SMulWithZero M₀ A] (m : A) : 0 • m = 0</code>",
+ "420":
+ "<code>ConvexOptV3.Lectures.Lecture02.thm_l2_point_closed_sep.{u_2} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  [FiniteDimensional ℝ E] {C : Set E} (hC_closed : IsClosed C) (hC_convex : Convex ℝ C) (hC_ne : C.Nonempty) {z : E}\n  (hz : z ∉ C) : ∃ ξ, ξ ≠ 0 ∧ ∃ b, (∀ y ∈ C, ξ y ≤ b) ∧ ξ z &gt; b</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing point-to-set separation in `E/E*` language. </code>",
+ "42":
+ "<code>IsLocalMinOn.{u, v} {α : Type u} {β : Type v} [TopologicalSpace α] [Preorder β] (f : α → β) (s : Set α) (a : α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`IsLocalMinOn f s a` means that `f a ≤ f x` for all `x ∈ s` in some neighborhood of `a`. </code>",
+ "419": "<code>ξ z &gt; b</code>",
+ "418": "<code>∀ y ∈ K, ξ y ≤ b</code>",
+ "417":
+ "<code class=\"docstring\">This tactic applies to a goal whose target has the form `x ~ x`,\nwhere `~` is equality, heterogeneous equality or any relation that\nhas a reflexivity lemma tagged with the attribute @[refl].\n</code>",
+ "416": "<code>x ∈ K</code>",
+ "415": "<code>0 ∈ K</code>",
+ "414":
+ "<code>HSMul.hSMul.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HSMul α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a • b` computes the product of `a` and `b`.\nThe meaning of this notation is type-dependent, but it is intended to be used for left actions. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `•` in identifiers is `smul`.</code>",
+ "413":
+ "<code>ConvexOptV3.Lectures.Lecture02.polarCone.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] (K : Set E) :\n  Set (Covector E)</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing polar cone on covectors. </code>",
+ "412": "<code>z ∉ K</code>",
+ "411": "<code>∀ x ∈ K, ∀ (t : ℝ), 0 ≤ t → t • x ∈ K</code>",
+ "410": "<code>Convex ℝ K</code>",
+ "41": "<code>IsLocalMinOn f Ω xStar</code>",
+ "409": "<code>IsClosed K</code>",
+ "408": "<code>K.Nonempty</code>",
+ "407":
+ "<code>Lecture02_thm_l2_cone_sep.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {K : Set E} (hK_ne : K.Nonempty) (hK_closed : IsClosed K) (hK_convex : Convex ℝ K)\n  (hK_cone : ∀ x ∈ K, ∀ (t : ℝ), 0 ≤ t → t • x ∈ K) {z : E} (hz : z ∉ K) : ∃ ξ ∈ polarCone K, ξ z &gt; 0</code>",
+ "406":
+ "<code>ConvexOptV3.Lectures.Lecture02.prop_l2_cch.{u_2} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  [FiniteDimensional ℝ E] {S : Set E} :\n  IsClosed (closure S) ∧\n    Convex ℝ ((convexHull ℝ) S) ∧\n      S ⊆ closure S ∩ (convexHull ℝ) S ∧\n        (closedConvexHull ℝ) S = closure ((convexHull ℝ) S) ∧\n          IsClosed (closure ((convexHull ℝ) S)) ∧\n            Convex ℝ (closure ((convexHull ℝ) S)) ∧\n              S ⊆ closure ((convexHull ℝ) S) ∧\n                (∀ {C : Set E}, IsClosed C → Convex ℝ C → closure ((convexHull ℝ) C) = C) ∧\n                  closure ((convexHull ℝ) (closure ((convexHull ℝ) S))) = closure ((convexHull ℝ) S)</code><span class=\"sep\"></span><code class=\"docstring\">Basic properties of closure, convex hull, and closed convex hull.\n\nThis packages notes items (1)--(5). The `\\mathbb R^2` counterexample from item\n(6) is recorded separately in `prop_l2_cch_counterexample`. </code>",
+ "405": "<code>closure ((convexHull ℝ) S) = S</code>",
+ "404": "<code>Convex ℝ S</code>",
+ "403": "<code>IsClosed S</code>",
+ "402": "<code>S.Nonempty</code>",
+ "401":
+ "<code>ConvexOptV3.Lectures.Lecture02.thm_l2_separation.{u_2} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  [FiniteDimensional ℝ E] {S : Set E} :\n  closure ((convexHull ℝ) S) = ⋂ p, ⋂ (_ : ∀ x ∈ S, p.1 x ≤ p.2), closedHalfspace p.1 p.2 ∧\n    (S.Nonempty →\n      IsClosed S →\n        Convex ℝ S → S = closure ((convexHull ℝ) S) ∧ S = ⋂ p, ⋂ (_ : ∀ x ∈ S, p.1 x ≤ p.2), closedHalfspace p.1 p.2)</code><span class=\"sep\"></span><code class=\"docstring\">Closed convex hull equals the intersection of all containing halfspaces,\nwith the closed-convex corollary packaged as in the notes. </code>",
+ "400":
+ "<code>ConvexOptV3.Lectures.Lecture02.closedHalfspace.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  (ξ : Covector E) (b : ℝ) : Set E</code><span class=\"sep\"></span><code class=\"docstring\">Notes-facing closed halfspace `{x | ξ x ≤ b}`. </code>",
+ "40":
+ "<code class=\"docstring\">The `have` tactic is for adding opaque definitions and hypotheses to the local context of the main goal.\nThe definitions forget their associated value and cannot be unfolded, unlike definitions added by the `let` tactic.\n\n* `have h : t := e` adds the hypothesis `h : t` if `e` is a term of type `t`.\n* `have h := e` uses the type of `e` for `t`.\n* `have : t := e` and `have := e` use `this` for the name of the hypothesis.\n* `have pat := e` for a pattern `pat` is equivalent to `match e with | pat =&gt; _`,\n  where `_` stands for the tactics that follow this one.\n  It is convenient for types that have only one applicable constructor.\n  For example, given `h : p ∧ q ∧ r`, `have ⟨h₁, h₂, h₃⟩ := h` produces the\n  hypotheses `h₁ : p`, `h₂ : q`, and `h₃ : r`.\n* The syntax `have (eq := h) pat := e` is equivalent to `match h : e with | pat =&gt; _`,\n  which adds the equation `h : e = pat` to the local context.\n\nThe tactic supports all the same syntax variants and options as the `have` term.\n\n## Properties and relations\n\n* It is not possible to unfold a variable introduced using `have`, since the definition's value is forgotten.\n  The `let` tactic introduces definitions that can be unfolded.\n* The `have h : t := e` is like doing `let h : t := e; clear_value h`.\n* The `have` tactic is preferred for propositions, and `let` is preferred for non-propositions.\n* Sometimes `have` is used for non-propositions to ensure that the variable is never unfolded,\n  which may be important for performance reasons.\n    Consider using the equivalent `let +nondep` to indicate the intent.\n\n</code>",
+ "4": "<code>Set E</code>",
+ "399": "<code>Covector E × ℝ</code>",
+ "398":
+ "<code>convexHull.{u_1, u_2} (𝕜 : Type u_1) {E : Type u_2} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid E] [Module 𝕜 E] :\n  ClosureOperator (Set E)</code><span class=\"sep\"></span><code class=\"docstring\">The convex hull of a set `s` is the minimal convex set that includes `s`. </code>",
+ "397":
+ "<code>Lecture02_thm_l2_separation.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {S : Set E} :\n  closure ((convexHull ℝ) S) = ⋂ p, ⋂ (_ : ∀ x ∈ S, p.1 x ≤ p.2), closedHalfspace p.1 p.2 ∧\n    (S.Nonempty →\n      IsClosed S →\n        Convex ℝ S → S = closure ((convexHull ℝ) S) ∧ S = ⋂ p, ⋂ (_ : ∀ x ∈ S, p.1 x ≤ p.2), closedHalfspace p.1 p.2)</code>",
+ "396":
+ "<code>frontier.eq_1.{u} {X : Type u} [TopologicalSpace X] (s : Set X) : frontier s = closure s \\ interior s</code>",
+ "395":
+ "<code>isClosed_closure.{u} {X : Type u} [TopologicalSpace X] {s : Set X} : IsClosed (closure s)</code>",
+ "394":
+ "<code>ConvexOptV3.Lectures.Lecture02.thm_l2_supporting_closed_frontier.{u_2} {E : Type u_2} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] [FiniteDimensional ℝ E] {C : Set E} (hC_closed : IsClosed C) (hC_convex : Convex ℝ C) {x : E}\n  (hx_bd : x ∈ frontier C) : ∃ ξ, ξ ≠ 0 ∧ ∀ y ∈ C, ξ y ≤ ξ x</code><span class=\"sep\"></span><code class=\"docstring\">Supporting hyperplane at a boundary point of a closed convex set, stated in\n`E/E*` language. </code>",
+ "393": "<code>∀ y ∈ closure C, ξ y ≤ ξ x</code>",
+ "392": "<code>ξ ≠ 0</code>",
+ "391":
+ "<code>closure_closure.{u} {X : Type u} [TopologicalSpace X] {s : Set X} : closure (closure s) = closure s</code>",
+ "390":
+ "<code>frontier.{u} {X : Type u} [TopologicalSpace X] (s : Set X) : Set X</code><span class=\"sep\"></span><code class=\"docstring\">The frontier of a set is the set of points between the closure and interior. </code>",
+ "39":
+ "<code>GT.gt.{u} {α : Type u} [LT α] (a b : α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`a &gt; b` is an abbreviation for `b &lt; a`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `&gt;` in identifiers is `gt`.</code>",
+ "389": "<code>x ∈ frontier (closure C)</code>",
+ "388":
+ "<code>And.right {a b : Prop} (self : a ∧ b) : b</code><span class=\"sep\"></span><code class=\"docstring\">Extract the right conjunct from a conjunction. `h : a ∧ b` then\n`h.right`, also notated as `h.2`, is a proof of `b`. </code>",
+ "387": "<code>interior (closure C) = interior C</code>",
+ "386":
+ "<code>ConvexOptV3.Lectures.Lecture02.lem_l2_int_cl_convex.{u_2} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  [FiniteDimensional ℝ E] {C : Set E} (hC_convex : Convex ℝ C) :\n  Convex ℝ (closure C) ∧ interior (closure C) = interior C</code><span class=\"sep\"></span><code class=\"docstring\">Closure preserves convexity and interior for convex sets. </code>",
+ "385": "<code>Convex ℝ (closure C)</code>",
+ "384":
+ "<code>subset_closure.{u} {X : Type u} [TopologicalSpace X] {s : Set X} : s ⊆ closure s</code>",
+ "383":
+ "<code>Set.Nonempty.mono.{u} {α : Type u} {s t : Set α} (ht : s ⊆ t) (hs : s.Nonempty) : t.Nonempty</code>",
+ "382": "<code>(closure C).Nonempty</code>",
+ "381":
+ "<code>SDiff.sdiff.{u} {α : Type u} [self : SDiff α] : α → α → α</code><span class=\"sep\"></span><code class=\"docstring\">`a \\ b` is the set difference of `a` and `b`,\nconsisting of all elements in `a` that are not in `b`.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `\\` in identifiers is `sdiff`.</code>",
+ "380":
+ "<code>interior.{u} {X : Type u} [TopologicalSpace X] (s : Set X) : Set X</code><span class=\"sep\"></span><code class=\"docstring\">The interior of a set `s` is the largest open subset of `s`. </code>",
+ "38": "<code>∀ ⦃x : E⦄, x ∈ Ω → ‖x - xStar‖ &lt; r → f xStar ≤ f x</code>",
+ "379":
+ "<code>closure.{u} {X : Type u} [TopologicalSpace X] (s : Set X) : Set X</code><span class=\"sep\"></span><code class=\"docstring\">The closure of `s` is the smallest closed set containing `s`. </code>",
+ "378": "<code>x ∈ closure C \\ interior C</code>",
+ "377":
+ "<code>Lecture02_thm_l2_supporting.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {C : Set E} (hC_ne : C.Nonempty) (hC_convex : Convex ℝ C) {x : E} (hx : x ∈ closure C \\ interior C) :\n  ∃ ξ, ξ ≠ 0 ∧ ∃ b, ξ x = b ∧ ∀ y ∈ C, ξ y ≤ b</code>",
+ "376":
+ "<code>norm_eq_zero.{u_5} {E : Type u_5} [NormedAddGroup E] {a : E} : ‖a‖ = 0 ↔ a = 0</code>",
+ "375":
+ "<code>sub_eq_zero.{u_3} {G : Type u_3} [AddGroup G] {a b : G} : a - b = 0 ↔ a = b</code>",
+ "374":
+ "<code>sq_nonneg.{u} {R : Type u} [Semiring R] [LinearOrder R] [ExistsAddOfLE R] [PosMulMono R] [AddLeftMono R] (a : R) :\n  0 ≤ a ^ 2</code>",
+ "373":
+ "<code class=\"docstring\">An extension of `linarith` with some preprocessing to allow it to solve some nonlinear arithmetic\nproblems. (Based on Coq's `nra` tactic.) See `linarith` for the available syntax of options,\nwhich are inherited by `nlinarith`; that is, `nlinarith!` and `nlinarith only [h1, h2]` all work as\nin `linarith`. The preprocessing is as follows:\n\n* For every subterm `a ^ 2` or `a * a` in a hypothesis or the goal,\n  the assumption `0 ≤ a ^ 2` or `0 ≤ a * a` is added to the context.\n* For every pair of hypotheses `a1 R1 b1`, `a2 R2 b2` in the context, `R1, R2 ∈ {&lt;, ≤, =}`,\n  the assumption `0 R' (b1 - a1) * (b2 - a2)` is added to the context (non-recursively),\n  where `R ∈ {&lt;, ≤, =}` is the appropriate comparison derived from `R1, R2`.\n</code>",
+ "372":
+ "<code>sub_eq_zero_of_eq.{u_3} {G : Type u_3} [AddGroup G] {a b : G} : a = b → a - b = 0</code><span class=\"sep\"></span><code class=\"docstring\">**Alias** of the reverse direction of `sub_eq_zero`.</code>",
+ "371":
+ "<code>neg_eq_zero.{u_1} {α : Type u_1} [SubtractionMonoid α] {a : α} : -a = 0 ↔ a = 0</code>",
+ "370":
+ "<code>Mathlib.Tactic.Linarith.add_nonpos.{u} {α : Type u} [Semiring α] [PartialOrder α] [IsOrderedRing α] {a b : α}\n  (ha : a ≤ 0) (hb : b ≤ 0) : a + b ≤ 0</code>",
+ "37": "<code>r &gt; 0</code>",
+ "369":
+ "<code>Mathlib.Tactic.Linarith.le_of_le_of_eq.{u} {α : Type u} [Semiring α] [PartialOrder α] {a b : α} (ha : a ≤ 0)\n  (hb : b = 0) : a + b ≤ 0</code>",
+ "368":
+ "<code>Mathlib.Meta.NormNum.IsNat.to_raw_eq.{u} {α : Type u} {a : α} {n : ℕ} [AddMonoidWithOne α] :\n  Mathlib.Meta.NormNum.IsNat a n → a = n.rawCast</code>",
+ "367":
+ "<code>Mathlib.Tactic.Ring.zero_mul.{u_1} {R : Type u_1} [CommSemiring R] (b : R) : 0 * b = 0</code>",
+ "366":
+ "<code>Mathlib.Tactic.Ring.mul_zero.{u_1} {R : Type u_1} [CommSemiring R] (a : R) : a * 0 = 0</code>",
+ "365":
+ "<code>Mathlib.Tactic.Ring.mul_pf_left.{u_1} {R : Type u_1} [CommSemiring R] {a₃ b c : R} (a₁ : R) (a₂ : ℕ) :\n  a₃ * b = c → a₁ ^ a₂ * a₃ * b = a₁ ^ a₂ * c</code>",
+ "364":
+ "<code>Mathlib.Tactic.Ring.mul_add.{u_1} {R : Type u_1} [CommSemiring R] {a b₁ b₂ c₁ c₂ d : R} :\n  a * b₁ = c₁ → a * b₂ = c₂ → c₁ + 0 + c₂ = d → a * (b₁ + b₂) = d</code>",
+ "363":
+ "<code>Mathlib.Tactic.Ring.add_mul.{u_1} {R : Type u_1} [CommSemiring R] {a₁ a₂ b c₁ c₂ d : R} :\n  a₁ * b = c₁ → a₂ * b = c₂ → c₁ + c₂ = d → (a₁ + a₂) * b = d</code>",
+ "362":
+ "<code>Mathlib.Tactic.Ring.pow_zero.{u_1} {R : Type u_1} [CommSemiring R] (a : R) : a ^ 0 = Nat.rawCast 1 + 0</code>",
+ "361":
+ "<code>Mathlib.Tactic.Ring.one_pow.{u_1} {R : Type u_1} [CommSemiring R] (b : ℕ) : Nat.rawCast 1 ^ b = Nat.rawCast 1</code>",
+ "360":
+ "<code>Mathlib.Tactic.Ring.one_mul.{u_1} {R : Type u_1} [CommSemiring R] (a : R) : Nat.rawCast 1 * a = a</code>",
+ "36":
+ "<code class=\"docstring\">The `obtain` tactic is a combination of `have` and `rcases`. See `rcases` for\na description of supported patterns.\n\n```lean\nobtain ⟨patt⟩ : type := proof\n```\nis equivalent to\n```lean\nhave h : type := proof\nrcases h with ⟨patt⟩\n```\n\nIf `⟨patt⟩` is omitted, `rcases` will try to infer the pattern.\n\nIf `type` is omitted, `:= proof` is required.\n</code>",
+ "359":
+ "<code>Mathlib.Tactic.Ring.mul_pow.{u_1} {R : Type u_1} [CommSemiring R] {a₂ c₂ : R} {ea₁ b c₁ : ℕ} {xa₁ : R} :\n  ea₁ * b = c₁ → a₂ ^ b = c₂ → (xa₁ ^ ea₁ * a₂) ^ b = xa₁ ^ c₁ * c₂</code>",
+ "358":
+ "<code>Mathlib.Tactic.Ring.single_pow.{u_1} {R : Type u_1} [CommSemiring R] {a c : R} {b : ℕ} : a ^ b = c → (a + 0) ^ b = c + 0</code>",
+ "357":
+ "<code>Mathlib.Tactic.Ring.pow_add.{u_1} {R : Type u_1} [CommSemiring R] {a c₁ c₂ : R} {b₁ b₂ : ℕ} {d : R} :\n  a ^ b₁ = c₁ → a ^ b₂ = c₂ → c₁ * c₂ = d → a ^ (b₁ + b₂) = d</code>",
+ "356":
+ "<code>Nat : Type</code><span class=\"sep\"></span><code class=\"docstring\">The natural numbers, starting at zero.\n\nThis type is special-cased by both the kernel and the compiler, and overridden with an efficient\nimplementation. Both use a fast arbitrary-precision arithmetic library (usually\n[GMP](https://gmplib.org/)); at runtime, `Nat` values that are sufficiently small are unboxed.\n</code>",
+ "355":
+ "<code>Mathlib.Tactic.Ring.cast_pos.{u_1} {R : Type u_1} [CommSemiring R] {a : R} {n : ℕ} :\n  Mathlib.Meta.NormNum.IsNat a n → a = n.rawCast + 0</code>",
+ "354":
+ "<code>Mathlib.Tactic.Ring.pow_congr.{u_1} {R : Type u_1} [CommSemiring R] {a a' c : R} {b b' : ℕ} :\n  a = a' → b = b' → a' ^ b' = c → a ^ b = c</code>",
+ "353":
+ "<code>Mathlib.Tactic.Ring.add_pf_add_lt.{u_1} {R : Type u_1} [CommSemiring R] {a₂ b c : R} (a₁ : R) :\n  a₂ + b = c → a₁ + a₂ + b = a₁ + c</code>",
+ "352": "<code>0 &lt; ‖q - p‖ ^ 2</code>",
+ "351": "<code>‖q - p‖ = 0</code>",
+ "350":
+ "<code>Mathlib.Tactic.Abel.zero_termg.{u_1} {α : Type u_1} [AddCommGroup α] (x a : α) : Mathlib.Tactic.Abel.termg 0 x a = a</code>",
+ "35":
+ "<code>LE.le.{u} {α : Type u} [self : LE α] : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The less-equal relation: `x ≤ y` \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `≤` in identifiers is `le`.\n\n * The recommended spelling of `&lt;=` in identifiers is `le` (prefer `≤` over `&lt;=`).</code>",
+ "349":
+ "<code>Mathlib.Tactic.Abel.term_add_termg.{u_1} {α : Type u_1} [AddCommGroup α] (n₁ : ℤ) (x a₁ : α) (n₂ : ℤ) (a₂ : α) (n' : ℤ)\n  (a' : α) (h₁ : n₁ + n₂ = n') (h₂ : a₁ + a₂ = a') :\n  Mathlib.Tactic.Abel.termg n₁ x a₁ + Mathlib.Tactic.Abel.termg n₂ x a₂ = Mathlib.Tactic.Abel.termg n' x a'</code>",
+ "348": "<code>‖q - p‖ ^ 2 ≤ 0</code>",
+ "347":
+ "<code>real_inner_self_eq_norm_sq.{u_3} {F : Type u_3} [SeminormedAddCommGroup F] [InnerProductSpace ℝ F] (x : F) :\n  ⟪x, x⟫_ℝ = ‖x‖ ^ 2</code>",
+ "346":
+ "<code>inner_add_left.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [RCLike 𝕜] [SeminormedAddCommGroup E] [InnerProductSpace 𝕜 E]\n  (x y z : E) : ⟪x + y, z⟫_𝕜 = ⟪x, z⟫_𝕜 + ⟪y, z⟫_𝕜</code>",
+ "345":
+ "<code>Left.one_le_inv_iff._simp_3.{u} {α : Type u} [AddGroup α] [LE α] [AddLeftMono α] {a : α} : (0 ≤ -a) = (a ≤ 0)</code>",
+ "344":
+ "<code>Mathlib.Tactic.Linarith.sub_neg_of_lt.{u} {α : Type u} [Ring α] [PartialOrder α] [IsOrderedRing α] {a b : α} :\n  a &lt; b → a - b &lt; 0</code>",
+ "343":
+ "<code>Mathlib.Tactic.Linarith.sub_nonpos_of_le.{u} {α : Type u} [Ring α] [PartialOrder α] [IsOrderedRing α] {a b : α} :\n  a ≤ b → a - b ≤ 0</code>",
+ "342":
+ "<code>Mathlib.Tactic.Linarith.add_lt_of_le_of_neg.{u} {α : Type u} [Semiring α] [PartialOrder α] [IsStrictOrderedRing α]\n  {a b c : α} (hbc : b ≤ c) (ha : a &lt; 0) : b + a &lt; c</code>",
+ "341":
+ "<code>Mathlib.Tactic.Ring.add_pf_zero_add.{u_1} {R : Type u_1} [CommSemiring R] (b : R) : 0 + b = b</code>",
+ "340":
+ "<code>Mathlib.Meta.NormNum.isInt_add.{u_1} {α : Type u_1} [Ring α] {f : α → α → α} {a b : α} {a' b' c : ℤ} :\n  f = HAdd.hAdd →\n    Mathlib.Meta.NormNum.IsInt a a' →\n      Mathlib.Meta.NormNum.IsInt b b' → a'.add b' = c → Mathlib.Meta.NormNum.IsInt (f a b) c</code>",
+ "34":
+ "<code>LT.lt.{u} {α : Type u} [self : LT α] : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The less-than relation: `x &lt; y` \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `&lt;` in identifiers is `lt`.</code>",
+ "339":
+ "<code>Mathlib.Tactic.Ring.add_overlap_pf_zero.{u_1} {R : Type u_1} [CommSemiring R] {a b : R} (x : R) (e : ℕ) :\n  Mathlib.Meta.NormNum.IsNat (a + b) 0 → Mathlib.Meta.NormNum.IsNat (x ^ e * a + x ^ e * b) 0</code>",
+ "338":
+ "<code>Mathlib.Tactic.Ring.add_pf_add_overlap_zero.{u_1} {R : Type u_1} [CommSemiring R] {a₁ a₂ b₁ b₂ c : R}\n  (h : Mathlib.Meta.NormNum.IsNat (a₁ + b₁) 0) (h₄ : a₂ + b₂ = c) : a₁ + a₂ + (b₁ + b₂) = c</code>",
+ "337":
+ "<code>Int.rawCast.{u} {α : Type u} [Ring α] (n : ℤ) : α</code><span class=\"sep\"></span><code class=\"docstring\">A \"raw int cast\" is an expression of the form:\n\n* `(Nat.rawCast lit : α)` where `lit` is a raw natural number literal\n* `(Int.rawCast (Int.negOfNat lit) : α)` where `lit` is a nonzero raw natural number literal\n\n(That is, we only actually use this function for negative integers.) This representation is used by\ntactics like `ring` to decrease the number of typeclass arguments required in each use of a number\nliteral at type `α`.\n</code>",
+ "336":
+ "<code>Mathlib.Meta.NormNum.IsNat.of_raw.{u_1} (α : Type u_1) [AddMonoidWithOne α] (n : ℕ) :\n  Mathlib.Meta.NormNum.IsNat n.rawCast n</code>",
+ "335":
+ "<code>Mathlib.Meta.NormNum.IsInt.of_raw.{u_1} (α : Type u_1) [Ring α] (n : ℤ) : Mathlib.Meta.NormNum.IsInt n.rawCast n</code>",
+ "334":
+ "<code>Mathlib.Meta.NormNum.isInt_mul.{u_1} {α : Type u_1} [Ring α] {f : α → α → α} {a b : α} {a' b' c : ℤ} :\n  f = HMul.hMul →\n    Mathlib.Meta.NormNum.IsInt a a' →\n      Mathlib.Meta.NormNum.IsInt b b' → a'.mul b' = c → Mathlib.Meta.NormNum.IsInt (a * b) c</code>",
+ "333":
+ "<code>Mathlib.Meta.NormNum.IsInt.to_raw_eq.{u} {α : Type u} {a : α} {n : ℤ} [Ring α] :\n  Mathlib.Meta.NormNum.IsInt a n → a = n.rawCast</code>",
+ "332":
+ "<code>Mathlib.Tactic.Ring.neg_one_mul.{u_2} {R : Type u_2} [CommRing R] {a b : R} : (Int.negOfNat 1).rawCast * a = b → -a = b</code>",
+ "331":
+ "<code>Mathlib.Tactic.Ring.neg_mul.{u_2} {R : Type u_2} [CommRing R] (a₁ : R) (a₂ : ℕ) {a₃ b : R} :\n  -a₃ = b → -(a₁ ^ a₂ * a₃) = a₁ ^ a₂ * b</code>",
+ "330":
+ "<code>Mathlib.Tactic.Ring.neg_add.{u_2} {R : Type u_2} [CommRing R] {a₁ a₂ b₁ b₂ : R} :\n  -a₁ = b₁ → -a₂ = b₂ → -(a₁ + a₂) = b₁ + b₂</code>",
+ "33":
+ "<code>HSub.hSub.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HSub α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a - b` computes the difference of `a` and `b`.\nThe meaning of this notation is type-dependent.\n* For natural numbers, this operator saturates at 0: `a - b = 0` when `a ≤ b`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `-` in identifiers is `sub` (when used as a binary operator).</code>",
+ "329":
+ "<code>Mathlib.Tactic.Ring.neg_congr.{u_2} {R : Type u_2} [CommRing R] {a a' b : R} : a = a' → -a' = b → -a = b</code>",
+ "328":
+ "<code>HMul.hMul.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HMul α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a * b` computes the product of `a` and `b`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `*` in identifiers is `mul`.</code>",
+ "327":
+ "<code>Nat.rawCast.{u} {α : Type u} [AddMonoidWithOne α] (n : ℕ) : α</code><span class=\"sep\"></span><code class=\"docstring\">A \"raw nat cast\" is an expression of the form `(Nat.rawCast lit : α)` where `lit` is a raw\nnatural number literal. These expressions are used by tactics like `ring` to decrease the number\nof typeclass arguments required in each use of a number literal at type `α`.\n</code>",
+ "326":
+ "<code>HPow.hPow.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HPow α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a ^ b` computes `a` to the power of `b`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `^` in identifiers is `pow`.</code>",
+ "325":
+ "<code>Mathlib.Tactic.Ring.add_pf_add_zero.{u_1} {R : Type u_1} [CommSemiring R] (a : R) : a + 0 = a</code>",
+ "324":
+ "<code>Mathlib.Tactic.Ring.neg_zero.{u_2} {R : Type u_2} [CommRing R] : -0 = 0</code>",
+ "323":
+ "<code>Mathlib.Tactic.Ring.sub_pf.{u_2} {R : Type u_2} [CommRing R] {a b c d : R} : -b = c → a + c = d → a - b = d</code>",
+ "322":
+ "<code>Nat.cast_zero.{u_1} {R : Type u_1} [AddMonoidWithOne R] : ↑0 = 0</code>",
+ "321":
+ "<code>Mathlib.Tactic.Ring.cast_zero.{u_1} {R : Type u_1} [CommSemiring R] {a : R} : Mathlib.Meta.NormNum.IsNat a 0 → a = 0</code>",
+ "320":
+ "<code>Mathlib.Tactic.Ring.atom_pf.{u_1} {R : Type u_1} [CommSemiring R] (a : R) : a = a ^ Nat.rawCast 1 * Nat.rawCast 1 + 0</code>",
+ "32":
+ "<code>Norm.norm.{u_8} {E : Type u_8} [self : Norm E] : E → ℝ</code><span class=\"sep\"></span><code class=\"docstring\">the `ℝ`-valued norm function. </code>",
+ "319":
+ "<code>Mathlib.Tactic.Ring.sub_congr.{u_2} {R : Type u_2} [CommRing R] {a a' b b' c : R} :\n  a = a' → b = b' → a' - b' = c → a - b = c</code>",
+ "318":
+ "<code>Mathlib.Tactic.Ring.add_congr.{u_1} {R : Type u_1} [CommSemiring R] {a a' b b' c : R} :\n  a = a' → b = b' → a' + b' = c → a + b = c</code>",
+ "317":
+ "<code>Mathlib.Tactic.Ring.of_eq.{u_1} {α : Sort u_1} {a b c : α} : a = c → b = c → a = b</code>",
+ "316":
+ "<code>Mathlib.Tactic.Linarith.lt_irrefl.{u} {α : Type u} [Preorder α] {a : α} : ¬a &lt; a</code>",
+ "315": "<code>-⟪z - q, p - q⟫_ℝ &lt; 0</code>",
+ "314":
+ "<code>le_of_not_gt.{u_1} {α : Type u_1} [LinearOrder α] {a b : α} (h : ¬b &lt; a) : a ≤ b</code>",
+ "313": "<code>ℕ</code>",
+ "312": "<code>⟪z - p, q - p⟫_ℝ = ⟪z - q, q - p⟫_ℝ + ‖q - p‖ ^ 2</code>",
+ "311": "<code>0 ≤ -⟪z - q, p - q⟫_ℝ</code>",
+ "310":
+ "<code>Int.ofNat : ℕ → ℤ</code><span class=\"sep\"></span><code class=\"docstring\">A natural number is an integer.\n\nThis constructor covers the non-negative integers (from `0` to `∞`).\n</code>",
+ "31":
+ "<code>Membership.mem.{u, v} {α : outParam (Type u)} {γ : Type v} [self : Membership α γ] : γ → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The membership relation `a ∈ s : Prop` where `a : α`, `s : γ`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∈` in identifiers is `mem`.</code>",
+ "309":
+ "<code>Int.negOfNat : ℕ → ℤ</code><span class=\"sep\"></span><code class=\"docstring\">Negation of natural numbers.\n\nExamples:\n* `Int.negOfNat 6 = -6`\n* `Int.negOfNat 0 = 0`\n</code>",
+ "308":
+ "<code>Int : Type</code><span class=\"sep\"></span><code class=\"docstring\">The integers.\n\nThis type is special-cased by the compiler and overridden with an efficient implementation. The\nruntime has a special representation for `Int` that stores “small” signed numbers directly, while\nlarger numbers use a fast arbitrary-precision arithmetic library (usually\n[GMP](https://gmplib.org/)). A “small number” is an integer that can be encoded with one fewer bits\nthan the platform's pointer size (i.e. 63 bits on 64-bit architectures and 31 bits on 32-bit\narchitectures).\n</code>",
+ "307":
+ "<code>Mathlib.Meta.NormNum.isNat_ofNat.{u} (α : Type u) [AddMonoidWithOne α] {a : α} {n : ℕ} (h : ↑n = a) :\n  Mathlib.Meta.NormNum.IsNat a n</code>",
+ "306":
+ "<code>Mathlib.Meta.NormNum.IsNat.to_isInt.{u_1} {α : Type u_1} [Ring α] {a : α} {n : ℕ} :\n  Mathlib.Meta.NormNum.IsNat a n → Mathlib.Meta.NormNum.IsInt a (Int.ofNat n)</code>",
+ "305":
+ "<code>Mathlib.Meta.NormNum.isInt_neg.{u_1} {α : Type u_1} [Ring α] {f : α → α} {a : α} {a' b : ℤ} :\n  f = Neg.neg → Mathlib.Meta.NormNum.IsInt a a' → a'.neg = b → Mathlib.Meta.NormNum.IsInt (-a) b</code>",
+ "304":
+ "<code>Mathlib.Meta.NormNum.IsInt.to_isNat.{u_1} {α : Type u_1} [Ring α] {a : α} {n : ℕ} :\n  Mathlib.Meta.NormNum.IsInt a (Int.ofNat n) → Mathlib.Meta.NormNum.IsNat a n</code>",
+ "303":
+ "<code>Mathlib.Meta.NormNum.IsNat.to_eq.{u} {α : Type u} [AddMonoidWithOne α] {n : ℕ} {a a' : α} :\n  Mathlib.Meta.NormNum.IsNat a n → ↑n = a' → a = a'</code>",
+ "302":
+ "<code>add_zero.{u} {M : Type u} [AddZeroClass M] (a : M) : a + 0 = a</code>",
+ "301":
+ "<code>Mathlib.Tactic.Abel.const_add_termg.{u_1} {α : Type u_1} [AddCommGroup α] (k : α) (n : ℤ) (x a a' : α)\n  (h : k + a = a') : k + Mathlib.Tactic.Abel.termg n x a = Mathlib.Tactic.Abel.termg n x a'</code>",
+ "300":
+ "<code>Eq.symm.{u} {α : Sort u} {a b : α} (h : a = b) : b = a</code><span class=\"sep\"></span><code class=\"docstring\">Equality is symmetric: if `a = b` then `b = a`.\n\nBecause this is in the `Eq` namespace, if you have a variable `h : a = b`,\n`h.symm` can be used as shorthand for `Eq.symm h` as a proof of `b = a`.\n\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n</code>",
+ "30": "<code>NormedSpace ℝ E</code>",
+ "3":
+ "<code>TopologicalSpace.{u} (X : Type u) : Type u</code><span class=\"sep\"></span><code class=\"docstring\">A topology on `X`. </code>",
+ "299":
+ "<code>Mathlib.Tactic.Abel.term_add_constg.{u_1} {α : Type u_1} [AddCommGroup α] (n : ℤ) (x a k a' : α) (h : a + k = a') :\n  Mathlib.Tactic.Abel.termg n x a + k = Mathlib.Tactic.Abel.termg n x a'</code>",
+ "298": "<code>neg_zero.{u_1} {G : Type u_1} [NegZeroClass G] : -0 = 0</code>",
+ "297":
+ "<code>Mathlib.Tactic.Abel.term_neg.{u_1} {α : Type u_1} [AddCommGroup α] (n : ℤ) (x a : α) (n' : ℤ) (a' : α) (h₁ : -n = n')\n  (h₂ : -a = a') : -Mathlib.Tactic.Abel.termg n x a = Mathlib.Tactic.Abel.termg n' x a'</code>",
+ "296":
+ "<code>Mathlib.Tactic.Abel.subst_into_negg.{u_1} {α : Type u_1} [AddCommGroup α] (a ta t : α) (pra : a = ta) (prt : -ta = t) :\n  -a = t</code>",
+ "295":
+ "<code>Mathlib.Tactic.Abel.term_atomg.{u_1} {α : Type u_1} [AddCommGroup α] (x : α) : x = Mathlib.Tactic.Abel.termg 1 x 0</code>",
+ "294":
+ "<code>Mathlib.Tactic.Abel.subst_into_addg.{u_1} {α : Type u_1} [AddCommGroup α] (l r tl tr t : α) (prl : l = tl)\n  (prr : r = tr) (prt : tl + tr = t) : l + r = t</code>",
+ "293":
+ "<code>Mathlib.Tactic.Abel.termg.{u_1} {α : Type u_1} [AddCommGroup α] (n : ℤ) (x a : α) : α</code><span class=\"sep\"></span><code class=\"docstring\">A type synonym used by `abel` to represent `n • x + a` in an additive commutative group. </code>",
+ "292":
+ "<code>Mathlib.Tactic.Abel.unfold_sub.{u_1} {α : Type u_1} [SubtractionMonoid α] (a b c : α) (h : a + -b = c) : a - b = c</code>",
+ "291": "<code>a_2 = a_3</code>",
+ "290": "<code>a = a_2</code>",
+ "29": "<code>NormedAddCommGroup E</code>",
+ "289": "<code>a = a_1</code>",
+ "288":
+ "<code>Inner.{u_4, u_5} (𝕜 : Type u_4) (E : Type u_5) : Type (max u_4 u_5)</code><span class=\"sep\"></span><code class=\"docstring\">Syntactic typeclass for types endowed with an inner product </code>",
+ "287":
+ "<code>Trans.trans.{u, v, w, u_1, u_2, u_3} {α : Sort u_1} {β : Sort u_2} {γ : Sort u_3} {r : α → β → Sort u}\n  {s : β → γ → Sort v} {t : outParam (α → γ → Sort w)} [self : Trans r s t] {a : α} {b : β} {c : γ} :\n  r a b → s b c → t a c</code><span class=\"sep\"></span><code class=\"docstring\">Compose two proofs by transitivity, generalized over the relations involved. </code>",
+ "286":
+ "<code>inner_neg_right.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [RCLike 𝕜] [SeminormedAddCommGroup E] [InnerProductSpace 𝕜 E]\n  (x y : E) : ⟪x, -y⟫_𝕜 = -⟪x, y⟫_𝕜</code>",
+ "285":
+ "<code class=\"docstring\">`abel` solves equations in the language of *additive*, commutative monoids and groups.\n\n`abel` and its variants work as both tactics and conv tactics.\n\n* `abel1` fails if the target is not an equality that is provable by the axioms of\n  commutative monoids/groups.\n* `abel_nf` rewrites all group expressions into a normal form.\n  * `abel_nf at h` rewrites in a hypothesis.\n  * `abel_nf (config := cfg)` allows for additional configuration:\n    * `red`: the reducibility setting (overridden by `!`).\n    * `zetaDelta`: if true, local `let` variables can be unfolded (overridden by `!`).\n    * `recursive`: if true, `abel_nf` also recurses into atoms.\n* `abel!`, `abel1!`, `abel_nf!` use a more aggressive reducibility setting to identify atoms.\n\nExamples:\n```\nexample [AddCommMonoid α] (a b : α) : a + (b + a) = a + a + b := by abel\nexample [AddCommGroup α] (a : α) : (3 : ℤ) • a = a + (2 : ℤ) • a := by abel\n```\n</code>",
+ "284":
+ "<code class=\"docstring\">Apply congruence (recursively) to goals of the form `⊢ f as = f bs` and `⊢ f as ≍ f bs`.\nThe optional parameter is the depth of the recursive applications.\nThis is useful when `congr` is too aggressive in breaking down the goal.\nFor example, given `⊢ f (g (x + y)) = f (g (y + x))`,\n`congr` produces the goals `⊢ x = y` and `⊢ y = x`,\nwhile `congr 2` produces the intended `⊢ x + y = y + x`.\n</code>",
+ "283":
+ "<code class=\"docstring\">Step-wise reasoning over transitive relations.\n```\ncalc\n  a = b := pab\n  b = c := pbc\n  ...\n  y = z := pyz\n```\nproves `a = z` from the given step-wise proofs. `=` can be replaced with any\nrelation implementing the typeclass `Trans`. Instead of repeating the right-\nhand sides, subsequent left-hand sides can be replaced with `_`.\n```\ncalc\n  a = b := pab\n  _ = c := pbc\n  ...\n  _ = z := pyz\n```\nIt is also possible to write the *first* relation as `&lt;lhs&gt;\\n  _ = &lt;rhs&gt; :=\n&lt;proof&gt;`. This is useful for aligning relation symbols, especially on longer\nidentifiers:\n```\ncalc abc\n  _ = bce := pabce\n  _ = cef := pbcef\n  ...\n  _ = xyz := pwxyz\n```\n\n`calc` works as a term, as a tactic or as a `conv` tactic.\n\nSee [Theorem Proving in Lean 4][tpil4] for more information.\n\n[tpil4]: https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#calculational-proofs\n</code>",
+ "282":
+ "<code>Neg.neg.{u} {α : Type u} [self : Neg α] : α → α</code><span class=\"sep\"></span><code class=\"docstring\">`-a` computes the negative or opposite of `a`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `-` in identifiers is `neg` (when used as a unary operator).</code>",
+ "281": "<code>⟪z - q, q - p⟫_ℝ = -⟪z - q, p - q⟫_ℝ</code>",
+ "280": "<code>0 ≤ ⟪z - q, q - p⟫_ℝ</code>",
+ "28": "<code>ℝ</code>",
+ "279": "<code>⟪z - q, p - q⟫_ℝ ≤ 0</code>",
+ "278": "<code>⟪z - p, q - p⟫_ℝ ≤ 0</code>",
+ "277": "<code>∀ y ∈ C, ⟪z - p, y - p⟫_ℝ ≤ 0</code>",
+ "276": "<code>∀ y ∈ C, ⟪z - q, y - q⟫_ℝ ≤ 0</code>",
+ "275": "<code>q ∈ C</code>",
+ "274":
+ "<code>q ∈ C ∧ (∀ y ∈ C, ‖z - q‖ ≤ ‖z - y‖) ∧ ∀ y ∈ C, ⟪z - q, y - q⟫_ℝ ≤ 0</code>",
+ "273":
+ "<code>norm_eq_iInf_iff_real_inner_le_zero.{u_3} {F : Type u_3} [NormedAddCommGroup F] [InnerProductSpace ℝ F] {K : Set F}\n  (h : Convex ℝ K) {u v : F} (hv : v ∈ K) : ‖u - v‖ = ⨅ w, ‖u - ↑w‖ ↔ ∀ w ∈ K, ⟪u - v, w - v⟫_ℝ ≤ 0</code><span class=\"sep\"></span><code class=\"docstring\">Characterization of minimizers for the projection on a convex set in a real inner product\nspace. </code>",
+ "272":
+ "<code>norm_nonneg.{u_5} {E : Type u_5} [SeminormedAddGroup E] (a : E) : 0 ≤ ‖a‖</code>",
+ "271":
+ "<code>Set.forall_mem_range.{u_1, u_4} {α : Type u_1} {ι : Sort u_4} {f : ι → α} {p : α → Prop} :\n  (∀ a ∈ Set.range f, p a) ↔ ∀ (i : ι), p (f i)</code>",
+ "270":
+ "<code>ciInf_le.{u_1, u_4} {α : Type u_1} {ι : Sort u_4} [ConditionallyCompleteLattice α] {f : ι → α}\n  (H : BddBelow (Set.range f)) (c : ι) : iInf f ≤ f c</code><span class=\"sep\"></span><code class=\"docstring\">The indexed infimum of a function is bounded above by the value taken at one point </code>",
+ "27":
+ "<code>∃ r &gt; 0, ∀ ⦃x : E⦄, x ∈ Ω → ‖x - xStar‖ &lt; r → f xStar ≤ f x</code>",
+ "269":
+ "<code>Subtype.mk.{u} {α : Sort u} {p : α → Prop} (val : α) (property : p val) : Subtype p</code>",
+ "268": "<code>⨅ w, ‖z - ↑w‖ ≤ ‖z - ↑⟨y, hy⟩‖</code>",
+ "267":
+ "<code class=\"docstring\">`rw` is like `rewrite`, but also tries to close the goal by \"cheap\" (reducible) `rfl` afterwards.\n</code>",
+ "266": "<code>↑C</code>",
+ "265":
+ "<code>IsClosed.isComplete.{u} {α : Type u} [uniformSpace : UniformSpace α] [CompleteSpace α] {s : Set α} (h : IsClosed s) :\n  IsComplete s</code>",
+ "264":
+ "<code>exists_norm_eq_iInf_of_complete_convex.{u_3} {F : Type u_3} [NormedAddCommGroup F] [InnerProductSpace ℝ F] {K : Set F}\n  (ne : K.Nonempty) (h₁ : IsComplete K) (h₂ : Convex ℝ K) (u : F) : ∃ v ∈ K, ‖u - v‖ = ⨅ w, ‖u - ↑w‖</code><span class=\"sep\"></span><code class=\"docstring\">**Existence of minimizers**, aka the **Hilbert projection theorem**.\n\nLet `u` be a point in a real inner product space, and let `K` be a nonempty complete convex subset.\nThen there exists a (unique) `v` in `K` that minimizes the distance `‖u - v‖` to `u`. </code>",
+ "263": "<code>‖z - p‖ = ⨅ w, ‖z - ↑w‖</code>",
+ "262": "<code>p ∈ C</code>",
+ "261": "<code>Nonempty ↑C</code>",
+ "260":
+ "<code>Set.Nonempty.to_subtype.{u} {α : Type u} {s : Set α} : s.Nonempty → Nonempty ↑s</code>",
+ "26":
+ "<code>ConvexOn.{u_1, u_2, u_5} (𝕜 : Type u_1) {E : Type u_2} {β : Type u_5} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid E]\n  [AddCommMonoid β] [PartialOrder β] [SMul 𝕜 E] [SMul 𝕜 β] (s : Set E) (f : E → β) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Convexity of functions </code>",
+ "259":
+ "<code>Nonempty.{u} (α : Sort u) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`Nonempty α` is a typeclass that says that `α` is not an empty type,\nthat is, there exists an element in the type. It differs from `Inhabited α`\nin that `Nonempty α` is a `Prop`, which means that it does not actually carry\nan element of `α`, only a proof that *there exists* such an element.\nGiven `Nonempty α`, you can construct an element of `α` *nonconstructively*\nusing `Classical.choice`.\n</code>",
+ "258":
+ "<code class=\"docstring\">`letI` behaves like `let`, but inlines the value instead of producing a `let` term. </code>",
+ "257":
+ "<code>Inner.inner.{u_4, u_5} (𝕜 : Type u_4) {E : Type u_5} [self : Inner 𝕜 E] : E → E → 𝕜</code><span class=\"sep\"></span><code class=\"docstring\">The inner product function. </code>",
+ "256":
+ "<code>ExistsUnique.{u_1} {α : Sort u_1} (p : α → Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">For `p : α → Prop`, `ExistsUnique p` means that there exists a unique `x : α` with `p x`. </code>",
+ "255": "<code>CompleteSpace E</code>",
+ "254": "<code>InnerProductSpace ℝ E</code>",
+ "253":
+ "<code>CompleteSpace.{u} (α : Type u) [UniformSpace α] : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A complete space is defined here using uniformities. A uniform space\nis complete if every Cauchy filter converges. </code>",
+ "252":
+ "<code>InnerProductSpace.{u_4, u_5} (𝕜 : Type u_4) (E : Type u_5) [RCLike 𝕜] [SeminormedAddCommGroup E] : Type (max u_4 u_5)</code><span class=\"sep\"></span><code class=\"docstring\">A (pre) inner product space is a vector space with an additional operation called inner product.\nThe (semi)norm could be derived from the inner product, instead we require the existence of a\nseminorm and the fact that `‖x‖^2 = re ⟪x, x⟫` to be able to put instances on `𝕂` or product spaces.\n\nNote that `NormedSpace` does not assume that `‖x‖=0` implies `x=0` (it is rather a seminorm).\n\nTo construct a seminorm from an inner product, see `PreInnerProductSpace.ofCore`.\n</code>",
+ "251":
+ "<code>Lecture02_thm_l2_projection.{u_1} {E : Type u_1} [NormedAddCommGroup E] [InnerProductSpace ℝ E] [CompleteSpace E]\n  {C : Set E} (hC_ne : C.Nonempty) (hC_closed : IsClosed C) (hC_convex : Convex ℝ C) (z : E) :\n  ∃! p, p ∈ C ∧ (∀ y ∈ C, ‖z - p‖ ≤ ‖z - y‖) ∧ ∀ y ∈ C, ⟪z - p, y - p⟫_ℝ ≤ 0</code>",
+ "250":
+ "<code>And.intro {a b : Prop} (left : a) (right : b) : a ∧ b</code><span class=\"sep\"></span><code class=\"docstring\">`And.intro : a → b → a ∧ b` is the constructor for the And operation. </code>",
+ "25": "<code>ConvexOn ℝ Ω f</code>",
+ "249":
+ "<code>rfl.{u} {α : Sort u} {a : α} : a = a</code><span class=\"sep\"></span><code class=\"docstring\">`rfl : a = a` is the unique constructor of the equality type. This is the\nsame as `Eq.refl` except that it takes `a` implicitly instead of explicitly.\n\nThis is a more powerful theorem than it may appear at first, because although\nthe statement of the theorem is `a = a`, Lean will allow anything that is\ndefinitionally equal to that type. So, for instance, `2 + 2 = 4` is proven in\nLean by `rfl`, because both sides are the same up to definitional equality.\n</code>",
+ "248": "<code>e y ∈ C'</code>",
+ "247": "<code>y ∈ C</code>",
+ "246":
+ "<code>ContinuousLinearEquiv.surjective.{u_1, u_2, u_4, u_5} {R₁ : Type u_1} {R₂ : Type u_2} [Semiring R₁] [Semiring R₂]\n  {σ₁₂ : R₁ →+* R₂} {σ₂₁ : R₂ →+* R₁} [RingHomInvPair σ₁₂ σ₂₁] [RingHomInvPair σ₂₁ σ₁₂] {M₁ : Type u_4}\n  [TopologicalSpace M₁] [AddCommMonoid M₁] {M₂ : Type u_5} [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R₁ M₁]\n  [Module R₂ M₂] (e : M₁ ≃SL[σ₁₂] M₂) : Function.Surjective ⇑e</code>",
+ "245": "<code>e x = u</code>",
+ "244":
+ "<code class=\"docstring\">Applies extensionality lemmas that are registered with the `@[ext]` attribute.\n* `ext pat*` applies extensionality theorems as much as possible,\n  using the patterns `pat*` to introduce the variables in extensionality theorems using `rintro`.\n  For example, the patterns are used to name the variables introduced by lemmas such as `funext`.\n* Without patterns,`ext` applies extensionality lemmas as much\n  as possible but introduces anonymous hypotheses whenever needed.\n* `ext pat* : n` applies ext theorems only up to depth `n`.\n\nThe `ext1 pat*` tactic is like `ext pat*` except that it only applies a single extensionality theorem.\n\nUnused patterns will generate warning.\nPatterns that don't match the variables will typically result in the introduction of anonymous hypotheses.\n</code>",
+ "243": "<code>ξ = 0</code>",
+ "242":
+ "<code>Exists.intro.{u} {α : Sort u} {p : α → Prop} (w : α) (h : p w) : Exists p</code><span class=\"sep\"></span><code class=\"docstring\">Existential introduction. If `a : α` and `h : p a`,\nthen `⟨a, h⟩` is a proof that `∃ x : α, p x`. </code>",
+ "241":
+ "<code class=\"docstring\">`refine e` behaves like `exact e`, except that named (`?x`) or unnamed (`?_`)\nholes in `e` that are not solved by unification with the main goal's target type\nare converted into new goals, using the hole's name, if any, as the goal case name.\n</code>",
+ "240":
+ "<code>ContinuousLinearEquiv.toContinuousLinearMap.{u_1, u_2, u_4, u_5} {R₁ : Type u_1} {R₂ : Type u_2} [Semiring R₁]\n  [Semiring R₂] {σ₁₂ : R₁ →+* R₂} {σ₂₁ : R₂ →+* R₁} [RingHomInvPair σ₁₂ σ₂₁] [RingHomInvPair σ₂₁ σ₁₂] {M₁ : Type u_4}\n  [TopologicalSpace M₁] [AddCommMonoid M₁] {M₂ : Type u_5} [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R₁ M₁]\n  [Module R₂ M₂] (e : M₁ ≃SL[σ₁₂] M₂) : M₁ →SL[σ₁₂] M₂</code><span class=\"sep\"></span><code class=\"docstring\">A continuous linear equivalence induces a continuous linear map. </code>",
+ "24": "<code>xStar ∈ Ω</code>",
+ "239":
+ "<code>ContinuousLinearMap.comp.{u_1, u_2, u_3, u_4, u_6, u_7} {R₁ : Type u_1} {R₂ : Type u_2} {R₃ : Type u_3} [Semiring R₁]\n  [Semiring R₂] [Semiring R₃] {σ₁₂ : R₁ →+* R₂} {σ₂₃ : R₂ →+* R₃} {σ₁₃ : R₁ →+* R₃} {M₁ : Type u_4}\n  [TopologicalSpace M₁] [AddCommMonoid M₁] {M₂ : Type u_6} [TopologicalSpace M₂] [AddCommMonoid M₂] {M₃ : Type u_7}\n  [TopologicalSpace M₃] [AddCommMonoid M₃] [Module R₁ M₁] [Module R₂ M₂] [Module R₃ M₃] [RingHomCompTriple σ₁₂ σ₂₃ σ₁₃]\n  (g : M₂ →SL[σ₂₃] M₃) (f : M₁ →SL[σ₁₂] M₂) : M₁ →SL[σ₁₃] M₃</code><span class=\"sep\"></span><code class=\"docstring\">Composition of bounded linear maps. </code>",
+ "238": "<code>EuclideanSpace ℝ (Fin (Module.finrank ℝ E))</code>",
+ "237":
+ "<code>Eq.rec.{u, u_1} {α : Sort u_1} {a✝ : α} {motive : (a : α) → a✝ = a → Sort u} (refl : motive a✝ ⋯) {a✝¹ : α}\n  (t : a✝ = a✝¹) : motive a✝¹ t</code>",
+ "236":
+ "<code>And.casesOn.{u} {a b : Prop} {motive : a ∧ b → Sort u} (t : a ∧ b) (intro : (left : a) → (right : b) → motive ⋯) :\n  motive t</code>",
+ "235": "<code>x ∈ C ∧ e x = e z</code>",
+ "234":
+ "<code>Exists.casesOn.{u} {α : Sort u} {p : α → Prop} {motive : Exists p → Prop} (t : Exists p)\n  (intro : ∀ (w : α) (h : p w), motive ⋯) : motive t</code>",
+ "233":
+ "<code>ConvexOptV3.Lectures.Lecture02.point_closed_sep_dual_euclidean.{u_2} {E : Type u_2} [NormedAddCommGroup E]\n  [InnerProductSpace ℝ E] [CompleteSpace E] {C : Set E} (hC_closed : IsClosed C) (hC_convex : Convex ℝ C)\n  (hC_ne : C.Nonempty) {z : E} (hz : z ∉ C) : ∃ ξ, ξ ≠ 0 ∧ ∃ b, (∀ y ∈ C, ξ y ≤ b) ∧ ξ z &gt; b</code>",
+ "232": "<code>ξ' (e z) &gt; b</code>",
+ "231": "<code>∀ y ∈ C', ξ' y ≤ b</code>",
+ "230": "<code>ξ' ≠ 0</code>",
+ "23":
+ "<code>NormedSpace.{u_6, u_7} (𝕜 : Type u_6) (E : Type u_7) [NormedField 𝕜] [SeminormedAddCommGroup E] : Type (max u_6 u_7)</code><span class=\"sep\"></span><code class=\"docstring\">A normed space over a normed field is a vector space endowed with a norm which satisfies the\nequality `‖c • x‖ = ‖c‖ ‖x‖`. We require only `‖c • x‖ ≤ ‖c‖ ‖x‖` in the definition, then prove\n`‖c • x‖ = ‖c‖ ‖x‖` in `norm_smul`.\n\nNote that since this requires `SeminormedAddCommGroup` and not `NormedAddCommGroup`, this\ntypeclass can be used for \"seminormed spaces\" too, just as `Module` can be used for\n\"semimodules\". </code>",
+ "229": "<code>Covector (EuclideanSpace ℝ (Fin (Module.finrank ℝ E)))</code>",
+ "228":
+ "<code>ContinuousLinearEquiv.injective.{u_1, u_2, u_4, u_5} {R₁ : Type u_1} {R₂ : Type u_2} [Semiring R₁] [Semiring R₂]\n  {σ₁₂ : R₁ →+* R₂} {σ₂₁ : R₂ →+* R₁} [RingHomInvPair σ₁₂ σ₂₁] [RingHomInvPair σ₂₁ σ₁₂] {M₁ : Type u_4}\n  [TopologicalSpace M₁] [AddCommMonoid M₁] {M₂ : Type u_5} [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R₁ M₁]\n  [Module R₂ M₂] (e : M₁ ≃SL[σ₁₂] M₂) : Function.Injective ⇑e</code>",
+ "227":
+ "<code class=\"docstring\">`apply e` tries to match the current goal against the conclusion of `e`'s type.\nIf it succeeds, then the tactic returns as many subgoals as the number of premises that\nhave not been fixed by type inference or type class resolution.\nNon-dependent premises are added before dependent ones.\n\nThe `apply` tactic uses higher-order pattern matching, type class resolution,\nand first-order unification with dependent types.\n\n\nExtensions:\n\n * * `apply (config := cfg) e` allows for additional configuration (see `Lean.Meta.ApplyConfig`):\n     * `newGoals` controls which new goals are added by `apply`, in which order.\n     * `-synthAssignedInstances` will not synthesize instance implicit arguments if they have been\n       assigned by `isDefEq`.\n     * `+allowSynthFailures` will create new goals when instance synthesis fails, rather than erroring.\n     * `+approx` enables `isDefEq` approximations (see `Lean.Meta.approxDefEq`).</code>",
+ "226": "<code>e x = e z</code>",
+ "225": "<code>x ∈ C</code>",
+ "224":
+ "<code class=\"docstring\">`rcases` is a tactic that will perform `cases` recursively, according to a pattern. It is used to\ndestructure hypotheses or expressions composed of inductive types like `h1 : a ∧ b ∧ c ∨ d` or\n`h2 : ∃ x y, trans_rel R x y`. Usual usage might be `rcases h1 with ⟨ha, hb, hc⟩ | hd` or\n`rcases h2 with ⟨x, y, _ | ⟨z, hxz, hzy⟩⟩` for these examples.\n\nEach element of an `rcases` pattern is matched against a particular local hypothesis (most of which\nare generated during the execution of `rcases` and represent individual elements destructured from\nthe input expression). An `rcases` pattern has the following grammar:\n\n* A name like `x`, which names the active hypothesis as `x`.\n* A blank `_`, which does nothing (letting the automatic naming system used by `cases` name the\n  hypothesis).\n* A hyphen `-`, which clears the active hypothesis and any dependents.\n* The keyword `rfl`, which expects the hypothesis to be `h : a = b`, and calls `subst` on the\n  hypothesis (which has the effect of replacing `b` with `a` everywhere or vice versa).\n* A type ascription `p : ty`, which sets the type of the hypothesis to `ty` and then matches it\n  against `p`. (Of course, `ty` must unify with the actual type of `h` for this to work.)\n* A tuple pattern `⟨p1, p2, p3⟩`, which matches a constructor with many arguments, or a series\n  of nested conjunctions or existentials. For example if the active hypothesis is `a ∧ b ∧ c`,\n  then the conjunction will be destructured, and `p1` will be matched against `a`, `p2` against `b`\n  and so on.\n* A `@` before a tuple pattern as in `@⟨p1, p2, p3⟩` will bind all arguments in the constructor,\n  while leaving the `@` off will only use the patterns on the explicit arguments.\n* An alternation pattern `p1 | p2 | p3`, which matches an inductive type with multiple constructors,\n  or a nested disjunction like `a ∨ b ∨ c`.\n\nA pattern like `⟨a, b, c⟩ | ⟨d, e⟩` will do a split over the inductive datatype,\nnaming the first three parameters of the first constructor as `a,b,c` and the\nfirst two of the second constructor `d,e`. If the list is not as long as the\nnumber of arguments to the constructor or the number of constructors, the\nremaining variables will be automatically named. If there are nested brackets\nsuch as `⟨⟨a⟩, b | c⟩ | d` then these will cause more case splits as necessary.\nIf there are too many arguments, such as `⟨a, b, c⟩` for splitting on\n`∃ x, ∃ y, p x`, then it will be treated as `⟨a, ⟨b, c⟩⟩`, splitting the last\nparameter as necessary.\n\n`rcases` also has special support for quotient types: quotient induction into Prop works like\nmatching on the constructor `quot.mk`.\n\n`rcases h : e with PAT` will do the same as `rcases e with PAT` with the exception that an\nassumption `h : e = PAT` will be added to the context.\n</code>",
+ "223":
+ "<code>False : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`False` is the empty proposition. Thus, it has no introduction rules.\nIt represents a contradiction. `False` elimination rule, `False.rec`,\nexpresses the fact that anything follows from a contradiction.\nThis rule is sometimes called ex falso (short for ex falso sequitur quodlibet),\nor the principle of explosion.\nFor more information: [Propositional Logic](https://lean-lang.org/theorem_proving_in_lean4/propositions_and_proofs.html#propositional-logic)\n</code>",
+ "222": "<code>e z ∈ C'</code>",
+ "221": "<code>e z ∉ C'</code>",
+ "220":
+ "<code>ContinuousLinearEquiv.toLinearEquiv.{u_1, u_2, u_3, u_4} {R : Type u_1} {S : Type u_2} [Semiring R] [Semiring S]\n  {σ : R →+* S} {σ' : S →+* R} [RingHomInvPair σ σ'] [RingHomInvPair σ' σ] {M : Type u_3} [TopologicalSpace M]\n  [AddCommMonoid M] {M₂ : Type u_4} [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R M] [Module S M₂]\n  (self : M ≃SL[σ] M₂) : M ≃ₛₗ[σ] M₂</code>",
+ "22":
+ "<code>NormedAddCommGroup.{u_8} (E : Type u_8) : Type u_8</code><span class=\"sep\"></span><code class=\"docstring\">A normed group is an additive group endowed with a norm for which `dist x y = ‖x - y‖` defines a\nmetric space structure. </code>",
+ "219": "<code>a ∈ C</code>",
+ "218":
+ "<code>Set.image_congr.{u_1, u_2} {α : Type u_1} {β : Type u_2} {f g : α → β} {s : Set α} (h : ∀ a ∈ s, f a = g a) :\n  f '' s = g '' s</code>",
+ "217":
+ "<code>Set.Nonempty.image.{u_1, u_2} {α : Type u_1} {β : Type u_2} (f : α → β) {s : Set α} : s.Nonempty → (f '' s).Nonempty</code>",
+ "216": "<code>C'.Nonempty</code>",
+ "215":
+ "<code>LinearEquiv.toLinearMap.{u_14, u_15, u_16, u_17} {R : Type u_14} {S : Type u_15} [Semiring R] [Semiring S] {σ : R →+* S}\n  {σ' : S →+* R} [RingHomInvPair σ σ'] [RingHomInvPair σ' σ] {M : Type u_16} {M₂ : Type u_17} [AddCommMonoid M]\n  [AddCommMonoid M₂] [Module R M] [Module S M₂] (self : M ≃ₛₗ[σ] M₂) : M →ₛₗ[σ] M₂</code><span class=\"sep\"></span><code class=\"docstring\">The linear map underlying a linear equivalence. </code>",
+ "214":
+ "<code>Convex.linear_image.{u_1, u_2, u_3} {𝕜 : Type u_1} {E : Type u_2} {F : Type u_3} [Semiring 𝕜] [PartialOrder 𝕜]\n  [AddCommMonoid E] [AddCommMonoid F] [Module 𝕜 E] [Module 𝕜 F] {s : Set E} (hs : Convex 𝕜 s) (f : E →ₗ[𝕜] F) :\n  Convex 𝕜 (⇑f '' s)</code><span class=\"sep\"></span><code class=\"docstring\">See `Convex.semilinear_image` for a version for semilinar maps, but requiring that `𝕜` be a\nlinear order, instead of just a partial order. </code>",
+ "213": "<code>Convex ℝ C'</code>",
+ "212":
+ "<code>Homeomorph.isClosed_image.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [TopologicalSpace X] [TopologicalSpace Y]\n  (h : X ≃ₜ Y) {s : Set X} : IsClosed (⇑h '' s) ↔ IsClosed s</code>",
+ "211":
+ "<code>ContinuousLinearEquiv.toHomeomorph.{u_1, u_2, u_4, u_5} {R₁ : Type u_1} {R₂ : Type u_2} [Semiring R₁] [Semiring R₂]\n  {σ₁₂ : R₁ →+* R₂} {σ₂₁ : R₂ →+* R₁} [RingHomInvPair σ₁₂ σ₂₁] [RingHomInvPair σ₂₁ σ₁₂] {M₁ : Type u_4}\n  [TopologicalSpace M₁] [AddCommMonoid M₁] {M₂ : Type u_5} [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R₁ M₁]\n  [Module R₂ M₂] (e : M₁ ≃SL[σ₁₂] M₂) : M₁ ≃ₜ M₂</code><span class=\"sep\"></span><code class=\"docstring\">A continuous linear equivalence induces a homeomorphism. </code>",
+ "210": "<code>IsClosed C'</code>",
+ "21":
+ "<code>proof_of_Lecture01_thm_l1_local_global.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {Ω : Set E}\n  {f : E → ℝ} {xStar : E} (hxStar : xStar ∈ Ω) (hconv : ConvexOn ℝ Ω f)\n  (hlocal : ∃ r &gt; 0, ∀ ⦃x : E⦄, x ∈ Ω → ‖x - xStar‖ &lt; r → f xStar ≤ f x) (x : E) : x ∈ Ω → f xStar ≤ f x</code>",
+ "209":
+ "<code>Set.image.{u, v} {α : Type u} {β : Type v} (f : α → β) (s : Set α) : Set β</code><span class=\"sep\"></span><code class=\"docstring\">The image of `s : Set α` by `f : α → β`, written `f '' s`, is the set of `b : β` such that\n`f a = b` for some `a ∈ s`. </code>",
+ "208": "<code>Set F</code>",
+ "207":
+ "<code>ContinuousLinearEquiv.{u_1, u_2, u_3, u_4} {R : Type u_1} {S : Type u_2} [Semiring R] [Semiring S] (σ : R →+* S)\n  {σ' : S →+* R} [RingHomInvPair σ σ'] [RingHomInvPair σ' σ] (M : Type u_3) [TopologicalSpace M] [AddCommMonoid M]\n  (M₂ : Type u_4) [TopologicalSpace M₂] [AddCommMonoid M₂] [Module R M] [Module S M₂] : Type (max u_3 u_4)</code><span class=\"sep\"></span><code class=\"docstring\">Continuous linear equivalences between modules. We only put the type classes that are necessary\nfor the definition, although in applications `M` and `M₂` will be topological modules over the\ntopological semiring `R`. </code>",
+ "206":
+ "<code>toEuclidean.{u_1} {E : Type u_1} [AddCommGroup E] [TopologicalSpace E] [IsTopologicalAddGroup E] [T2Space E]\n  [Module ℝ E] [ContinuousSMul ℝ E] [FiniteDimensional ℝ E] : E ≃L[ℝ] EuclideanSpace ℝ (Fin (Module.finrank ℝ E))</code><span class=\"sep\"></span><code class=\"docstring\">If `E` is a finite-dimensional space over `ℝ`, then `toEuclidean` is a continuous `ℝ`-linear\nequivalence between `E` and the Euclidean space of the same dimension. </code>",
+ "205": "<code>E ≃L[ℝ] EuclideanSpace ℝ (Fin (Module.finrank ℝ E))</code>",
+ "204":
+ "<code>Module.finrank.{u_1, u_2} (R : Type u_1) (M : Type u_2) [Semiring R] [AddCommMonoid M] [Module R M] : ℕ</code><span class=\"sep\"></span><code class=\"docstring\">The rank of a module as a natural number.\n\nFor a finite-dimensional vector space `V` over a field `k`, `Module.finrank k V` is equal to\nthe dimension of `V` over `k`.\n\nFor a general module `M` over a ring `R`, `Module.finrank R M` is defined to be the supremum of the\ncardinalities of the `R`-linearly independent subsets of `M`, if this supremum is finite. It is\ndefined by convention to be `0` if this supremum is infinite. See `Module.rank` for a\ncardinal-valued version where infinite rank modules have rank an infinite cardinal.\n\nNote that if `R` is not a field then there can exist modules `M` with `¬(Module.Finite R M)` but\n`finrank R M ≠ 0`. For example `ℚ` has `finrank` equal to `1` over `ℤ`, because the nonempty\n`ℤ`-linearly independent subsets of `ℚ` are precisely the nonzero singletons. </code>",
+ "203":
+ "<code>Fin (n : ℕ) : Type</code><span class=\"sep\"></span><code class=\"docstring\">Natural numbers less than some upper bound.\n\nIn particular, a `Fin n` is a natural number `i` with the constraint that `i &lt; n`. It is the\ncanonical type with `n` elements.\n</code>",
+ "202":
+ "<code>EuclideanSpace.{u_7, u_8} (𝕜 : Type u_7) (n : Type u_8) : Type (max u_7 u_8)</code><span class=\"sep\"></span><code class=\"docstring\">The standard real/complex Euclidean space, functions on a finite type. For an `n`-dimensional\nspace use `EuclideanSpace 𝕜 (Fin n)`.\n\nFor the case when `n = Fin _`, there is `!₂[x, y, ...]` notation for building elements of this type,\nanalogous to `![x, y, ...]` notation. </code>",
+ "201": "<code>Type</code>",
+ "200":
+ "<code>Ne.{u} {α : Sort u} (a b : α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`a ≠ b`, or `Ne a b` is defined as `¬ (a = b)` or `a = b → False`,\nand asserts that `a` and `b` are not equal.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `≠` in identifiers is `ne`.</code>",
+ "20":
+ "<code>IsCompact.exists_isMinOn.{u_2, u_3} {α : Type u_2} {β : Type u_3} [LinearOrder α] [TopologicalSpace α]\n  [TopologicalSpace β] [ClosedIicTopology α] {s : Set β} (hs : IsCompact s) (ne_s : s.Nonempty) {f : β → α}\n  (hf : ContinuousOn f s) : ∃ x ∈ s, IsMinOn f s x</code><span class=\"sep\"></span><code class=\"docstring\">The **extreme value theorem**: a continuous function realizes its minimum on a compact set. </code>",
+ "2":
+ "<code class=\"docstring\">The syntax `variable (X Y ... Z : Type*)` creates a new distinct implicit universe variable\n`&gt; 0` for each variable in the sequence. </code>",
+ "199": "<code>FiniteDimensional ℝ E</code>",
+ "198":
+ "<code>ConvexOptV3.Lectures.Lecture02.Covector.{u_2} (E : Type u_2) [NormedAddCommGroup E] [NormedSpace ℝ E] : Type u_2</code><span class=\"sep\"></span><code class=\"docstring\">A Lecture 2 covector is a continuous linear functional `E →L[ℝ] ℝ`. </code>",
+ "197": "<code>Covector E</code>",
+ "196": "<code>z ∉ C</code>",
+ "195": "<code>C.Nonempty</code>",
+ "194": "<code>Convex ℝ C</code>",
+ "193":
+ "<code>IsClosed.{u} {X : Type u} [TopologicalSpace X] (s : Set X) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A set is closed if its complement is open </code>",
+ "192": "<code>IsClosed C</code>",
+ "191":
+ "<code>FiniteDimensional.{u_1, u_2} (K : Type u_1) (V : Type u_2) [DivisionRing K] [AddCommGroup V] [Module K V] : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`FiniteDimensional` vector spaces are defined to be finite modules.\nUse `Module.Basis.finiteDimensional_of_finite` to prove finite dimension from another definition. </code>",
+ "190":
+ "<code>Lecture02_thm_l2_point_closed_sep.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] [FiniteDimensional ℝ E]\n  {C : Set E} (hC_closed : IsClosed C) (hC_convex : Convex ℝ C) (hC_ne : C.Nonempty) {z : E} (hz : z ∉ C) :\n  ∃ ξ, ξ ≠ 0 ∧ ∃ b, (∀ y ∈ C, ξ y ≤ b) ∧ ξ z &gt; b</code>",
+ "19":
+ "<code class=\"docstring\">`exact e` closes the main goal if its target type matches that of `e`.\n</code>",
+ "189":
+ "<code>ConvexOptV3.Lectures.Lecture02.EConvex.eConvexOn.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {f : E → EReal} (hf : EConvex f) : EConvexOn Set.univ f</code>",
+ "188":
+ "<code>ConvexOptV3.Lectures.Lecture02.eConvex_of_toReal_convexOn_effectiveDomain.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {f : E → EReal} (hNoBot : NoBot f) (hconv : ConvexOn ℝ (effectiveDomain f) fun x =&gt; (f x).toReal) :\n  EConvex f</code><span class=\"sep\"></span><code class=\"docstring\">If `f` never takes `-∞` and `toReal ∘ f` is convex on `dom f`, then `f`\nis convex in the course's one-sided extended-value sense. </code>",
+ "187":
+ "<code>convexOn_of_convex_epigraph.{u_1, u_2, u_5} {𝕜 : Type u_1} {E : Type u_2} {β : Type u_5} [Semiring 𝕜] [PartialOrder 𝕜]\n  [AddCommMonoid E] [AddCommMonoid β] [PartialOrder β] [SMul 𝕜 E] [Module 𝕜 β] {s : Set E} {f : E → β}\n  (h : Convex 𝕜 {p | p.1 ∈ s ∧ f p.1 ≤ p.2}) : ConvexOn 𝕜 s f</code>",
+ "186": "<code>Convex ℝ (eRealEpigraph f)</code>",
+ "185":
+ "<code>ConvexOptV3.Lectures.Lecture02.eRealEpigraph_eq_epigraph_toReal.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {f : E → EReal} (hNoBot : NoBot f) :\n  eRealEpigraph f = epigraph (fun x =&gt; (f x).toReal) (effectiveDomain f)</code><span class=\"sep\"></span><code class=\"docstring\">On the effective domain, the extended-value epigraph agrees with the real\nepigraph of `toReal ∘ f`. </code>",
+ "184":
+ "<code>Iff.mp {a b : Prop} (self : a ↔ b) : a → b</code><span class=\"sep\"></span><code class=\"docstring\">Modus ponens for if and only if. If `a ↔ b` and `a`, then `b`. </code>",
+ "183":
+ "<code>ConvexOptV3.Lectures.Lecture02.EConvexOn.convex_effectiveDomain.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {f : E → EReal} (hf : EConvexOn Set.univ f) : Convex ℝ (effectiveDomain f)</code>",
+ "182":
+ "<code>ConvexOptV3.Lectures.Lecture02.lem_l2_epi_real.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {s : Set E}\n  {f : E → ℝ} (_hs : Convex ℝ s) : ConvexOn ℝ s f ↔ Convex ℝ (epigraph f s)</code><span class=\"sep\"></span><code class=\"docstring\">Real-valued epigraph criterion, kept as a local helper for the\nextended-value statement `lem_l2_epi`. </code>",
+ "181":
+ "<code>ConvexOptV3.Lectures.Lecture02.epigraph.{u_1} {E : Type u_1} (f : E → ℝ) (s : Set E) : Set (E × ℝ)</code><span class=\"sep\"></span><code class=\"docstring\">Epigraph of a real-valued function over a comparison set. </code>",
+ "180":
+ "<code>Convex ℝ (epigraph (fun x =&gt; (f x).toReal) (effectiveDomain f))</code>",
+ "18":
+ "<code>Real : Type</code><span class=\"sep\"></span><code class=\"docstring\">The type `ℝ` of real numbers constructed as equivalence classes of Cauchy sequences of rational\nnumbers. </code>",
+ "179":
+ "<code>ConvexOptV3.Lectures.Lecture02.EConvexOn.toReal_convexOn_effectiveDomain.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {f : E → EReal} (hNoBot : NoBot f) (hconv : EConvexOn Set.univ f) :\n  ConvexOn ℝ (effectiveDomain f) fun x =&gt; (f x).toReal</code><span class=\"sep\"></span><code class=\"docstring\">If `f` is convex in the one-sided extended-value sense, then `toReal ∘ f`\nis convex on its effective domain. </code>",
+ "178":
+ "<code>EReal.toReal : EReal → ℝ</code><span class=\"sep\"></span><code class=\"docstring\">The map from extended reals to reals sending infinities to zero. </code>",
+ "177":
+ "<code>ConvexOptV3.Lectures.Lecture02.effectiveDomain.{u_1} {E : Type u_1} (f : E → EReal) : Set E</code><span class=\"sep\"></span><code class=\"docstring\">Effective domain of an extended-value function. </code>",
+ "176": "<code>ConvexOn ℝ (effectiveDomain f) fun x =&gt; (f x).toReal</code>",
+ "175": "<code>EConvexOn Set.univ f</code>",
+ "174":
+ "<code>ConvexOptV3.Lectures.Lecture02.eRealEpigraph.{u_1} {E : Type u_1} (f : E → EReal) : Set (E × ℝ)</code><span class=\"sep\"></span><code class=\"docstring\">Epigraph of a one-sided extended-value function over the ambient space. </code>",
+ "173":
+ "<code>Set.univ.{u} {α : Type u} : Set α</code><span class=\"sep\"></span><code class=\"docstring\">The universal set on a type `α` is the set containing all elements of `α`.\n\nThis is conceptually the \"same as\" `α` (in set theory, it is actually the same), but type theory\nmakes the distinction that `α` is a type while `Set.univ` is a term of type `Set α`. `Set.univ` can\nitself be coerced to a type `↥Set.univ` which is in bijection with (but distinct from) `α`. </code>",
+ "172":
+ "<code>ConvexOptV3.Lectures.Lecture02.EConvexOn.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] (s : Set E)\n  (f : E → EReal) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">Extended-real convexity on a comparison set. </code>",
+ "171":
+ "<code>ConvexOptV3.Lectures.Lecture02.NoBot.{u_1} {E : Type u_1} (f : E → EReal) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`NoBot f` means `f` never takes the value `-∞`. </code>",
+ "170": "<code>NoBot f</code>",
+ "17": "<code>TopologicalSpace E</code>",
+ "169":
+ "<code>EReal : Type</code><span class=\"sep\"></span><code class=\"docstring\">The type of extended real numbers `[-∞, ∞]`, constructed as `WithBot (WithTop ℝ)`. </code>",
+ "168": "<code>E → EReal</code>",
+ "167":
+ "<code>Lecture02_lem_l2_epi.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → EReal} (hNoBot : NoBot f) :\n  EConvexOn Set.univ f ↔ Convex ℝ (eRealEpigraph f)</code>",
+ "166":
+ "<code>ConvexOptV3.Lectures.Lecture01.lem_l1_gradient_lower_bound.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E]\n  {Ω : Set E} {f : E → ℝ} (hconv : ConvexOn ℝ Ω f) (hf : Differentiable ℝ f) (x : E) :\n  x ∈ Ω → ∀ y ∈ Ω, f y ≥ f x + (fderiv ℝ f x) (y - x)</code><span class=\"sep\"></span><code class=\"docstring\">Lecture 1 linear lower bound for differentiable convex functions\n(`lem:l1_gradient_lower_bound`). </code>",
+ "165": "<code>f x ≥ f xStar + (fderiv ℝ f xStar) (x - xStar)</code>",
+ "164": "<code>∀ x ∈ Ω, 0 ≤ (fderiv ℝ f xStar) (x - xStar)</code>",
+ "163":
+ "<code>ConvexOptV3.Lectures.Lecture01.lem_l1_first_order_necessary.{u_1} {E : Type u_1} [NormedAddCommGroup E]\n  [NormedSpace ℝ E] {Ω : Set E} {f : E → ℝ} {xStar : E} (hΩ_convex : Convex ℝ Ω) (hxStar : xStar ∈ Ω)\n  (hmin : ∀ y ∈ Ω, f xStar ≤ f y) (hf : Differentiable ℝ f) (x : E) : x ∈ Ω → 0 ≤ (fderiv ℝ f xStar) (x - xStar)</code><span class=\"sep\"></span><code class=\"docstring\">Lecture 1 first-order necessary condition (`lem:l1_first_order_necessary`). </code>",
+ "162": "<code>∀ x ∈ Ω, f xStar ≤ f x</code>",
+ "161":
+ "<code class=\"docstring\">If the main goal's target type is an inductive type, `constructor` solves it with\nthe first matching constructor, or else fails.\n</code>",
+ "160":
+ "<code>Iff (a b : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">If and only if, or logical bi-implication. `a ↔ b` means that `a` implies `b` and vice versa.\nBy `propext`, this implies that `a` and `b` are equal and hence any expression involving `a`\nis equivalent to the corresponding expression with `b` instead.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `↔` in identifiers is `iff`.\n\n * The recommended spelling of `&lt;-&gt;` in identifiers is `iff` (prefer `↔` over `&lt;-&gt;`).</code>",
+ "16":
+ "<code class=\"docstring\">A type universe. `Type ≡ Type 0`, `Type u ≡ Sort (u + 1)`. </code>",
+ "159":
+ "<code>proof_of_Lecture01_thm_l1_first_order_char.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {Ω : Set E}\n  {f : E → ℝ} {xStar : E} (hconv : ConvexOn ℝ Ω f) (hxStar : xStar ∈ Ω) (hf : Differentiable ℝ f) :\n  (∀ x ∈ Ω, f xStar ≤ f x) ↔ ∀ x ∈ Ω, 0 ≤ (fderiv ℝ f xStar) (x - xStar)</code>",
+ "158":
+ "<code class=\"docstring\">`linarith` attempts to find a contradiction between hypotheses that are linear (in)equalities.\nEquivalently, it can prove a linear inequality by assuming its negation and proving `False`.\n\nIn theory, `linarith` should prove any goal that is true in the theory of linear arithmetic over\nthe rationals. While there is some special handling for non-dense orders like `Nat` and `Int`,\nthis tactic is not complete for these theories and will not prove every true goal. It will solve\ngoals over arbitrary types that instantiate `CommRing`, `LinearOrder` and `IsStrictOrderedRing`.\n\nAn example:\n```lean\nexample (x y z : ℚ) (h1 : 2*x &lt; 3*y) (h2 : -4*x + 2*z &lt; 0)\n        (h3 : 12*y - 4* z &lt; 0) : False := by\n  linarith\n```\n\n`linarith` will use all appropriate hypotheses and the negation of the goal, if applicable.\nDisequality hypotheses require case splitting and are not normally considered\n(see the `splitNe` option below).\n\n`linarith [t1, t2, t3]` will additionally use proof terms `t1, t2, t3`.\n\n`linarith only [h1, h2, h3, t1, t2, t3]` will use only the goal (if relevant), local hypotheses\n`h1`, `h2`, `h3`, and proofs `t1`, `t2`, `t3`. It will ignore the rest of the local context.\n\n`linarith!` will use a stronger reducibility setting to try to identify atoms. For example,\n```lean\nexample (x : ℚ) : id x ≥ x := by\n  linarith\n```\nwill fail, because `linarith` will not identify `x` and `id x`. `linarith!` will.\nThis can sometimes be expensive.\n\n`linarith (config := { .. })` takes a config object with five\noptional arguments:\n* `discharger` specifies a tactic to be used for reducing an algebraic equation in the\n  proof stage. The default is `ring`. Other options include `simp` for basic\n  problems.\n* `transparency` controls how hard `linarith` will try to match atoms to each other. By default\n  it will only unfold `reducible` definitions.\n* If `splitHypotheses` is true, `linarith` will split conjunctions in the context into separate\n  hypotheses.\n* If `splitNe` is `true`, `linarith` will case split on disequality hypotheses.\n  For a given `x ≠ y` hypothesis, `linarith` is run with both `x &lt; y` and `x &gt; y`,\n  and so this runs linarith exponentially many times with respect to the number of\n  disequality hypotheses. (`false` by default.)\n* If `exfalso` is `false`, `linarith` will fail when the goal is neither an inequality nor `False`.\n  (`true` by default.)\n* If `minimize` is `false`, `linarith?` will report all hypotheses appearing in its initial\n  proof without attempting to drop redundancies. (`true` by default.)\n* `restrict_type` (not yet implemented in mathlib4)\n  will only use hypotheses that are inequalities over `tp`. This is useful\n  if you have e.g. both integer- and rational-valued inequalities in the local context, which can\n  sometimes confuse the tactic.\n\nA variant, `nlinarith`, does some basic preprocessing to handle some nonlinear goals.\n\nThe option `set_option trace.linarith true` will trace certain intermediate stages of the `linarith`\nroutine.\n</code>",
+ "157":
+ "<code>AffineMap.lineMap_apply_one.{u_1, u_2, u_3} {k : Type u_1} {V1 : Type u_2} {P1 : Type u_3} [Ring k] [AddCommGroup V1]\n  [Module k V1] [AddTorsor V1 P1] (p₀ p₁ : P1) : (AffineMap.lineMap p₀ p₁) 1 = p₁</code>",
+ "156":
+ "<code>slope_def_field.{u_1} {k : Type u_1} [Field k] (f : k → k) (a b : k) : slope f a b = (f b - f a) / (b - a)</code>",
+ "155":
+ "<code>True : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`True` is a proposition and has only an introduction rule, `True.intro : True`.\nIn other words, `True` is simply true, and has a canonical proof, `True.intro`\nFor more information: [Propositional Logic](https://lean-lang.org/theorem_proving_in_lean4/propositions_and_proofs.html#propositional-logic)\n</code>",
+ "154": "<code>and_self (p : Prop) : (p ∧ p) = p</code>",
+ "153":
+ "<code>le_refl._simp_1.{u_1} {α : Type u_1} [Preorder α] (a : α) : (a ≤ a) = True</code>",
+ "152":
+ "<code>And (a b : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`And a b`, or `a ∧ b`, is the conjunction of propositions. It can be\nconstructed and destructed like a pair: if `ha : a` and `hb : b` then\n`⟨ha, hb⟩ : a ∧ b`, and if `h : a ∧ b` then `h.left : a` and `h.right : b`.\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `∧` in identifiers is `and`.\n\n * The recommended spelling of `/\\` in identifiers is `and` (prefer `∧` over `/\\`).</code>",
+ "151":
+ "<code>congr.{u, v} {α : Sort u} {β : Sort v} {f₁ f₂ : α → β} {a₁ a₂ : α} (h₁ : f₁ = f₂) (h₂ : a₁ = a₂) : f₁ a₁ = f₂ a₂</code><span class=\"sep\"></span><code class=\"docstring\">Congruence in both function and argument. If `f₁ = f₂` and `a₁ = a₂` then\n`f₁ a₁ = f₂ a₂`. This only works for nondependent functions; the theorem\nstatement is more complex in the dependent case.\n\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n</code>",
+ "150":
+ "<code>Set.mem_Icc._simp_1.{u_1} {α : Type u_1} [Preorder α] {a b x : α} : (x ∈ Set.Icc a b) = (a ≤ x ∧ x ≤ b)</code>",
+ "15":
+ "<code class=\"docstring\">`by tac` constructs a term of the expected type by running the tactic(s) `tac`. </code>",
+ "149": "<code>(fderiv ℝ f x) (y - x) ≤ f y - f x</code>",
+ "148":
+ "<code>zero_lt_one.{u_1} {α : Type u_1} [Zero α] [One α] [PartialOrder α] [ZeroLEOneClass α] [NeZero 1] : 0 &lt; 1</code><span class=\"sep\"></span><code class=\"docstring\">See `zero_lt_one'` for a version with the type explicit. </code>",
+ "147":
+ "<code>ConvexOn.le_slope_of_hasDerivAt {S : Set ℝ} {f : ℝ → ℝ} {x y f' : ℝ} (hfc : ConvexOn ℝ S f) (hx : x ∈ S) (hy : y ∈ S)\n  (hxy : x &lt; y) (ha : HasDerivAt f f' x) : f' ≤ slope f x y</code><span class=\"sep\"></span><code class=\"docstring\">If `f : ℝ → ℝ` is convex on `S` and differentiable at `x ∈ S`, then the slope of any secant\nline with left endpoint at `x` is bounded below by the derivative of `f` at `x`. </code>",
+ "146": "<code>eq_self.{u_1} {α : Sort u_1} (a : α) : (a = a) = True</code>",
+ "145":
+ "<code>slope.{u_1, u_2, u_3} {k : Type u_1} {E : Type u_2} {PE : Type u_3} [Field k] [AddCommGroup E] [Module k E]\n  [AddTorsor E PE] (f : k → PE) (a b : k) : E</code><span class=\"sep\"></span><code class=\"docstring\">`slope f a b = (b - a)⁻¹ • (f b -ᵥ f a)` is the slope of a function `f` on the interval\n`[a, b]`. Note that `slope f a a = 0`, not the derivative of `f` at `a`. </code>",
+ "144": "<code>(fderiv ℝ f x) (y - x) ≤ slope (fun t =&gt; f (g t)) 0 1</code>",
+ "143":
+ "<code>HasFDerivAt.comp_hasDerivAt_of_eq.{u, v, w} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [NormedAddCommGroup F]\n  [NormedSpace 𝕜 F] {E : Type w} [NormedAddCommGroup E] [NormedSpace 𝕜 E] {f : 𝕜 → F} {f' : F} (x : 𝕜) {l : F → E}\n  {l' : F →L[𝕜] E} {y : F} (hl : HasFDerivAt l l' y) (hf : HasDerivAt f f' x) (hy : y = f x) :\n  HasDerivAt (l ∘ f) (l' f') x</code><span class=\"sep\"></span><code class=\"docstring\">The composition `l ∘ f` where `l : F → E` and `f : 𝕜 → F`, has a derivative equal to the\nFréchet derivative of `l` applied to the derivative of `f`. </code>",
+ "142":
+ "<code>HasDerivAt (fun t =&gt; f (g t)) ((fderiv ℝ f x) (y - x)) 0</code>",
+ "141":
+ "<code>ConvexOn.subset.{u_1, u_2, u_5} {𝕜 : Type u_1} {E : Type u_2} {β : Type u_5} [Semiring 𝕜] [PartialOrder 𝕜]\n  [AddCommMonoid E] [AddCommMonoid β] [PartialOrder β] [SMul 𝕜 E] [SMul 𝕜 β] {s : Set E} {f : E → β} {t : Set E}\n  (hf : ConvexOn 𝕜 t f) (hst : s ⊆ t) (hs : Convex 𝕜 s) : ConvexOn 𝕜 s f</code>",
+ "140":
+ "<code>ConvexOn.comp_affineMap.{u_1, u_2, u_3, u_5} {𝕜 : Type u_1} {E : Type u_2} {F : Type u_3} {β : Type u_5} [Field 𝕜]\n  [LinearOrder 𝕜] [AddCommGroup E] [AddCommGroup F] [AddCommMonoid β] [PartialOrder β] [Module 𝕜 E] [Module 𝕜 F]\n  [SMul 𝕜 β] {f : F → β} (g : E →ᵃ[𝕜] F) {s : Set F} (hf : ConvexOn 𝕜 s f) : ConvexOn 𝕜 (⇑g ⁻¹' s) (f ∘ ⇑g)</code><span class=\"sep\"></span><code class=\"docstring\">If a function is convex on `s`, it remains convex when precomposed by an affine map. </code>",
+ "14":
+ "<code>IsMinOn.{u, v} {α : Type u} {β : Type v} [Preorder β] (f : α → β) (s : Set α) (a : α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`IsMinOn f s a` means that `f a ≤ f x` for all `x ∈ s`. Note that we do not assume `a ∈ s`. </code>",
+ "139": "<code>ConvexOn ℝ (Set.Icc 0 1) fun t =&gt; f (g t)</code>",
+ "138":
+ "<code>And.left {a b : Prop} (self : a ∧ b) : a</code><span class=\"sep\"></span><code class=\"docstring\">Extract the left conjunct from a conjunction. `h : a ∧ b` then\n`h.left`, also notated as `h.1`, is a proof of `a`. </code>",
+ "137":
+ "<code>Convex.mapsTo_lineMap.{u_1, u_2} {𝕜 : Type u_1} {E : Type u_2} [Ring 𝕜] [PartialOrder 𝕜] [AddCommGroup E] [Module 𝕜 E]\n  {s : Set E} [AddRightMono 𝕜] (h : Convex 𝕜 s) {x y : E} (hx : x ∈ s) (hy : y ∈ s) :\n  Set.MapsTo (⇑(AffineMap.lineMap x y)) (Set.Icc 0 1) s</code>",
+ "136": "<code>Set.MapsTo (⇑g) (Set.Icc 0 1) Ω</code>",
+ "135":
+ "<code>AffineMap.{u_1, u_2, u_3, u_4, u_5} (k : Type u_1) {V1 : Type u_2} (P1 : Type u_3) {V2 : Type u_4} (P2 : Type u_5)\n  [Ring k] [AddCommGroup V1] [Module k V1] [AddTorsor V1 P1] [AddCommGroup V2] [Module k V2] [AddTorsor V2 P2] :\n  Type (max (max (max u_2 u_3) u_4) u_5)</code><span class=\"sep\"></span><code class=\"docstring\">An `AffineMap k P1 P2` (notation: `P1 →ᵃ[k] P2`) is a map from `P1` to `P2` that\ninduces a corresponding linear map from `V1` to `V2`. </code>",
+ "134": "<code>ℝ →ᵃ[ℝ] E</code>",
+ "133":
+ "<code class=\"docstring\">The `simp` tactic uses lemmas and hypotheses to simplify the main goal target or\nnon-dependent hypotheses. It has many variants:\n- `simp` simplifies the main goal target using lemmas tagged with the attribute `[simp]`.\n- `simp [h₁, h₂, ..., hₙ]` simplifies the main goal target using the lemmas tagged\n  with the attribute `[simp]` and the given `hᵢ`'s, where the `hᵢ`'s are expressions.-\n- If an `hᵢ` is a defined constant `f`, then `f` is unfolded. If `f` has equational lemmas associated\n  with it (and is not a projection or a `reducible` definition), these are used to rewrite with `f`.\n- `simp [*]` simplifies the main goal target using the lemmas tagged with the\n  attribute `[simp]` and all hypotheses.\n- `simp only [h₁, h₂, ..., hₙ]` is like `simp [h₁, h₂, ..., hₙ]` but does not use `[simp]` lemmas.\n- `simp [-id₁, ..., -idₙ]` simplifies the main goal target using the lemmas tagged\n  with the attribute `[simp]`, but removes the ones named `idᵢ`.\n- `simp at h₁ h₂ ... hₙ` simplifies the hypotheses `h₁ : T₁` ... `hₙ : Tₙ`. If\n  the target or another hypothesis depends on `hᵢ`, a new simplified hypothesis\n  `hᵢ` is introduced, but the old one remains in the local context.\n- `simp at *` simplifies all the hypotheses and the target.\n- `simp [*] at *` simplifies target and all (propositional) hypotheses using the\n  other hypotheses.\n</code>",
+ "132":
+ "<code class=\"docstring\">`subst x...` substitutes each hypothesis `x` with a definition found in the local context,\nthen eliminates the hypothesis.\n- If `x` is a local definition, then its definition is used.\n- Otherwise, if there is a hypothesis of the form `x = e` or `e = x`,\n  then `e` is used for the definition of `x`.\n\nIf `h : a = b`, then `subst h` may be used if either `a` or `b` unfolds to a local hypothesis.\nThis is similar to the `cases h` tactic.\n\nSee also: `subst_vars` for substituting all local hypotheses that have a defining equation.\n</code>",
+ "131":
+ "<code>Not (a : Prop) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`Not p`, or `¬p`, is the negation of `p`. It is defined to be `p → False`,\nso if your goal is `¬p` you can use `intro h` to turn the goal into\n`h : p ⊢ False`, and if you have `hn : ¬p` and `h : p` then `hn h : False`\nand `(hn h).elim` will prove anything.\nFor more information: [Propositional Logic](https://lean-lang.org/theorem_proving_in_lean4/propositions_and_proofs.html#propositional-logic)\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `¬` in identifiers is `not`.</code>",
+ "130": "<code>¬y = x</code>",
+ "13": "<code>E</code>",
+ "129":
+ "<code>Eq.{u_1} {α : Sort u_1} : α → α → Prop</code><span class=\"sep\"></span><code class=\"docstring\">The equality relation. It has one introduction rule, `Eq.refl`.\nWe use `a = b` as notation for `Eq a b`.\nA fundamental property of equality is that it is an equivalence relation.\n```\nvariable (α : Type) (a b c d : α)\nvariable (hab : a = b) (hcb : c = b) (hcd : c = d)\n\nexample : a = d :=\n  Eq.trans (Eq.trans hab (Eq.symm hcb)) hcd\n```\nEquality is much more than an equivalence relation, however. It has the important property that every assertion\nrespects the equivalence, in the sense that we can substitute equal expressions without changing the truth value.\nThat is, given `h1 : a = b` and `h2 : p a`, we can construct a proof for `p b` using substitution: `Eq.subst h1 h2`.\nExample:\n```\nexample (α : Type) (a b : α) (p : α → Prop)\n        (h1 : a = b) (h2 : p a) : p b :=\n  Eq.subst h1 h2\n\nexample (α : Type) (a b : α) (p : α → Prop)\n    (h1 : a = b) (h2 : p a) : p b :=\n  h1 ▸ h2\n```\nThe triangle in the second presentation is a macro built on top of `Eq.subst` and `Eq.symm`, and you can enter it by typing `\\t`.\nFor more information: [Equality](https://lean-lang.org/theorem_proving_in_lean4/quantifiers_and_equality.html#equality)\n\n\nConventions for notations in identifiers:\n\n * The recommended spelling of `=` in identifiers is `eq`.</code>",
+ "128": "<code>y = x</code>",
+ "127":
+ "<code class=\"docstring\">`by_cases (h :)? p` splits the main goal into two cases, assuming `h : p` in the first branch, and `h : ¬ p` in the second branch.\n</code>",
+ "126": "<code>y ∈ Ω</code>",
+ "125":
+ "<code>GE.ge.{u} {α : Type u} [LE α] (a b : α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">`a ≥ b` is an abbreviation for `b ≤ a`. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `≥` in identifiers is `ge`.\n\n * The recommended spelling of `&gt;=` in identifiers is `ge` (prefer `≥` over `&gt;=`).</code>",
+ "124":
+ "<code>proof_of_Lecture01_lem_l1_gradient_lower_bound.{u_1} {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {Ω : Set E}\n  {f : E → ℝ} (hconv : ConvexOn ℝ Ω f) (hf : Differentiable ℝ f) (x : E) :\n  x ∈ Ω → ∀ y ∈ Ω, f y ≥ f x + (fderiv ℝ f x) (y - x)</code>",
+ "123":
+ "<code>subset_refl._simp_1.{u} {α : Type u} [HasSubset α] [Std.Refl fun x1 x2 =&gt; x1 ⊆ x2] (a : α) : (a ⊆ a) = True</code>",
+ "122":
+ "<code>zero_le_one._simp_1.{u_1} {α : Type u_1} [Zero α] [One α] [LE α] [ZeroLEOneClass α] : (0 ≤ 1) = True</code>",
+ "121":
+ "<code>segment_eq_Icc.{u_1} {𝕜 : Type u_1} [Field 𝕜] [LinearOrder 𝕜] [IsStrictOrderedRing 𝕜] {x y : 𝕜} (h : x ≤ y) :\n  segment 𝕜 x y = Set.Icc x y</code>",
+ "120":
+ "<code>zero_add.{u} {M : Type u} [AddZeroClass M] (a : M) : 0 + a = a</code>",
+ "12":
+ "<code>ContinuousOn.{u_1, u_2} {X : Type u_1} {Y : Type u_2} [TopologicalSpace X] [TopologicalSpace Y] (f : X → Y)\n  (s : Set X) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">A function between topological spaces is continuous on a subset `s`\nwhen it's continuous at every point of `s` within `s`. </code>",
+ "119": "<code>of_eq_true {p : Prop} (h : p = True) : p</code>",
+ "118": "<code>segment ℝ 0 (0 + 1) ⊆ Set.Icc 0 1</code>",
+ "117":
+ "<code>HasDerivWithinAt.hasFDerivWithinAt.{u, v} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [AddCommGroup F]\n  [Module 𝕜 F] [TopologicalSpace F] {f : 𝕜 → F} {x : 𝕜} {s : Set 𝕜} [ContinuousSMul 𝕜 F] {f' : F} :\n  HasDerivWithinAt f f' s x → HasFDerivWithinAt f (ContinuousLinearMap.toSpanSingleton 𝕜 f') s x</code>",
+ "116":
+ "<code>IsLocalMinOn.hasFDerivWithinAt_nonneg.{u} {E : Type u} [NormedAddCommGroup E] [NormedSpace ℝ E] {f : E → ℝ}\n  {f' : StrongDual ℝ E} {s : Set E} {a y : E} (h : IsLocalMinOn f s a) (hf : HasFDerivWithinAt f f' s a)\n  (hy : y ∈ posTangentConeAt s a) : 0 ≤ f' y</code><span class=\"sep\"></span><code class=\"docstring\">If `f` has a local min on `s` at `a`, `f'` is the derivative of `f` at `a` within `s`, and\n`y` belongs to the positive tangent cone of `s` at `a`, then `0 ≤ f' y`. </code>",
+ "115":
+ "<code>ContinuousLinearMap.toSpanSingleton.{u_1, u_4} (R₁ : Type u_1) [Semiring R₁] {M₁ : Type u_4} [TopologicalSpace M₁]\n  [AddCommMonoid M₁] [Module R₁ M₁] [TopologicalSpace R₁] [ContinuousSMul R₁ M₁] (x : M₁) : R₁ →L[R₁] M₁</code><span class=\"sep\"></span><code class=\"docstring\">Given an element `x` of a topological space `M` over a semiring `R`, the natural continuous\nlinear map from `R` to `M` by taking multiples of `x`. </code>",
+ "114":
+ "<code>0 ≤ (ContinuousLinearMap.toSpanSingleton ℝ ((fderiv ℝ f xStar) (x - xStar))) 1</code>",
+ "113":
+ "<code>HAdd.hAdd.{u, v, w} {α : Type u} {β : Type v} {γ : outParam (Type w)} [self : HAdd α β γ] : α → β → γ</code><span class=\"sep\"></span><code class=\"docstring\">`a + b` computes the sum of `a` and `b`.\nThe meaning of this notation is type-dependent. \n\nConventions for notations in identifiers:\n\n * The recommended spelling of `+` in identifiers is `add`.</code>",
+ "112":
+ "<code>mem_posTangentConeAt_of_segment_subset.{u} {E : Type u} [NormedAddCommGroup E] [NormedSpace ℝ E] {s : Set E} {x y : E}\n  (h : segment ℝ x (x + y) ⊆ s) : y ∈ posTangentConeAt s x</code><span class=\"sep\"></span><code class=\"docstring\">If `[x -[ℝ] x + y] ⊆ s`, then `y` belongs to the positive tangent cone of `s`. </code>",
+ "111":
+ "<code>Iff.mpr {a b : Prop} (self : a ↔ b) : b → a</code><span class=\"sep\"></span><code class=\"docstring\">Modus ponens for if and only if, reversed. If `a ↔ b` and `b`, then `a`. </code>",
+ "110":
+ "<code>Set.right_mem_Icc.{u_1} {α : Type u_1} [Preorder α] {a b : α} : b ∈ Set.Icc a b ↔ a ≤ b</code>",
+ "11": "<code>ContinuousOn f Ω</code>",
+ "109":
+ "<code>zero_le_one.{u_1} {α : Type u_1} [Zero α] [One α] [LE α] [ZeroLEOneClass α] : 0 ≤ 1</code><span class=\"sep\"></span><code class=\"docstring\">`zero_le_one` with the type argument implicit. </code>",
+ "108":
+ "<code>Set.left_mem_Icc.{u_1} {α : Type u_1} [Preorder α] {a b : α} : a ∈ Set.Icc a b ↔ a ≤ b</code>",
+ "107":
+ "<code>convex_Icc.{u_1, u_4} {𝕜 : Type u_1} {β : Type u_4} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid β] [PartialOrder β]\n  [IsOrderedAddMonoid β] [Module 𝕜 β] [PosSMulMono 𝕜 β] (r s : β) : Convex 𝕜 (Set.Icc r s)</code>",
+ "106":
+ "<code>segment.{u_1, u_2} (𝕜 : Type u_1) {E : Type u_2} [Semiring 𝕜] [PartialOrder 𝕜] [AddCommMonoid E] [SMul 𝕜 E] (x y : E) :\n  Set E</code><span class=\"sep\"></span><code class=\"docstring\">Segments in a vector space. </code>",
+ "105": "<code>segment ℝ 0 1 ⊆ Set.Icc 0 1</code>",
+ "104":
+ "<code>posTangentConeAt.{v} {E : Type v} [AddCommGroup E] [Module ℝ E] [TopologicalSpace E] (s : Set E) (x : E) : Set E</code><span class=\"sep\"></span><code class=\"docstring\">\"Positive\" tangent cone to `s` at `x`. </code>",
+ "103": "<code>1 ∈ posTangentConeAt (Set.Icc 0 1) 0</code>",
+ "102":
+ "<code>map_sub.{u_7, u_8, u_9} {G : Type u_7} {H : Type u_8} {F : Type u_9} [FunLike F G H] [AddGroup G] [SubtractionMonoid H]\n  [AddMonoidHomClass F G H] (f : F) (a b : G) : f (a - b) = f a - f b</code><span class=\"sep\"></span><code class=\"docstring\">Additive group homomorphisms preserve subtraction. </code>",
+ "101":
+ "<code>Eq.refl.{u_1} {α : Sort u_1} (a : α) : a = a</code><span class=\"sep\"></span><code class=\"docstring\">`Eq.refl a : a = a` is reflexivity, the unique constructor of the\nequality type. See also `rfl`, which is usually used instead. </code>",
+ "100":
+ "<code>HasDerivAt.congr_simp.{u, v} {𝕜 : Type u} [NontriviallyNormedField 𝕜] {F : Type v} [AddCommGroup F] [Module 𝕜 F]\n  [TopologicalSpace F] [ContinuousSMul 𝕜 F] (f f✝ : 𝕜 → F) (e_f : f = f✝) (f' f'✝ : F) (e_f' : f' = f'✝) (x x✝ : 𝕜)\n  (e_x : x = x✝) : HasDerivAt f f' x = HasDerivAt f✝ f'✝ x✝</code>",
+ "10":
+ "<code>Set.Nonempty.{u} {α : Type u} (s : Set α) : Prop</code><span class=\"sep\"></span><code class=\"docstring\">The property `s.Nonempty` expresses the fact that the set `s` is not empty. It should be used\nin theorem assumptions instead of `∃ x, x ∈ s` or `s ≠ ∅` as it gives access to a nice API thanks\nto the dot notation. </code>",
+ "1": "<code>Type u_1</code>",
+ "0":
+ "<code>proof_of_Lecture01_thm_l1_weier.{u_1} {E : Type u_1} [TopologicalSpace E] {Ω : Set E} {f : E → ℝ}\n  (hΩ_compact : IsCompact Ω) (hΩ_nonempty : Ω.Nonempty) (hf : ContinuousOn f Ω) : ∃ xStar ∈ Ω, IsMinOn f Ω xStar</code>"}

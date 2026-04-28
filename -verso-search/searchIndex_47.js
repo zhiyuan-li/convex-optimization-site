@@ -1,0 +1,1 @@
+window.docContents[47].resolve({"#Convex-Optimization-Notes":{"contents":"\n\n\n\n\n\n\n\n\n\n\n\n","context":"","header":"Convex Optimization Notes","id":"#Convex-Optimization-Notes"}});

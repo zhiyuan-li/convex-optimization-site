@@ -1,0 +1,852 @@
+{"Verso.Genre.Manual.section":
+ {"title": "Sections or chapters of the manual",
+  "description": null,
+  "contents":
+  {"Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Slater-and-Exactness":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Slater-and-Exactness",
+     "data":
+     {"title": "Slater and Exactness",
+      "shortTitle": null,
+      "sectionNum": "5.2.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 5: Lagrange Multipliers and KKT",
+        "shortTitle": null,
+        "number": "5"},
+       {"title": "Slater and Exactness", "shortTitle": null, "number": "2"}]},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--KKT-as-Optimality-Certificates":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--KKT-as-Optimality-Certificates",
+     "data":
+     {"title": "KKT as Optimality Certificates",
+      "shortTitle": null,
+      "sectionNum": "5.1.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 5: Lagrange Multipliers and KKT",
+        "shortTitle": null,
+        "number": "5"},
+       {"title": "KKT as Optimality Certificates",
+        "shortTitle": null,
+        "number": "1"}]},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Failure-Modes":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Failure-Modes",
+     "data":
+     {"title": "Failure Modes",
+      "shortTitle": null,
+      "sectionNum": "5.3.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 5: Lagrange Multipliers and KKT",
+        "shortTitle": null,
+        "number": "5"},
+       {"title": "Failure Modes", "shortTitle": null, "number": "3"}]},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Exercises":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Exercises",
+     "data":
+     {"title": "Exercises",
+      "shortTitle": null,
+      "sectionNum": "5.5.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 5: Lagrange Multipliers and KKT",
+        "shortTitle": null,
+        "number": "5"},
+       {"title": "Exercises", "shortTitle": null, "number": "5"}]},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Dependency-and-Proof-Sketch":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT--Dependency-and-Proof-Sketch",
+     "data":
+     {"title": "Dependency and Proof Sketch",
+      "shortTitle": null,
+      "sectionNum": "5.4.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 5: Lagrange Multipliers and KKT",
+        "shortTitle": null,
+        "number": "5"},
+       {"title": "Dependency and Proof Sketch",
+        "shortTitle": null,
+        "number": "4"}]},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-5___-Lagrange-Multipliers-and-KKT",
+     "data":
+     {"title": "Lecture 5: Lagrange Multipliers and KKT",
+      "shortTitle": null,
+      "sectionNum": "5.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 5: Lagrange Multipliers and KKT",
+        "shortTitle": null,
+        "number": "5"}]},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Marginal-Duality-and-Applications":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Marginal-Duality-and-Applications",
+     "data":
+     {"title": "Marginal Duality and Applications",
+      "shortTitle": null,
+      "sectionNum": "4.3.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "shortTitle": null,
+        "number": "4"},
+       {"title": "Marginal Duality and Applications",
+        "shortTitle": null,
+        "number": "3"}]},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Exercises":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Exercises",
+     "data":
+     {"title": "Exercises",
+      "shortTitle": null,
+      "sectionNum": "4.4.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "shortTitle": null,
+        "number": "4"},
+       {"title": "Exercises", "shortTitle": null, "number": "4"}]},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Conjugates-and-Biconjugation":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Conjugates-and-Biconjugation",
+     "data":
+     {"title": "Conjugates and Biconjugation",
+      "shortTitle": null,
+      "sectionNum": "4.1.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "shortTitle": null,
+        "number": "4"},
+       {"title": "Conjugates and Biconjugation",
+        "shortTitle": null,
+        "number": "1"}]},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Basic-Conjugate-Pairs":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality--Basic-Conjugate-Pairs",
+     "data":
+     {"title": "Basic Conjugate Pairs",
+      "shortTitle": null,
+      "sectionNum": "4.2.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "shortTitle": null,
+        "number": "4"},
+       {"title": "Basic Conjugate Pairs", "shortTitle": null, "number": "2"}]},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-4___-Convex-Conjugates___-and-Marginal-Duality",
+     "data":
+     {"title": "Lecture 4: Convex Conjugates, and Marginal Duality",
+      "shortTitle": null,
+      "sectionNum": "4.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "shortTitle": null,
+        "number": "4"}]},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-3___-Linear-Programming--Value-Functions-and-Shadow-Prices":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-3___-Linear-Programming--Value-Functions-and-Shadow-Prices",
+     "data":
+     {"title": "Value Functions and Shadow Prices",
+      "shortTitle": null,
+      "sectionNum": "3.1.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 3: Linear Programming",
+        "shortTitle": null,
+        "number": "3"},
+       {"title": "Value Functions and Shadow Prices",
+        "shortTitle": null,
+        "number": "1"}]},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Convex-Optimization-Notes--Lecture-3___-Linear-Programming--Exercises":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-3___-Linear-Programming--Exercises",
+     "data":
+     {"title": "Exercises",
+      "shortTitle": null,
+      "sectionNum": "3.3.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 3: Linear Programming",
+        "shortTitle": null,
+        "number": "3"},
+       {"title": "Exercises", "shortTitle": null, "number": "3"}]},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Convex-Optimization-Notes--Lecture-3___-Linear-Programming--Dependency-and-Proof-Sketch":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-3___-Linear-Programming--Dependency-and-Proof-Sketch",
+     "data":
+     {"title": "Dependency and Proof Sketch",
+      "shortTitle": null,
+      "sectionNum": "3.2.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 3: Linear Programming",
+        "shortTitle": null,
+        "number": "3"},
+       {"title": "Dependency and Proof Sketch",
+        "shortTitle": null,
+        "number": "2"}]},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Convex-Optimization-Notes--Lecture-3___-Linear-Programming":
+   [{"id": "Convex-Optimization-Notes--Lecture-3___-Linear-Programming",
+     "data":
+     {"title": "Lecture 3: Linear Programming",
+      "shortTitle": null,
+      "sectionNum": "3.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 3: Linear Programming",
+        "shortTitle": null,
+        "number": "3"}]},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Subgradient-and-Its-Existence":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Subgradient-and-Its-Existence",
+     "data":
+     {"title": "Subgradient and Its Existence",
+      "shortTitle": null,
+      "sectionNum": "2.5.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Subgradient and Its Existence",
+        "shortTitle": null,
+        "number": "5"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Separation-Theorems-for-Convex-Sets":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Separation-Theorems-for-Convex-Sets",
+     "data":
+     {"title": "Separation Theorems for Convex Sets",
+      "shortTitle": null,
+      "sectionNum": "2.2.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Separation Theorems for Convex Sets",
+        "shortTitle": null,
+        "number": "2"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Proof-Local-Lemmas":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Proof-Local-Lemmas",
+     "data":
+     {"title": "Proof-Local Lemmas",
+      "shortTitle": null,
+      "sectionNum": "2.6.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Proof-Local Lemmas", "shortTitle": null, "number": "6"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Extended-Real-and-Epigraph":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Extended-Real-and-Epigraph",
+     "data":
+     {"title": "Extended Real and Epigraph",
+      "shortTitle": null,
+      "sectionNum": "2.1.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Extended Real and Epigraph",
+        "shortTitle": null,
+        "number": "1"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Exercises":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Exercises",
+     "data":
+     {"title": "Exercises",
+      "shortTitle": null,
+      "sectionNum": "2.7.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Exercises", "shortTitle": null, "number": "7"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Duality-of-Convex-Sets-and-Cones":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Duality-of-Convex-Sets-and-Cones",
+     "data":
+     {"title": "Duality of Convex Sets and Cones",
+      "shortTitle": null,
+      "sectionNum": "2.3.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Duality of Convex Sets and Cones",
+        "shortTitle": null,
+        "number": "3"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Affine-Hull-and-Relative-Interior":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality--Affine-Hull-and-Relative-Interior",
+     "data":
+     {"title": "Affine Hull and Relative Interior",
+      "shortTitle": null,
+      "sectionNum": "2.4.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"},
+       {"title": "Affine Hull and Relative Interior",
+        "shortTitle": null,
+        "number": "4"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality":
+   [{"id": "Convex-Optimization-Notes--Lecture-2___-Separation-and-Duality",
+     "data":
+     {"title": "Lecture 2: Separation and Duality",
+      "shortTitle": null,
+      "sectionNum": "2.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 2: Separation and Duality",
+        "shortTitle": null,
+        "number": "2"}]},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Why-Convexity___":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Why-Convexity___",
+     "data":
+     {"title": "Why Convexity?",
+      "shortTitle": null,
+      "sectionNum": "1.1.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 1: Introduction and Convexity",
+        "shortTitle": null,
+        "number": "1"},
+       {"title": "Why Convexity?", "shortTitle": null, "number": "1"}]},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--First-Consequences-of-Convexity":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--First-Consequences-of-Convexity",
+     "data":
+     {"title": "First Consequences of Convexity",
+      "shortTitle": null,
+      "sectionNum": "1.2.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 1: Introduction and Convexity",
+        "shortTitle": null,
+        "number": "1"},
+       {"title": "First Consequences of Convexity",
+        "shortTitle": null,
+        "number": "2"}]},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Exercises":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Exercises",
+     "data":
+     {"title": "Exercises",
+      "shortTitle": null,
+      "sectionNum": "1.5.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 1: Introduction and Convexity",
+        "shortTitle": null,
+        "number": "1"},
+       {"title": "Exercises", "shortTitle": null, "number": "5"}]},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Examples-of-Convex-Functions":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Examples-of-Convex-Functions",
+     "data":
+     {"title": "Examples of Convex Functions",
+      "shortTitle": null,
+      "sectionNum": "1.3.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 1: Introduction and Convexity",
+        "shortTitle": null,
+        "number": "1"},
+       {"title": "Examples of Convex Functions",
+        "shortTitle": null,
+        "number": "3"}]},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Dependency-and-Proof-Sketch":
+   [{"id":
+     "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity--Dependency-and-Proof-Sketch",
+     "data":
+     {"title": "Dependency and Proof Sketch",
+      "shortTitle": null,
+      "sectionNum": "1.4.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 1: Introduction and Convexity",
+        "shortTitle": null,
+        "number": "1"},
+       {"title": "Dependency and Proof Sketch",
+        "shortTitle": null,
+        "number": "4"}]},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity":
+   [{"id": "Convex-Optimization-Notes--Lecture-1___-Introduction-and-Convexity",
+     "data":
+     {"title": "Lecture 1: Introduction and Convexity",
+      "shortTitle": null,
+      "sectionNum": "1.",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null},
+       {"title": "Lecture 1: Introduction and Convexity",
+        "shortTitle": null,
+        "number": "1"}]},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Convex-Optimization-Notes":
+   [{"id": "Convex-Optimization-Notes",
+     "data":
+     {"title": "Convex Optimization Notes",
+      "shortTitle": null,
+      "sectionNum": "",
+      "context":
+      [{"title": "Convex Optimization Notes",
+        "shortTitle": null,
+        "number": null}]},
+     "address": "index.html"}]}},
+ "Verso.Genre.Manual.example":
+ {"title": "Verso.Genre.Manual.example",
+  "description": null,
+  "contents":
+  {"proof_of_Lecture01_thm_l1_weier":
+   [{"id": "proof_of_Lecture01_thm_l1_weier",
+     "data":
+     {"Lecture-1___-Introduction-and-Convexity/index.html#proof_of_Lecture01_thm_l1_weier":
+      {"display": "proof_of_Lecture01_thm_l1_weier",
+       "context":
+       ["Convex Optimization Notes", "Lecture 1: Introduction and Convexity"]}},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "proof_of_Lecture01_thm_l1_local_global":
+   [{"id": "proof_of_Lecture01_thm_l1_local_global",
+     "data":
+     {"Lecture-1___-Introduction-and-Convexity/index.html#proof_of_Lecture01_thm_l1_local_global":
+      {"display": "proof_of_Lecture01_thm_l1_local_global",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 1: Introduction and Convexity",
+        "First Consequences of Convexity"]}},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "proof_of_Lecture01_thm_l1_first_order_char":
+   [{"id": "proof_of_Lecture01_thm_l1_first_order_char",
+     "data":
+     {"Lecture-1___-Introduction-and-Convexity/index.html#proof_of_Lecture01_thm_l1_first_order_char":
+      {"display": "proof_of_Lecture01_thm_l1_first_order_char",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 1: Introduction and Convexity",
+        "First Consequences of Convexity"]}},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "proof_of_Lecture01_lem_l1_gradient_lower_bound":
+   [{"id": "proof_of_Lecture01_lem_l1_gradient_lower_bound",
+     "data":
+     {"Lecture-1___-Introduction-and-Convexity/index.html#proof_of_Lecture01_lem_l1_gradient_lower_bound":
+      {"display": "proof_of_Lecture01_lem_l1_gradient_lower_bound",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 1: Introduction and Convexity",
+        "First Consequences of Convexity"]}},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "proof_of_Lecture01_lem_l1_first_order_necessary":
+   [{"id": "proof_of_Lecture01_lem_l1_first_order_necessary",
+     "data":
+     {"Lecture-1___-Introduction-and-Convexity/index.html#proof_of_Lecture01_lem_l1_first_order_necessary":
+      {"display": "proof_of_Lecture01_lem_l1_first_order_necessary",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 1: Introduction and Convexity",
+        "First Consequences of Convexity"]}},
+     "address": "Lecture-1___-Introduction-and-Convexity/index.html"}],
+   "Lecture05_thm_l5_weak_duality":
+   [{"id": "Lecture05_thm_l5_weak_duality",
+     "data":
+     {"Lecture-5___-Lagrange-Multipliers-and-KKT/index.html#Lecture05_thm_l5_weak_duality":
+      {"display": "Lecture05_thm_l5_weak_duality",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 5: Lagrange Multipliers and KKT"]}},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Lecture05_thm_l5_strong_duality":
+   [{"id": "Lecture05_thm_l5_strong_duality",
+     "data":
+     {"Lecture-5___-Lagrange-Multipliers-and-KKT/index.html#Lecture05_thm_l5_strong_duality":
+      {"display": "Lecture05_thm_l5_strong_duality",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 5: Lagrange Multipliers and KKT",
+        "Slater and Exactness"]}},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Lecture05_thm_l5_kkt_suff":
+   [{"id": "Lecture05_thm_l5_kkt_suff",
+     "data":
+     {"Lecture-5___-Lagrange-Multipliers-and-KKT/index.html#Lecture05_thm_l5_kkt_suff":
+      {"display": "Lecture05_thm_l5_kkt_suff",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 5: Lagrange Multipliers and KKT",
+        "KKT as Optimality Certificates"]}},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Lecture05_thm_l5_kkt_nec":
+   [{"id": "Lecture05_thm_l5_kkt_nec",
+     "data":
+     {"Lecture-5___-Lagrange-Multipliers-and-KKT/index.html#Lecture05_thm_l5_kkt_nec":
+      {"display": "Lecture05_thm_l5_kkt_nec",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 5: Lagrange Multipliers and KKT",
+        "Slater and Exactness"]}},
+     "address": "Lecture-5___-Lagrange-Multipliers-and-KKT/index.html"}],
+   "Lecture04_thm_l4_marginal_duality_part3":
+   [{"id": "Lecture04_thm_l4_marginal_duality_part3",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_thm_l4_marginal_duality_part3":
+      {"display": "Lecture04_thm_l4_marginal_duality_part3",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Marginal Duality and Applications"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_thm_l4_marginal_duality_part2":
+   [{"id": "Lecture04_thm_l4_marginal_duality_part2",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_thm_l4_marginal_duality_part2":
+      {"display": "Lecture04_thm_l4_marginal_duality_part2",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Marginal Duality and Applications"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_thm_l4_marginal_duality_part1":
+   [{"id": "Lecture04_thm_l4_marginal_duality_part1",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_thm_l4_marginal_duality_part1":
+      {"display": "Lecture04_thm_l4_marginal_duality_part1",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Marginal Duality and Applications"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_thm_l4_marginal_duality":
+   [{"id": "Lecture04_thm_l4_marginal_duality",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_thm_l4_marginal_duality":
+      {"display": "Lecture04_thm_l4_marginal_duality",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Marginal Duality and Applications"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_thm_l4_fm":
+   [{"id": "Lecture04_thm_l4_fm",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_thm_l4_fm":
+      {"display": "Lecture04_thm_l4_fm",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Conjugates and Biconjugation"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_lem_l4_fy_eq_iff_subgradient":
+   [{"id": "Lecture04_lem_l4_fy_eq_iff_subgradient",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_lem_l4_fy_eq_iff_subgradient":
+      {"display": "Lecture04_lem_l4_fy_eq_iff_subgradient",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Conjugates and Biconjugation"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_lem_l4_fy":
+   [{"id": "Lecture04_lem_l4_fy",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_lem_l4_fy":
+      {"display": "Lecture04_lem_l4_fy",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Conjugates and Biconjugation"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture04_lem_l4_biconj_le":
+   [{"id": "Lecture04_lem_l4_biconj_le",
+     "data":
+     {"Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html#Lecture04_lem_l4_biconj_le":
+      {"display": "Lecture04_lem_l4_biconj_le",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 4: Convex Conjugates, and Marginal Duality",
+        "Conjugates and Biconjugation"]}},
+     "address": "Lecture-4___-Convex-Conjugates___-and-Marginal-Duality/index.html"}],
+   "Lecture03_thm_l3_lp_strong":
+   [{"id": "Lecture03_thm_l3_lp_strong",
+     "data":
+     {"Lecture-3___-Linear-Programming/index.html#Lecture03_thm_l3_lp_strong":
+      {"display": "Lecture03_thm_l3_lp_strong",
+       "context":
+       ["Convex Optimization Notes", "Lecture 3: Linear Programming"]}},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Lecture03_thm_l3_farkas":
+   [{"id": "Lecture03_thm_l3_farkas",
+     "data":
+     {"Lecture-3___-Linear-Programming/index.html#Lecture03_thm_l3_farkas":
+      {"display": "Lecture03_thm_l3_farkas",
+       "context":
+       ["Convex Optimization Notes", "Lecture 3: Linear Programming"]}},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Lecture03_thm_l3_cs":
+   [{"id": "Lecture03_thm_l3_cs",
+     "data":
+     {"Lecture-3___-Linear-Programming/index.html#Lecture03_thm_l3_cs":
+      {"display": "Lecture03_thm_l3_cs",
+       "context":
+       ["Convex Optimization Notes", "Lecture 3: Linear Programming"]}},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Lecture03_lem_l3_weak_duality":
+   [{"id": "Lecture03_lem_l3_weak_duality",
+     "data":
+     {"Lecture-3___-Linear-Programming/index.html#Lecture03_lem_l3_weak_duality":
+      {"display": "Lecture03_lem_l3_weak_duality",
+       "context":
+       ["Convex Optimization Notes", "Lecture 3: Linear Programming"]}},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Lecture03_lem_l3_value_function_convex":
+   [{"id": "Lecture03_lem_l3_value_function_convex",
+     "data":
+     {"Lecture-3___-Linear-Programming/index.html#Lecture03_lem_l3_value_function_convex":
+      {"display": "Lecture03_lem_l3_value_function_convex",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 3: Linear Programming",
+        "Value Functions and Shadow Prices"]}},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Lecture03_lem_l3_objective_values_closed":
+   [{"id": "Lecture03_lem_l3_objective_values_closed",
+     "data":
+     {"Lecture-3___-Linear-Programming/index.html#Lecture03_lem_l3_objective_values_closed":
+      {"display": "Lecture03_lem_l3_objective_values_closed",
+       "context":
+       ["Convex Optimization Notes", "Lecture 3: Linear Programming"]}},
+     "address": "Lecture-3___-Linear-Programming/index.html"}],
+   "Lecture02_thm_l2_supporting":
+   [{"id": "Lecture02_thm_l2_supporting",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_supporting":
+      {"display": "Lecture02_thm_l2_supporting",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Separation Theorems for Convex Sets"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_thm_l2_subgrad_exist":
+   [{"id": "Lecture02_thm_l2_subgrad_exist",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_subgrad_exist":
+      {"display": "Lecture02_thm_l2_subgrad_exist",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Subgradient and Its Existence"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_thm_l2_separation":
+   [{"id": "Lecture02_thm_l2_separation",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_separation":
+      {"display": "Lecture02_thm_l2_separation",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Duality of Convex Sets and Cones"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_thm_l2_projection":
+   [{"id": "Lecture02_thm_l2_projection",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_projection":
+      {"display": "Lecture02_thm_l2_projection",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Separation Theorems for Convex Sets"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_thm_l2_point_closed_sep":
+   [{"id": "Lecture02_thm_l2_point_closed_sep",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_point_closed_sep":
+      {"display": "Lecture02_thm_l2_point_closed_sep",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Separation Theorems for Convex Sets"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_thm_l2_cone_sep":
+   [{"id": "Lecture02_thm_l2_cone_sep",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_cone_sep":
+      {"display": "Lecture02_thm_l2_cone_sep",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Duality of Convex Sets and Cones"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_thm_l2_bipolar":
+   [{"id": "Lecture02_thm_l2_bipolar",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_thm_l2_bipolar":
+      {"display": "Lecture02_thm_l2_bipolar",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Duality of Convex Sets and Cones"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_prop_l2_unique_subgrad":
+   [{"id": "Lecture02_prop_l2_unique_subgrad",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_prop_l2_unique_subgrad":
+      {"display": "Lecture02_prop_l2_unique_subgrad",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Subgradient and Its Existence"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_lem_l2_subgrad_support":
+   [{"id": "Lecture02_lem_l2_subgrad_support",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_lem_l2_subgrad_support":
+      {"display": "Lecture02_lem_l2_subgrad_support",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Subgradient and Its Existence"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_lem_l2_extend_covector":
+   [{"id": "Lecture02_lem_l2_extend_covector",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_lem_l2_extend_covector":
+      {"display": "Lecture02_lem_l2_extend_covector",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Proof-Local Lemmas"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}],
+   "Lecture02_lem_l2_epi":
+   [{"id": "Lecture02_lem_l2_epi",
+     "data":
+     {"Lecture-2___-Separation-and-Duality/index.html#Lecture02_lem_l2_epi":
+      {"display": "Lecture02_lem_l2_epi",
+       "context":
+       ["Convex Optimization Notes",
+        "Lecture 2: Separation and Duality",
+        "Extended Real and Epigraph"]}},
+     "address": "Lecture-2___-Separation-and-Duality/index.html"}]}},
+ "Verso.Genre.Manual.doc.tech":
+ {"title": "Terminology",
+  "description": "Definitions of technical terms",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.tactic.conv":
+ {"title": "Conversion Tactics",
+  "description": "Tactics for performing targeted rewriting of subterms",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.tactic":
+ {"title": "Tactic Documentation",
+  "description": "Detailed descriptions of tactics",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.suggestion":
+ {"title": "Lean constant suggestions",
+  "description": "Search suggestions for Lean constants",
+  "contents": {}},
+ "Verso.Genre.Manual.doc.option":
+ {"title": "Compiler options", "description": null, "contents": {}},
+ "Verso.Genre.Manual.doc":
+ {"title": "Lean constant reference",
+  "description": "Documentation for Lean constants",
+  "contents": {}}}

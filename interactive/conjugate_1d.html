@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One-Dimensional Convex Conjugate Demo</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --panel: #ffffff;
+      --ink: #1f2933;
+      --muted: #5b6672;
+      --accent: #1f4e79;
+      --accent-2: #c76e00;
+      --line: #27689b;
+      --line-2: #c76e00;
+      --point: #b42318;
+      --warn: #8a6d1f;
+      --error: #b42318;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 8px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    }
+
+    .wrap {
+      max-width: 1020px;
+      margin: 0 auto;
+      display: grid;
+      gap: 8px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 0.8px solid #ececec;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+
+    .note {
+      margin: 0;
+      line-height: 1.45;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .controls {
+      padding: 9px 10px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .controls-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.4fr) minmax(0, 0.9fr);
+      gap: 10px;
+      align-items: end;
+    }
+
+    .control {
+      display: grid;
+      gap: 6px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    select, input[type="text"], input[type="range"] {
+      width: 100%;
+      font: inherit;
+    }
+
+    select, input[type="text"] {
+      border: 0.8px solid #dcdcdc;
+      border-radius: 4px;
+      background: #fff;
+      color: var(--ink);
+      padding: 7px 9px;
+    }
+
+    input[type="range"] {
+      accent-color: var(--accent-2);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 0.8px solid #dcdcdc;
+      background: #fff;
+      color: var(--ink);
+      border-radius: 4px;
+      padding: 6px 10px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--accent);
+      color: white;
+      border-color: transparent;
+    }
+
+    .status {
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-size: 0.92rem;
+      line-height: 1.4;
+      background: rgba(31, 78, 121, 0.08);
+      color: var(--muted);
+    }
+
+    .status.warn {
+      background: rgba(138, 109, 31, 0.1);
+      color: var(--warn);
+    }
+
+    .status.error {
+      background: rgba(180, 35, 24, 0.1);
+      color: var(--error);
+    }
+
+    .plots {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .plot-card {
+      padding: 8px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .plot-card h2 {
+      margin: 0;
+      font-size: 0.93rem;
+      color: var(--accent);
+    }
+
+    canvas {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 4px;
+      background: #fff;
+      border: 0.8px solid #ececec;
+    }
+
+    .readout {
+      display: grid;
+      gap: 4px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .readout strong {
+      color: var(--ink);
+    }
+
+    code {
+      font-family: "SFMono-Regular", "Menlo", monospace;
+      font-size: 0.92em;
+      color: var(--ink);
+      background: rgba(31, 78, 121, 0.06);
+      padding: 0.08rem 0.28rem;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 720px) {
+      .controls-grid, .plots {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="note">
+      Edit <code>f(x)</code> and move <code>y</code>. The left plot shows
+      <code>f</code> together with the supporting line
+      <code>x ↦ yx - f*(y)</code>; the right plot shows the numerically computed
+      graph of <code>f*</code> on a finite window.
+    </p>
+
+    <div class="card controls">
+      <div class="controls-grid">
+        <div class="control">
+          <label for="preset">Preset family</label>
+          <select id="preset">
+            <option value="x^2">Quadratic: x^2</option>
+            <option value="abs(x)">Absolute value: abs(x)</option>
+            <option value="x log(x)">Entropy: x log(x)</option>
+            <option value="x^4/4">Quartic: x^4 / 4</option>
+            <option value="exp(x)">Exponential: exp(x)</option>
+            <option value="x^2 + 0.4*abs(x)">Quadratic + kink</option>
+            <option value="custom">Custom expression</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="expr">Convex function <code>f(x)</code></label>
+          <input id="expr" type="text" value="x^2" spellcheck="false" />
+        </div>
+
+        <div class="control">
+          <label>&nbsp;</label>
+          <div class="buttons">
+            <button class="primary" id="apply">Apply function</button>
+            <button id="reset">Reset demo</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-grid">
+        <div class="control">
+          <label for="y">Dual coordinate <code>y</code> <span id="yv">1.20</span></label>
+          <input id="y" type="range" min="-4" max="4" step="0.01" value="1.2" />
+        </div>
+
+        <div class="control">
+          <label for="radius">Search / plot radius <code>R</code> <span id="rv">4.0</span></label>
+          <input id="radius" type="range" min="2.5" max="8" step="0.1" value="4.0" />
+        </div>
+
+        <div class="control">
+          <label>&nbsp;</label>
+          <div class="readout" id="quickInfo"></div>
+        </div>
+      </div>
+
+      <div class="status" id="status">
+        Use syntax such as <code>x^2</code>, <code>abs(x)</code>, <code>x log(x)</code>,
+        <code>exp(x)</code>, <code>x^4/4</code>, or <code>x^2 + 0.4*abs(x)</code>.
+      </div>
+    </div>
+
+    <div class="plots">
+      <div class="card plot-card">
+        <h2 id="primalTitle">Primal graph: <code>f(x)=x^2</code></h2>
+        <canvas id="primal" width="520" height="320"></canvas>
+        <div class="readout" id="primalReadout"></div>
+      </div>
+
+      <div class="card plot-card">
+        <h2 id="dualTitle">Conjugate graph: <code>f*(y)</code></h2>
+        <canvas id="dual" width="520" height="320"></canvas>
+        <div class="readout" id="dualReadout"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const preset = document.getElementById("preset");
+    const exprInput = document.getElementById("expr");
+    const applyBtn = document.getElementById("apply");
+    const resetBtn = document.getElementById("reset");
+    const yInput = document.getElementById("y");
+    const radiusInput = document.getElementById("radius");
+    const yv = document.getElementById("yv");
+    const rv = document.getElementById("rv");
+    const status = document.getElementById("status");
+    const quickInfo = document.getElementById("quickInfo");
+    const primalTitle = document.getElementById("primalTitle");
+    const dualTitle = document.getElementById("dualTitle");
+    const primalReadout = document.getElementById("primalReadout");
+    const dualReadout = document.getElementById("dualReadout");
+    const primalCanvas = document.getElementById("primal");
+    const dualCanvas = document.getElementById("dual");
+    const pctx = primalCanvas.getContext("2d");
+    const dctx = dualCanvas.getContext("2d");
+
+    const presets = {
+      "x^2": "x^2",
+      "abs(x)": "abs(x)",
+      "x log(x)": "x log(x)",
+      "x^4/4": "x^4/4",
+      "exp(x)": "exp(x)",
+      "x^2 + 0.4*abs(x)": "x^2 + 0.4*abs(x)"
+    };
+
+    let compiled = null;
+    let activeExpr = "x^2";
+
+    function fmt(x) {
+      if (!Number.isFinite(x)) return "∞";
+      const y = Math.abs(x) < 1e-8 ? 0 : x;
+      return y.toFixed(3);
+    }
+
+    function safeEval(f, x) {
+      try {
+        const y = Number(f(x));
+        return Number.isFinite(y) ? y : NaN;
+      } catch (_err) {
+        return NaN;
+      }
+    }
+
+    function setStatus(kind, message) {
+      status.className = "status" + (kind ? " " + kind : "");
+      status.innerHTML = message;
+    }
+
+    function normalizeExpr(expr) {
+      let cleaned = expr.trim();
+      cleaned = cleaned.replace(/\^/g, "**");
+      cleaned = cleaned.replace(/([0-9x)\]])\s+(?=[A-Za-z(])/g, "$1*");
+      cleaned = cleaned.replace(/([0-9)])(?=x\b)/g, "$1*");
+      cleaned = cleaned.replace(/\bx\s*\*\s*log\s*\(\s*x\s*\)/g, "xlog(x)");
+      cleaned = cleaned.replace(/\blog\s*\(\s*x\s*\)\s*\*\s*x\b/g, "xlog(x)");
+      return cleaned;
+    }
+
+    function compileExpression(expr) {
+      const cleaned = normalizeExpr(expr);
+      const allowed = /^[0-9xX+\-*/().,_\sA-Za-z]*$/;
+      const forbidden =
+        /(window|document|globalThis|Function|eval|constructor|=>|;|{|}|\[|\]|new\s)/i;
+      if (!cleaned) {
+        return { ok: false, message: "Please enter a function of <code>x</code>." };
+      }
+      if (!allowed.test(cleaned) || forbidden.test(cleaned)) {
+        return { ok: false, message: "Only simple arithmetic expressions in <code>x</code> are allowed." };
+      }
+      try {
+        const fn = new Function(
+          "x",
+          `"use strict";
+          const abs = Math.abs, exp = Math.exp, log = Math.log, sqrt = Math.sqrt,
+                sin = Math.sin, cos = Math.cos, tanh = Math.tanh, pow = Math.pow,
+                max = Math.max, min = Math.min,
+                xlog = (t) => (t === 0 ? 0 : (t > 0 ? t * Math.log(t) : NaN));
+          return (${cleaned});`
+        );
+        return { ok: true, fn };
+      } catch (_err) {
+        return { ok: false, message: "Could not parse the expression. Try syntax such as <code>x^2 + 0.4*abs(x)</code>." };
+      }
+    }
+
+    function sampleGrid(f, left, right, count) {
+      const pts = [];
+      for (let i = 0; i <= count; i++) {
+        const x = left + (right - left) * i / count;
+        const y = safeEval(f, x);
+        pts.push({ x, y, finite: Number.isFinite(y) });
+      }
+      return pts;
+    }
+
+    function finiteIntervals(points) {
+      const intervals = [];
+      let start = null;
+      let end = null;
+      points.forEach(p => {
+        if (p.finite) {
+          if (start === null) start = p.x;
+          end = p.x;
+        } else if (start !== null) {
+          intervals.push([start, end]);
+          start = null;
+          end = null;
+        }
+      });
+      if (start !== null) intervals.push([start, end]);
+      return intervals;
+    }
+
+    function formatIntervals(intervals) {
+      if (intervals.length === 0) return "none";
+      return intervals.map(([a, b]) => `[${fmt(a)}, ${fmt(b)}]`).join(" ∪ ");
+    }
+
+    function looksConvex(f, radius) {
+      const pts = sampleGrid(f, -radius, radius, 120);
+      const finitePts = pts.filter(p => p.finite);
+      if (finitePts.length < 3) return { ok: false, minSecondDiff: -Infinity };
+      let minSecondDiff = Infinity;
+      for (let i = 1; i < finitePts.length - 1; i++) {
+        const d2 = finitePts[i + 1].y - 2 * finitePts[i].y + finitePts[i - 1].y;
+        minSecondDiff = Math.min(minSecondDiff, d2);
+      }
+      return { ok: minSecondDiff >= -1e-2, minSecondDiff };
+    }
+
+    function maximizePhi(f, y, radius) {
+      let left = -radius;
+      let right = radius;
+      let bestX = 0;
+      let bestV = -Infinity;
+      for (let stage = 0; stage < 5; stage++) {
+        const steps = 260;
+        let found = false;
+        bestV = -Infinity;
+        let bestIndex = 0;
+        for (let i = 0; i <= steps; i++) {
+          const x = left + (right - left) * i / steps;
+          const fx = safeEval(f, x);
+          if (!Number.isFinite(fx)) continue;
+          const v = y * x - fx;
+          if (v > bestV) {
+            found = true;
+            bestV = v;
+            bestX = x;
+            bestIndex = i;
+          }
+        }
+        if (!found) return null;
+        const width = (right - left) / steps;
+        left = Math.max(-radius, bestX - 3 * width);
+        right = Math.min(radius, bestX + 3 * width);
+        if (bestIndex === 0) {
+          left = -radius;
+          right = Math.min(radius, -radius + 8 * width);
+        } else if (bestIndex === steps) {
+          left = Math.max(-radius, radius - 8 * width);
+          right = radius;
+        }
+      }
+      return { xStar: bestX, value: bestV };
+    }
+
+    function conjugateSamples(f, radius, yMax, count) {
+      const out = [];
+      for (let i = 0; i <= count; i++) {
+        const y = -yMax + (2 * yMax) * i / count;
+        const result = maximizePhi(f, y, radius);
+        if (result) out.push({ x: y, y: result.value });
+      }
+      return out;
+    }
+
+    function clearCanvas(ctx, canvas) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#fffdf9";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
+    function drawAxes(ctx, canvas, bounds) {
+      const { xMin, xMax, yMin, yMax } = bounds;
+      const m = { l: 54, r: 18, t: 16, b: 36 };
+      function sx(x) {
+        return m.l + (x - xMin) * (canvas.width - m.l - m.r) / (xMax - xMin);
+      }
+      function sy(y) {
+        return canvas.height - m.b - (y - yMin) * (canvas.height - m.t - m.b) / (yMax - yMin);
+      }
+
+      ctx.strokeStyle = "rgba(60,60,60,0.55)";
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(sx(xMin), sy(0));
+      ctx.lineTo(sx(xMax), sy(0));
+      ctx.moveTo(sx(0), sy(yMin));
+      ctx.lineTo(sx(0), sy(yMax));
+      ctx.stroke();
+
+      ctx.fillStyle = "rgba(70,70,70,0.85)";
+      ctx.font = "14px Georgia";
+      ctx.fillText("0", sx(0) + 6, sy(0) - 6);
+      ctx.fillText("x", canvas.width - 14, sy(0) - 6);
+      ctx.fillText("value", sx(0) + 8, 18);
+
+      return { sx, sy };
+    }
+
+    function drawCurve(ctx, map, pts, color, width) {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = width;
+      let started = false;
+      ctx.beginPath();
+      pts.forEach(p => {
+        if (!Number.isFinite(p.y)) {
+          if (started) {
+            ctx.stroke();
+            ctx.beginPath();
+            started = false;
+          }
+          return;
+        }
+        const X = map.sx(p.x);
+        const Y = map.sy(p.y);
+        if (!started) {
+          ctx.moveTo(X, Y);
+          started = true;
+        } else {
+          ctx.lineTo(X, Y);
+        }
+      });
+      if (started) ctx.stroke();
+    }
+
+    function drawPoint(ctx, map, p, color, label) {
+      const X = map.sx(p.x);
+      const Y = map.sy(p.y);
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(X, Y, 4.2, 0, Math.PI * 2);
+      ctx.fill();
+      if (label) {
+        ctx.font = "14px Georgia";
+        ctx.fillText(label, X + 8, Y - 8);
+      }
+    }
+
+    function drawGuide(ctx, map, p0, p1, color) {
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 1.2;
+      ctx.setLineDash([6, 6]);
+      ctx.beginPath();
+      ctx.moveTo(map.sx(p0.x), map.sy(p0.y));
+      ctx.lineTo(map.sx(p1.x), map.sy(p1.y));
+      ctx.stroke();
+      ctx.setLineDash([]);
+    }
+
+    function render() {
+      if (!compiled) return;
+      const f = compiled;
+      const expr = activeExpr;
+      const y = Number(yInput.value);
+      const radius = Number(radiusInput.value);
+      const yMax = 4;
+      yv.textContent = fmt(y);
+      rv.textContent = radius.toFixed(1);
+
+      const primalSamples = sampleGrid(f, -radius, radius, 260);
+      const finitePrimal = primalSamples.filter(p => p.finite);
+      const sampledDomain = finiteIntervals(primalSamples);
+      if (finitePrimal.length < 3) {
+        setStatus("error", "The function is not finite on enough points in the selected window.");
+        return;
+      }
+
+      const convexity = looksConvex(f, radius);
+      const domainText = formatIntervals(sampledDomain);
+      if (convexity.ok) {
+        setStatus("", `The sampled graph looks convex on the current window. Sampled effective domain in [-R,R]: <code>${domainText}</code>.`);
+      } else {
+        setStatus("warn", `This function does not look convex on the sampled window. Sampled effective domain in [-R,R]: <code>${domainText}</code>.`);
+      }
+
+      const maxInfo = maximizePhi(f, y, radius);
+      if (!maxInfo) {
+        setStatus("error", "Could not find any finite point of the function on the selected search window.");
+        return;
+      }
+      const xStar = maxInfo.xStar;
+      const fStar = maxInfo.value;
+      const tangentValue = safeEval(f, xStar);
+      const lineSamples = primalSamples.map(p => ({ x: p.x, y: y * p.x - fStar }));
+      const conjSamples = conjugateSamples(f, radius, yMax, 140);
+      if (conjSamples.length < 3) {
+        setStatus("error", "The conjugate could not be sampled on the selected dual window.");
+        return;
+      }
+
+      primalTitle.innerHTML = `Primal graph: <code>f(x)=${expr}</code>`;
+      dualTitle.innerHTML = `Conjugate graph: <code>f*(y)=sup_x(xy-f(x))</code>`;
+      quickInfo.innerHTML = `
+        <div><strong>Current input:</strong> <code>f(x) = ${expr}</code></div>
+        <div><strong>Window:</strong> <code>x ∈ [-${radius.toFixed(1)}, ${radius.toFixed(1)}]</code></div>
+        <div><strong>Sampled domain:</strong> <code>${domainText}</code></div>
+      `;
+
+      primalReadout.innerHTML = `
+        <div><strong>Selected slope:</strong> <code>y = ${fmt(y)}</code></div>
+        <div><strong>Maximizer:</strong> <code>x*(y) ≈ ${fmt(xStar)}</code></div>
+        <div><strong>Touch value:</strong> <code>f(x*(y)) ≈ ${fmt(tangentValue)}</code></div>
+        <div><strong>y-axis intercept:</strong> <code>ℓ(0) = ${fmt(-fStar)}</code></div>
+        <div><strong>Supporting line:</strong> <code>ℓ(x) = ${fmt(y)}x ${fStar >= 0 ? "-" : "+"} ${fmt(Math.abs(fStar))}</code></div>
+      `;
+
+      dualReadout.innerHTML = `
+        <div><strong>Conjugate value:</strong> <code>f*(y) ≈ ${fmt(fStar)}</code></div>
+        <div><strong>Dual point:</strong> <code>(${fmt(y)}, ${fmt(fStar)})</code></div>
+        <div><strong>Sign relation:</strong> <code>ℓ(0) = -f*(y) ≈ ${fmt(-fStar)}</code></div>
+        <div><strong>Interpretation:</strong> the line with slope <code>${fmt(y)}</code> is chosen to be just tangent to the graph of <code>f</code>.</div>
+      `;
+
+      clearCanvas(pctx, primalCanvas);
+      clearCanvas(dctx, dualCanvas);
+
+      const lineInterceptMin = Math.min(...conjSamples.map(p => -p.y));
+      const primalYVals = finitePrimal.map(p => p.y).concat([lineInterceptMin]);
+      const primalYMin = Math.min(...primalYVals);
+      const primalYMax = Math.max(...primalYVals);
+      const primalPad = 0.12 * Math.max(1, primalYMax - primalYMin);
+      const primalBounds = {
+        xMin: -radius,
+        xMax: radius,
+        yMin: primalYMin - primalPad,
+        yMax: primalYMax + primalPad
+      };
+      const pmap = drawAxes(pctx, primalCanvas, primalBounds);
+      drawCurve(pctx, pmap, primalSamples, "#27689b", 2.2);
+      drawCurve(pctx, pmap, lineSamples, "#c76e00", 1.8);
+      drawPoint(pctx, pmap, { x: xStar, y: tangentValue }, "#b42318", "touch");
+      drawPoint(pctx, pmap, { x: 0, y: -fStar }, "#c76e00", "intercept", 8, 16);
+      pctx.fillStyle = "#27689b";
+      pctx.font = "15px Georgia";
+      pctx.fillText("graph of f", 18, 22);
+      pctx.fillStyle = "#c76e00";
+      pctx.fillText("line x ↦ yx - f*(y)", 18, 42);
+
+      const dualYVals = conjSamples.map(p => p.y);
+      const dualYMin = Math.min(...dualYVals);
+      const dualYMax = Math.max(...dualYVals);
+      const dualPad = 0.12 * Math.max(1, dualYMax - dualYMin);
+      const dualBounds = {
+        xMin: -yMax,
+        xMax: yMax,
+        yMin: dualYMin - dualPad,
+        yMax: dualYMax + dualPad
+      };
+      const dmap = drawAxes(dctx, dualCanvas, dualBounds);
+      drawCurve(dctx, dmap, conjSamples, "#27689b", 2.2);
+      drawGuide(dctx, dmap, { x: y, y: 0 }, { x: y, y: fStar }, "rgba(180, 35, 24, 0.62)");
+      drawGuide(dctx, dmap, { x: 0, y: fStar }, { x: y, y: fStar }, "rgba(180, 35, 24, 0.62)");
+      drawPoint(dctx, dmap, { x: y, y: fStar }, "#b42318", "selected");
+      dctx.fillStyle = "#27689b";
+      dctx.font = "15px Georgia";
+      dctx.fillText("graph of f*", 18, 22);
+      dctx.fillStyle = "#b42318";
+      dctx.fillText("f*(y)", dmap.sx(0) + 10, dmap.sy(fStar) - 8);
+    }
+
+    function applyFunction() {
+      const expr = exprInput.value.trim();
+      const result = compileExpression(expr);
+      if (!result.ok) {
+        setStatus("error", result.message);
+        return;
+      }
+      compiled = result.fn;
+      activeExpr = expr;
+      render();
+    }
+
+    preset.addEventListener("change", () => {
+      const value = preset.value;
+      if (value === "custom") return;
+      exprInput.value = presets[value];
+      applyFunction();
+    });
+
+    exprInput.addEventListener("input", () => {
+      preset.value = "custom";
+    });
+
+    exprInput.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        applyFunction();
+      }
+    });
+
+    applyBtn.addEventListener("click", applyFunction);
+    resetBtn.addEventListener("click", () => {
+      preset.value = "x^2";
+      exprInput.value = "x^2";
+      yInput.value = "1.2";
+      radiusInput.value = "4.0";
+      applyFunction();
+    });
+
+    yInput.addEventListener("input", render);
+    radiusInput.addEventListener("input", render);
+
+    applyFunction();
+  </script>
+</body>
+</html>
